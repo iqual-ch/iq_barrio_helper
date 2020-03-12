@@ -1,0 +1,6 @@
+name: 'iq_barrio helper'
+type: module
+description: 'Provides iqBarrioService'
+package: 'Theme helper'
+core: 8.x
+
