@@ -143,6 +143,18 @@ msgstr "Schriftformat"
 msgid "Font style"
 msgstr "Schriftstil"
 
+msgid "Text Transform"
+msgstr "Gross-/Kleinschreibung"
+
+msgid "Uppercase"
+msgstr "Grossbuchstaben"
+
+msgid "Lowercase"
+msgstr "Kleinbuchstaben"
+
+msgid "Capitalize"
+msgstr "Kapitälchen"
+
 msgid "Line height"
 msgstr "Höhe der Textzeile"
 

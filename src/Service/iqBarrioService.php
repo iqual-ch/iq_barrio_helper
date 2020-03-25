@@ -66,11 +66,10 @@ class iqBarrioService {
     ];
 
     $arr_texttransform = [
-      'none' => t('None'),
+      'none' => t('Normal'),
       'uppercase' => t('Uppercase'),
       'lowercase' => t('Lowercase'),
       'capitalize' => t('Capitalize'),
-      'full-width' => t('Full width'),
     ];
 
     $arr_units = [
