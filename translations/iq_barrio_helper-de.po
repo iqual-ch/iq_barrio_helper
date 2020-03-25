@@ -165,7 +165,7 @@ msgid "<br/>max"
 msgstr "<br />max"
 
 msgid "Margin (top, bottom)"
-msgstr "Aussenabstand <br/>(oben, unten)"
+msgstr "Aussenabstand<br />(oben, unten)"
 
 msgid "Text elements"
 msgstr "Textelemente"
@@ -201,10 +201,10 @@ msgid "Font size"
 msgstr "Schriftgrösse"
 
 msgid "Margin (top, left/right, bottom)"
-msgstr "Aussenabstand <br/>(oben, links/rechts, unten)"
+msgstr "Aussenabstand<br />(oben, links/rechts, unten)"
 
 msgid "Padding (top, left/right, bottom)"
-msgstr "Innenabstand <br/>(oben, links/rechts, unten)"
+msgstr "Innenabstand<br />(oben, links/rechts, unten)"
 
 msgid "Font color "
 msgstr "Schriftfarbe"
