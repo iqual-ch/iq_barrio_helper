@@ -879,7 +879,7 @@ class iqBarrioService {
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['navi_main_border_width_unit'] ? $formValues['navi_main_border_width_unit'] : '0',
+      '#default_value' => $formValues['navi_main_border_width_unit'] ? $formValues['navi_main_border_width_unit'] : 'px',
       '#suffix' => '</div>'
     ];
 
@@ -1203,7 +1203,7 @@ class iqBarrioService {
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['navi_sub_border_width_unit'] ? $formValues['navi_sub_border_width_unit'] : '0',
+      '#default_value' => $formValues['navi_sub_border_width_unit'] ? $formValues['navi_sub_border_width_unit'] : 'px',
       '#suffix' => '</div>'
     ];
 
@@ -1597,7 +1597,7 @@ class iqBarrioService {
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['border_width_unit'] ? $formValues['border_width_unit'] : '1',
+      '#default_value' => $formValues['border_width_unit'] ? $formValues['border_width_unit'] : 'px',
     ];
 
     $form['decorations']['border']['border_style'] = [
@@ -1825,7 +1825,7 @@ class iqBarrioService {
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['button_border_width_unit'] ? $formValues['button_border_width_unit'] : '1',
+      '#default_value' => $formValues['button_border_width_unit'] ? $formValues['button_border_width_unit'] : 'px',
     ];
 
     $form['buttons']['default']['button_border_radius_holder'] = [
@@ -2390,10 +2390,9 @@ class iqBarrioService {
     ];
 
     $form['buttons']['alternate']['button_alternate_border_width_holder']['button_alternate_border_width_unit'] = [
-      '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['button_alternate_border_width_unit'],
+      '#default_value' => $formValues['button_alternate_border_width_unit'] ? $formValues['button_alternate_border_width_unit'] : 'px',
     ];
 
     $form['buttons']['alternate']['button_alternate_border_radius_holder'] = [
