@@ -1,0 +1,381 @@
+# German translation of iq_barrio_helper
+#
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2019-12-12 10:48+0000\n"
+"PO-Revision-Date: 2019-12-12 10:48+0000\n"
+"Last-Translator: iqual GmbH <support@iqual.ch>\n"
+"Language-Team: iqual GmbH <support@iqual.ch>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+
+msgid "Primary color"
+msgstr "Primäre Farbe"
+
+msgid "Secondary color"
+msgstr "Sekundäre Farbe"
+
+msgid "Tertiary color"
+msgstr "Tertiäre Farbe"
+
+msgid "Quaternary color"
+msgstr "Quartiäre Farbe"
+
+msgid "Grey 1"
+msgstr "Grau 1"
+
+msgid "Grey 2"
+msgstr "Grau 2"
+
+msgid "Grey 3"
+msgstr "Grau 3"
+
+msgid "Grey 4"
+msgstr "Grau 4"
+
+msgid "Grey 5"
+msgstr "Grau 5"
+
+msgid "Black"
+msgstr "Schwarz"
+
+msgid "White"
+msgstr "Weiss"
+
+msgid "100 (lightest)"
+msgstr "100 (leichteste)"
+
+msgid "300"
+msgstr "300"
+
+msgid "400 (normal)"
+msgstr "400 (normal)"
+
+msgid "500"
+msgstr "500"
+
+msgid "600"
+msgstr "600"
+
+msgid "700 (bold)"
+msgstr "700 (fett)"
+
+msgid "800"
+msgstr "800"
+
+msgid "900 (boldest)"
+msgstr "900 (fetteste)"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Italic"
+msgstr "Kursiv"
+
+msgid "Arial"
+msgstr "Arial"
+
+msgid "Courier New"
+msgstr "Courier New"
+
+msgid "Helvetica"
+msgstr "Helvetica"
+
+msgid "Times New Roman"
+msgstr "Times New Roman"
+
+msgid "Verdana"
+msgstr "Verdana"
+
+msgid "Open Sans, sans-serif"
+msgstr "Open Sans, sans-serif"
+
+msgid "Custom Theme Settings"
+msgstr "Einstellungen benutzerdefiniertes Theme"
+
+msgid "Colors"
+msgstr "Farben"
+
+msgid "Base color definitions"
+msgstr "Basis Farbdefinitionen"
+
+msgid "Color assignments"
+msgstr "Farbzuweisungen"
+
+msgid "Color"
+msgstr "Farbe"
+
+msgid "Opacity"
+msgstr "Deckkraft"
+
+msgid "Background color"
+msgstr "Hintergrundfarbe"
+
+msgid "Font color"
+msgstr "Schriftfarbe"
+
+msgid "Font color footer"
+msgstr "Schriftfarbe im Fussbereich"
+
+msgid "Background color "
+msgstr "Hintergrundfarbe"
+
+msgid "Typography"
+msgstr "Typografie"
+
+msgid "Typography definitions."
+msgstr "Typografie-Definitionen."
+
+msgid "Headings"
+msgstr "Überschriften"
+
+msgid "Inverted color"
+msgstr "Kontrastfarbe (Konträr)"
+
+msgid "Font family"
+msgstr "Schriftfarbe"
+
+msgid "Font weight"
+msgstr "Schriftformat"
+
+msgid "Font style"
+msgstr "Schriftstil"
+
+msgid "Line height"
+msgstr "Höhe der Textzeile"
+
+msgid "Font-size<br/>min"
+msgstr "Schriftgrösse<br />min"
+
+msgid "<br/>max"
+msgstr "<br />max"
+
+msgid "Margin (top, bottom)"
+msgstr "Aussenabstand (oben, unten)"
+
+msgid "Text elements"
+msgstr "Textelemente"
+
+msgid "Links"
+msgstr "Links"
+
+msgid "Text decoration"
+msgstr "Textunterstreichung"
+
+msgid "Underline"
+msgstr "Unterstrichen"
+
+msgid "Dotted"
+msgstr "Gepunktet"
+
+msgid "Dashed"
+msgstr "Gestrichelt"
+
+msgid "none"
+msgstr "keine"
+
+msgid "Navigation"
+msgstr "Navigation"
+
+msgid "Navigation settings"
+msgstr "Navigationseinstellungen"
+
+msgid "Navigation Main"
+msgstr "Hauptnavigation"
+
+msgid "Font size"
+msgstr "Schriftgrösse"
+
+msgid "Margin (top, left/right, bottom)"
+msgstr "Aussenabstand (oben, links/rechts, unten)"
+
+msgid "Padding (top, left/right, bottom)"
+msgstr "Innenabstand (oben, links/rechts, unten)"
+
+msgid "Font color "
+msgstr "Schriftfarbe"
+
+msgid "Background"
+msgstr "Hintergrund"
+
+msgid "Navigation Mobile"
+msgstr "Mobile Navigation"
+
+msgid "Navigation Sidebar"
+msgstr "Seitliche Navigation"
+
+msgid "Styling"
+msgstr "Styling"
+
+msgid "Borders, shadows etc."
+msgstr "Rahmen, Schatten etc."
+
+msgid "Border"
+msgstr "Rahmen"
+
+msgid "Width"
+msgstr "Breite"
+
+msgid "Style"
+msgstr "Style"
+
+msgid "Border Radius"
+msgstr "Eckenrundung des Rahmens"
+
+msgid "Margins & Paddings"
+msgstr "Aussenabstände und Innenabstände"
+
+msgid "Margin (Top, right, bottom, left)"
+msgstr "Aussenabstand (oben, rechts, unten, links)"
+
+msgid "Padding (Top, right, bottom, left)"
+msgstr "Innenabstand (oben, rechts, unten, links)"
+
+msgid "Buttons"
+msgstr "Buttons"
+
+msgid "Styling of buttons."
+msgstr "Styling der Buttons."
+
+msgid "Default Button"
+msgstr "Standard Button"
+
+msgid "Border (top, right, bottom, left)"
+msgstr "Rahmenlinie (oben, rechts, unten, links)"
+
+msgid "Border radius"
+msgstr "Eckenrundung des Rahmens"
+
+msgid "Margin (top, right, bottom, left)"
+msgstr "Aussenabstand (oben, rechts, unten, links)"
+
+msgid "Padding (top, right, bottom, left)"
+msgstr "Innenabstand (oben, rechts, unten, links)"
+
+msgid "Standard color settings"
+msgstr "Standard Farbeinstellungen"
+
+msgid "Border color"
+msgstr "Rahmenfarbe"
+
+msgid "Hover border color"
+msgstr "Rahmenfarbe (Hover)"
+
+msgid "Inverted color settings"
+msgstr "Einstellungen der invertierten Farben"
+
+msgid "Alterante Button"
+msgstr "Alternativer Button"
+
+msgid "Patterns"
+msgstr "Patterns"
+
+msgid "Styling of patterns."
+msgstr "Styling der Patterns."
+
+msgid "Slider"
+msgstr "Slider"
+
+msgid "Size"
+msgstr "Grösse"
+
+msgid "Color standard"
+msgstr "Standardfarbe"
+
+msgid "Color active"
+msgstr "Farbe (aktiver Zustand)"
+
+msgid "Quote"
+msgstr "Zitat"
+
+msgid "Icons"
+msgstr "Icons"
+
+msgid "Default icon"
+msgstr "Standard Icon"
+
+msgid "Alternate icon"
+msgstr "Alternatives Icon"
+
+msgid "Social"
+msgstr "Social"
+
+msgid "Tabbed content"
+msgstr "Tabbed content"
+
+msgid "Tab font color active"
+msgstr "Schriftfarbe eines aktiven Tabs"
+
+msgid "Toggler"
+msgstr "Toggler/Schalter"
+
+msgid "Anchor navigation"
+msgstr "Anker Navigation"
+
+msgid "Wrapper background color"
+msgstr "Hintergrundfarbe des Wrappers"
+
+msgid "iqual Barrio Subtheme"
+msgstr "iqual Barrio Subtheme"
+
+msgid "iqual Bootstrap Barrio SubTheme."
+msgstr "iqual Bootstrap Barrio SubTheme."
+
+msgid "Header background top"
+msgstr "Hintergrund Kopfbereich (oben)"
+
+msgid "Header background bottom"
+msgstr "Hintergrund Kopfbereich (unten)"
+
+msgid "Main background"
+msgstr "Haupthintergrund"
+
+msgid "Sidebar background"
+msgstr "Hintergrund der Seitenleiste"
+
+msgid "Sidebar borders"
+msgstr "Rahmen der Seitenleiste"
+
+msgid "Footer background"
+msgstr "Hintergrund Fussbereich"
+
+msgid "Primary button background"
+msgstr "Hintergrundfarbe des primären Buttons"
+
+msgid "Primary button hover"
+msgstr "Primär-Button überfahren"
+
+msgid "Title and slogan"
+msgstr "Titel und Slogan"
+
+msgid "Text color"
+msgstr "Schriftfarbe"
+
+msgid "Link color"
+msgstr "Linkfarbe"
+
+msgid "Blue Lagoon (default)"
+msgstr "Blue Lagoon (default)"
+
+msgid "Firehouse"
+msgstr "Firehouse"
+
+msgid "Ice"
+msgstr "Ice"
+
+msgid "Plum"
+msgstr "Plum"
+
+msgid "Slate"
+msgstr "Slate"
+
+msgid "iqual theme settings"
+msgstr "iqual Theme-Einstellungen"
+
+msgid "Inverted"
+msgstr "Invertiert"
+
+msgid "Inverted Text color"
+msgstr "Invertierte Textfarbe"
