@@ -1,0 +1,63 @@
+<?php
+/**
+ * @file
+ * Update hooks for iq_barrio_helper themes.
+ */
+
+/**
+ * Update 8001: Set newly added styling values
+ */
+
+function iq_barrio_helper_update_8001() {
+
+  // Set newly added styling values
+  $config = \Drupal::configFactory()->getEditable('iq_barrio.settings');
+  $styleSettings = \Drupal::config('iq_barrio.settings')->get();
+
+  $config->set('navi_main_text_transform', 'none');
+  $config->set('navi_main_text_transform', 'none');
+  $config->set('navi_main_border_width_top', '0');
+  $config->set('navi_main_border_width_right', '0');
+  $config->set('navi_main_border_width_bottom', '0');
+  $config->set('navi_main_border_width_left', '0');
+  $config->set('navi_main_border_width_unit', 'px');
+  $config->set('color_page_border_navbar', 'white');
+  $config->set('opacity_page_border_navbar', '0');
+  $config->set('color_page_border_navbar_hover', 'white');
+  $config->set('opacity_page_border_navbar_hover', '0');
+  $config->set('color_page_border_navbar_active', 'white');
+  $config->set('opacity_page_border_navbar_active', '0');
+  $config->set('navi_sub_font_family', $styleSettings['navi_main_font_family']);
+  $config->set('navi_sub_font_weight', $styleSettings['navi_main_font_weight']);
+  $config->set('navi_sub_font_style', $styleSettings['navi_main_font_style']);
+  $config->set('navi_sub_text_transform', 'none');
+  $config->set('navi_sub_font_size', $styleSettings['navi_main_font_size']);
+  $config->set('navi_sub_font_size_unit', $styleSettings['navi_main_font_size_unit']);
+  $config->set('navi_sub_line_height', $styleSettings['navi_main_line_height']);
+  $config->set('navi_sub_border_width_top', '1');
+  $config->set('navi_sub_border_width_right', '1');
+  $config->set('navi_sub_border_width_bottom', '1');
+  $config->set('navi_sub_border_width_left', '1');
+  $config->set('navi_sub_border_width_unit', 'px');
+  $config->set('navi_sub_margin_top', '-1');
+  $config->set('navi_sub_margin_left_right', '0');
+  $config->set('navi_sub_margin_bottom', '0');
+  $config->set('navi_sub_margin_unit', 'px');
+  $config->set('navi_sub_padding_top', '15');
+  $config->set('navi_sub_padding_left_right', '15');
+  $config->set('navi_sub_padding_bottom', '15');
+  $config->set('navi_sub_padding_unit', 'px');
+  $config->set('color_page_border_nav_dropdown', 'grey5');
+  $config->set('opacity_page_border_nav_dropdown', '1');
+  $config->set('color_page_border_nav_dropdown_hover', 'grey5');
+  $config->set('opacity_page_border_nav_dropdown_hover', '1');
+  $config->set('color_page_border_nav_dropdown_active', 'grey5');
+  $config->set('opacity_page_border_nav_dropdown_active', '1');
+
+  $config->save();
+
+  $styles = \Drupal::config('iq_barrio.settings')->get();
+  $service = \Drupal::service('iq_barrio_helper.iq_barrio_service');
+  $service->writeDefinitionsFile($styles, __DIR__ .'/public/themes/custom/iq_barrio/resources/sass/_definitions.scss', __DIR__ .'/public/themes/custom/iq_barrio/resources/sass/_definitions.scss.txt' );
+
+}
