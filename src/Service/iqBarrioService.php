@@ -65,6 +65,14 @@ class iqBarrioService {
       'italic' => t('Italic'),
     ];
 
+    $arr_texttransform = [
+      'none' => t('None'),
+      'uppercase' => t('Uppercase'),
+      'lowercase' => t('Lowercase'),
+      'capitalize' => t('Capitalize'),
+      'full-width' => t('Full width'),
+    ];
+
     $arr_units = [
       'px'  => 'px',
       'em'  => 'em',
@@ -111,7 +119,7 @@ class iqBarrioService {
       '#title' => t('Colors'),
       '#open' => true, // Controls the HTML5 'open' attribute. Defaults to FALSE.
       '#group' => 'iq_theme',
-      '#prefix' => '<div id="iq-barrio-target"></div><div id="iq-barrio-source">' . file_get_contents(DRUPAL_ROOT . '/' . drupal_get_path('theme', 'iq_barrio') . "/resources/sass/backend-styling-previes.css.txt") . '</div>'
+      '#prefix' => '<div id="iq-barrio-target"></div><div id="iq-barrio-source">' . file_get_contents(DRUPAL_ROOT . '/' . drupal_get_path('theme', 'iq_barrio') . "/resources/sass/backend-styling-preview.css.txt") . '</div>'
     ];
 
     $form['color_definitions']['base_definitions'] = [
@@ -802,16 +810,18 @@ class iqBarrioService {
       '#default_value' => $formValues['navi_main_font_style'],
     ];
 
-     $form['navigation']['navi_main']['navi_main_line_height'] = [
-      '#type' => 'textfield',
-      '#title' => t('Line height'),
-      '#default_value' => $formValues['navi_main_line_height'] ? $formValues['navi_main_line_height'] : 2,
+    $form['navigation']['navi_main']['navi_main_text_transform'] = [
+      '#type' => 'select',
+      '#title' => t('Text Transform'),
+      '#default_value' => $formValues['navi_main_text_transform'] ? $formValues['navi_main_text_transform'] : 'none',
+      '#options' => $arr_texttransform,
       '#suffix' => '</div>'
     ];
 
+
     $form['navigation']['navi_main']['navi_main_font_size_holder'] = [
       '#type' => 'container',
-      '#prefix' => '<div class="inline-input-holder separator">',
+      '#prefix' => '<div class="inline-input-holder">',
       '#attributes' => [
         'class' => ['container-inline', 'unit-combo-field', 'separator'],
       ]
@@ -829,8 +839,55 @@ class iqBarrioService {
       '#default_value' => $formValues['navi_main_font_size_unit'] ? $formValues['navi_main_font_size_unit'] : 'rem',
     ];
 
+    $form['navigation']['navi_main']['navi_main_line_height'] = [
+      '#type' => 'textfield',
+      '#title' => t('Line height'),
+      '#default_value' => $formValues['navi_main_line_height'] ? $formValues['navi_main_line_height'] : 2,
+    ];
+
+
+    $form['navigation']['navi_main']['navi_main_border_width_holder'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => ['container-inline', 'unit-combo-field', 'multi-valule', 'separator'],
+      ],
+    ];
+
+    $form['navigation']['navi_main']['navi_main_border_width_holder']['navi_main_border_width_top'] = [
+      '#title' => t('Border (top, right, bottom, left)'),
+      '#type' => 'textfield',
+      '#default_value' => $formValues['navi_main_border_width_top'] ? $formValues['navi_main_border_width_top'] : '0',
+    ];
+
+
+    $form['navigation']['navi_main']['navi_main_border_width_holder']['navi_main_border_width_right'] = [
+      '#type' => 'textfield',
+      '#default_value' => $formValues['navi_main_border_width_right'] ? $formValues['navi_main_border_width_right'] : '0',
+    ];
+
+    $form['navigation']['navi_main']['navi_main_border_width_holder']['navi_main_border_width_bottom'] = [
+      '#type' => 'textfield',
+      '#default_value' => $formValues['navi_main_border_width_bottom'] ? $formValues['navi_main_border_width_bottom'] : '0',
+    ];
+
+    $form['navigation']['navi_main']['navi_main_border_width_holder']['navi_main_border_width_left'] = [
+      '#type' => 'textfield',
+      '#default_value' => $formValues['navi_main_border_width_left'] ? $formValues['navi_main_border_width_left'] : '0',
+    ];
+
+    $form['navigation']['navi_main']['navi_main_border_width_holder']['navi_main_border_width_unit'] = [
+      '#type' => 'textfield',
+      '#type' => 'select',
+      '#options' => $arr_units,
+      '#default_value' => $formValues['navi_main_border_width_unit'] ? $formValues['navi_main_border_width_unit'] : '0',
+      '#suffix' => '</div>'
+    ];
+
+
+
     $form['navigation']['navi_main']['navi_main_margin_holder'] = [
       '#type' => 'container',
+      '#prefix' => '<div class="inline-input-holder separator">',
       '#attributes' => [
         'class' => ['container-inline', 'unit-combo-field', 'multi-valule', 'separator'],
       ],
@@ -844,7 +901,7 @@ class iqBarrioService {
 
     $form['navigation']['navi_main']['navi_main_margin_holder']['navi_main_margin_left_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_main_margin_left_right'] ? $formValues['navi_main_margin_left_right'] : '20',
+      '#default_value' => $formValues['navi_main_margin_left_right'] ? $formValues['navi_main_margin_left_right'] : '0',
     ];
 
     $form['navigation']['navi_main']['navi_main_margin_holder']['navi_main_margin_bottom'] = [
@@ -870,17 +927,17 @@ class iqBarrioService {
     $form['navigation']['navi_main']['navi_main_padding_holder']['navi_main_padding_top'] = [
       '#title' => t('Padding (top, left/right, bottom)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_main_padding_top'] ? $formValues['navi_main_padding_top'] : '5',
+      '#default_value' => $formValues['navi_main_padding_top'] ? $formValues['navi_main_padding_top'] : '0',
     ];
 
     $form['navigation']['navi_main']['navi_main_padding_holder']['navi_main_padding_left_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_main_padding_left_right'] ? $formValues['navi_main_padding_left_right'] : '5',
+      '#default_value' => $formValues['navi_main_padding_left_right'] ? $formValues['navi_main_padding_left_right'] : '0',
     ];
 
     $form['navigation']['navi_main']['navi_main_padding_holder']['navi_main_padding_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_main_padding_bottom'] ? $formValues['navi_main_padding_bottom'] : '5',
+      '#default_value' => $formValues['navi_main_padding_bottom'] ? $formValues['navi_main_padding_bottom'] : '0',
     ];
 
     $form['navigation']['navi_main']['navi_main_padding_holder']['navi_main_padding_unit'] = [
@@ -890,12 +947,30 @@ class iqBarrioService {
       '#default_value' => $formValues['navi_main_padding_unit'],
     ];
 
-    $form['navigation']['navi_main']['color_page_background_navbar'] = [
+    $form['navigation']['navi_main']['color_page_font_navbar'] = [
       '#prefix' => '<div class="inline-input-holder"><strong>Standard</strong>',
       '#type' => 'select',
-      '#title' => t('Background color '),
+      '#title' => t('Font color '),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_background_navbar'] ? $formValues['color_page_background_navbar'] : 'white',
+      '#default_value' => $formValues['color_page_font_navbar'] ? $formValues['color_page_font_navbar'] : 'white',
+    ];
+
+    $form['navigation']['navi_main']['opacity_page_font_navbar'] = [
+      '#type' => 'textfield',
+      '#title' => t('Opacity'),
+      '#attributes' => [
+        'class' => ['separator'],
+      ],
+      '#default_value' => $formValues['opacity_page_font_navbar'],
+      '#suffix' => '</div>'
+    ];
+
+    $form['navigation']['navi_main']['color_page_background_navbar'] = [
+      '#prefix' => '<div class="inline-input-holder">',
+      '#type' => 'select',
+      '#title' => t('Background color'),
+      '#options' => $arr_colors,
+      '#default_value' => $formValues['color_page_background_navbar'] ? $formValues['color_page_background_navbar'] : 'grey3',
     ];
 
     $form['navigation']['navi_main']['opacity_page_background_navbar'] = [
@@ -907,42 +982,32 @@ class iqBarrioService {
       '#default_value' => $formValues['opacity_page_background_navbar'],
     ];
 
-    $form['navigation']['navi_main']['color_page_font_navbar'] = [
+
+
+
+    $form['navigation']['navi_main']['color_page_border_navbar'] = [
       '#type' => 'select',
-      '#title' => t('Font color '),
+      '#title' => t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_navbar'] ? $formValues['color_page_font_navbar'] : 'grey3',
+      '#default_value' => $formValues['color_page_border_navbar'] ? $formValues['color_page_border_navbar'] : 'grey3',
     ];
 
-    $form['navigation']['navi_main']['opacity_page_font_navbar'] = [
+    $form['navigation']['navi_main']['opacity_page_border_navbar'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_font_navbar'],
+      '#default_value' => $formValues['opacity_page_border_navbar'],
       '#suffix' => '</div>'
     ];
 
-    $form['navigation']['navi_main']['color_page_background_navbar_hover'] = [
-      '#prefix' => '<div class="inline-input-holder"><strong>Navbar hover</strong>',
-      '#type' => 'select',
-      '#title' => t('Background color'),
-      '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_background_navbar_hover'] ? $formValues['color_page_background_navbar_hover'] : 'primary',
-    ];
 
-    $form['navigation']['navi_main']['opacity_page_background_navbar_hover'] = [
-      '#type' => 'textfield',
-      '#attributes' => [
-        'class' => ['separator'],
-      ],
-      '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_background_navbar_hover'],
-    ];
+
 
     $form['navigation']['navi_main']['color_page_font_navbar_hover'] = [
+      '#prefix' => '<div class="inline-input-holder"><strong>Navbar hover</strong>',
       '#type' => 'select',
       '#title' => t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_navbar_hover'] ? $formValues['color_page_font_navbar_hover'] : 'white',
+      '#default_value' => $formValues['color_page_font_navbar_hover'] ? $formValues['color_page_font_navbar_hover'] : 'primary',
     ];
 
     $form['navigation']['navi_main']['opacity_page_font_navbar_hover'] = [
@@ -952,12 +1017,67 @@ class iqBarrioService {
       '#suffix' => '</div>'
     ];
 
-    $form['navigation']['navi_main']['color_page_background_navbar_active'] = [
-      '#prefix' => '<div class="inline-input-holder separator"><strong>Navbar active</strong>',
+    $form['navigation']['navi_main']['color_page_background_navbar_hover'] = [
+      '#prefix' => '<div class="inline-input-holder">',
       '#type' => 'select',
       '#title' => t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_background_navbar_active'] ? $formValues['color_page_background_navbar_active'] : 'primary',
+      '#default_value' => $formValues['color_page_background_navbar_hover'] ? $formValues['color_page_background_navbar_hover'] : 'white',
+    ];
+
+
+    $form['navigation']['navi_main']['opacity_page_background_navbar_hover'] = [
+      '#type' => 'textfield',
+      '#title' => t('Opacity'),
+      '#attributes' => [
+        'class' => ['separator'],
+      ],
+      '#default_value' => $formValues['opacity_page_background_navbar_hover'],
+    ];
+
+    $form['navigation']['navi_main']['color_page_border_navbar_hover'] = [
+      '#type' => 'select',
+      '#title' => t('Border color'),
+      '#options' => $arr_colors,
+      '#default_value' => $formValues['color_page_border_navbar_hover'] ? $formValues['color_page_border_navbar_hover'] : 'white',
+    ];
+
+    $form['navigation']['navi_main']['opacity_page_border_navbar_hover'] = [
+      '#type' => 'textfield',
+      '#title' => t('Opacity'),
+      '#default_value' => $formValues['opacity_page_border_navbar_hover'],
+      '#suffix' => '</div>'
+    ];
+
+
+
+
+    $form['navigation']['navi_main']['color_page_font_navbar_active'] = [
+      '#prefix' => '<div class="inline-input-holder"><strong>Navbar active</strong>',
+      '#type' => 'select',
+      '#title' => t('Font color'),
+      '#options' => $arr_colors,
+      '#default_value' => $formValues['color_page_font_navbar_active'] ? $formValues['color_page_font_navbar_active'] : 'primary',
+    ];
+
+
+   $form['navigation']['navi_main']['opacity_page_font_navbar_active'] = [
+      '#type' => 'textfield',
+      '#title' => t('Opacity'),
+      '#attributes' => [
+        'class' => ['separator'],
+      ],
+      '#default_value' => $formValues['opacity_page_font_navbar_active'],
+      '#suffix' => '</div>'
+    ];
+
+
+    $form['navigation']['navi_main']['color_page_background_navbar_active'] = [
+      '#prefix' => '<div class="inline-input-holder separator">',
+      '#type' => 'select',
+      '#title' => t('Background color'),
+      '#options' => $arr_colors,
+      '#default_value' => $formValues['color_page_background_navbar_active'] ? $formValues['color_page_background_navbar_active'] : 'black',
     ];
 
     $form['navigation']['navi_main']['opacity_page_background_navbar_active'] = [
@@ -969,22 +1089,216 @@ class iqBarrioService {
       '#default_value' => $formValues['opacity_page_background_navbar_active'],
     ];
 
-    $form['navigation']['navi_main']['color_page_font_navbar_active'] = [
+
+
+
+    $form['navigation']['navi_main']['color_page_border_navbar_active'] = [
+      '#type' => 'select',
+      '#title' => t('Border color'),
+      '#options' => $arr_colors,
+      '#default_value' => $formValues['color_page_border_navbar_active'] ? $formValues['color_page_border_navbar_active'] : 'black',
+    ];
+
+    $form['navigation']['navi_main']['opacity_page_border_navbar_active'] = [
+      '#type' => 'textfield',
+      '#title' => t('Opacity'),
+      '#default_value' => $formValues['opacity_page_border_navbar_active'],
+      '#suffix' => '</div>'
+    ];
+
+
+
+
+
+
+
+    $form['navigation']['navi_main']['navi_sub_font_family'] = [
+      '#prefix' => '<div class="inline-input-holder"><strong>Dropdown styling</strong>',
+      '#type' => 'select',
+      '#title' => t('Font family'),
+      '#options' => $arr_fonts,
+      '#default_value' => $formValues['navi_sub_font_family'],
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_font_weight'] = [
+      '#type' => 'select',
+      '#options' => $arr_fontweights,
+      '#title' => t('Font weight'),
+      '#default_value' => $formValues['navi_sub_font_weight'],
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_font_style'] = [
+      '#type' => 'select',
+      '#options' => $arr_fontstyles,
+      '#title' => t('Font style'),
+      '#default_value' => $formValues['navi_sub_font_style'],
+    ];
+
+     $form['navigation']['navi_main']['navi_sub_text_transform'] = [
+      '#type' => 'select',
+      '#title' => t('Text Transform'),
+      '#default_value' => $formValues['navi_sub_text_transform'] ? $formValues['navi_sub_text_transform'] : 'none',
+      '#options' => $arr_texttransform,
+      '#suffix' => '</div>'
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_font_size_holder'] = [
+      '#type' => 'container',
+      '#prefix' => '<div class="inline-input-holder">',
+      '#attributes' => [
+        'class' => ['container-inline', 'unit-combo-field', 'separator'],
+      ]
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_font_size_holder']['navi_sub_font_size'] = [
+      '#type' => 'textfield',
+      '#title' => t('Font size'),
+      '#default_value' => $formValues['navi_sub_font_size'] ? $formValues['navi_sub_font_size'] : 1,
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_font_size_holder']['navi_sub_font_size_unit'] = [
+      '#type' => 'select',
+      '#options' => $arr_units,
+      '#default_value' => $formValues['navi_sub_font_size_unit'] ? $formValues['navi_sub_font_size_unit'] : 'rem',
+    ];
+
+
+     $form['navigation']['navi_main']['navi_sub_line_height'] = [
+      '#type' => 'textfield',
+      '#title' => t('Line height'),
+      '#default_value' => $formValues['navi_sub_line_height'] ? $formValues['navi_sub_line_height'] : 2,
+    ];
+
+
+
+    $form['navigation']['navi_main']['navi_sub_border_width_holder'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => ['container-inline', 'unit-combo-field', 'multi-valule', 'separator'],
+      ],
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_border_width_holder']['navi_sub_border_width_top'] = [
+      '#title' => t('Border (top, right, bottom, left)'),
+      '#type' => 'textfield',
+      '#default_value' => $formValues['navi_sub_border_width_top'] ? $formValues['navi_sub_border_width_top'] : '0',
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_border_width_holder']['navi_sub_border_width_right'] = [
+      '#type' => 'textfield',
+      '#default_value' => $formValues['navi_sub_border_width_right'] ? $formValues['navi_sub_border_width_right'] : '0',
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_border_width_holder']['navi_sub_border_width_bottom'] = [
+      '#type' => 'textfield',
+      '#default_value' => $formValues['navi_sub_border_width_bottom'] ? $formValues['navi_sub_border_width_bottom'] : '0',
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_border_width_holder']['navi_sub_border_width_left'] = [
+      '#type' => 'textfield',
+      '#default_value' => $formValues['navi_sub_border_width_left'] ? $formValues['navi_sub_border_width_left'] : '0',
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_border_width_holder']['navi_sub_border_width_unit'] = [
+      '#type' => 'textfield',
+      '#type' => 'select',
+      '#options' => $arr_units,
+      '#default_value' => $formValues['navi_sub_border_width_unit'] ? $formValues['navi_sub_border_width_unit'] : '0',
+      '#suffix' => '</div>'
+    ];
+
+
+
+
+    $form['navigation']['navi_main']['navi_sub_margin_holder'] = [
+      '#type' => 'container',
+      '#prefix' => '<div class="inline-input-holder separator">',
+      '#attributes' => [
+        'class' => ['container-inline', 'unit-combo-field', 'multi-valule', 'separator'],
+      ],
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_margin_holder']['navi_sub_margin_top'] = [
+      '#title' => t('Margin (top, left/right, bottom)'),
+      '#type' => 'textfield',
+      '#default_value' => $formValues['navi_sub_margin_top'] ? $formValues['navi_sub_margin_top'] : '0',
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_margin_holder']['navi_sub_margin_left_right'] = [
+      '#type' => 'textfield',
+      '#default_value' => $formValues['navi_sub_margin_left_right'] ? $formValues['navi_sub_margin_left_right'] : '0',
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_margin_holder']['navi_sub_margin_bottom'] = [
+      '#type' => 'textfield',
+      '#default_value' => $formValues['navi_sub_margin_bottom'] ? $formValues['navi_sub_margin_bottom'] : '0',
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_margin_holder']['navi_sub_margin_unit'] = [
+      '#type' => 'textfield',
+      '#type' => 'select',
+      '#options' => $arr_units,
+      '#default_value' => $formValues['navi_sub_margin_unit'],
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_padding_holder'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => ['container-inline', 'unit-combo-field', 'multi-valule'],
+      ],
+      '#suffix' => '</div>'
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_padding_holder']['navi_sub_padding_top'] = [
+      '#title' => t('Padding (top, left/right, bottom)'),
+      '#type' => 'textfield',
+      '#default_value' => $formValues['navi_sub_padding_top'] ? $formValues['navi_sub_padding_top'] : '0',
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_padding_holder']['navi_sub_padding_left_right'] = [
+      '#type' => 'textfield',
+      '#default_value' => $formValues['navi_sub_padding_left_right'] ? $formValues['navi_sub_padding_left_right'] : '0',
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_padding_holder']['navi_sub_padding_bottom'] = [
+      '#type' => 'textfield',
+      '#default_value' => $formValues['navi_sub_padding_bottom'] ? $formValues['navi_sub_padding_bottom'] : '0',
+    ];
+
+    $form['navigation']['navi_main']['navi_sub_padding_holder']['navi_sub_padding_unit'] = [
+      '#type' => 'textfield',
+      '#type' => 'select',
+      '#options' => $arr_units,
+      '#default_value' => $formValues['navi_sub_padding_unit'],
+    ];
+
+
+
+
+
+
+
+
+    $form['navigation']['navi_main']['color_page_font_nav_dropdown'] = [
+      '#prefix' => '<div class="inline-input-holder"><strong>Standard</strong>',
       '#type' => 'select',
       '#title' => t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_navbar_active'] ? $formValues['color_page_font_navbar_active'] : 'black',
+      '#default_value' => $formValues['color_page_font_nav_dropdown'] ? $formValues['color_page_font_nav_dropdown'] : 'grey3',
     ];
 
-    $form['navigation']['navi_main']['opacity_page_font_navbar_active'] = [
+    $form['navigation']['navi_main']['opacity_page_font_nav_dropdown'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_font_navbar_active'],
+      '#attributes' => [
+        'class' => ['separator'],
+      ],
+      '#default_value' => $formValues['opacity_page_font_nav_dropdown'],
       '#suffix' => '</div>'
     ];
 
     $form['navigation']['navi_main']['color_page_background_nav_dropdown'] = [
-      '#prefix' => '<div class="inline-input-holder"><strong>Dropdown standard</strong>',
+      '#prefix' => '<div class="inline-input-holder">',
       '#type' => 'select',
       '#title' => t('Background'),
       '#options' => $arr_colors,
@@ -1000,27 +1314,45 @@ class iqBarrioService {
       '#default_value' => $formValues['opacity_page_background_nav_dropdown'],
     ];
 
-    $form['navigation']['navi_main']['color_page_font_nav_dropdown'] = [
+    $form['navigation']['navi_main']['color_page_border_nav_dropdown'] = [
       '#type' => 'select',
-      '#title' => t('Font color'),
+      '#title' => t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_nav_dropdown'] ? $formValues['color_page_font_nav_dropdown'] : 'grey3',
+      '#default_value' => $formValues['color_page_border_nav_dropdown'] ? $formValues['color_page_border_nav_dropdown'] : 'primary',
     ];
 
-    $form['navigation']['navi_main']['opacity_page_font_nav_dropdown'] = [
+    $form['navigation']['navi_main']['opacity_page_border_nav_dropdown'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_font_nav_dropdown'],
+      '#default_value' => $formValues['opacity_page_border_nav_dropdown'],
+      '#suffix' => '</div>'
+    ];
+
+    $form['navigation']['navi_main']['color_page_font_nav_dropdown_hover'] = [
+      '#prefix' => '<div class="inline-input-holder"><strong>Hover</strong>',
+      '#type' => 'select',
+      '#title' => t('Font color'),
+      '#default_value' => $formValues['color_page_font_nav_dropdown_hover'] ? $formValues['color_page_font_nav_dropdown_hover'] : 'grey3',
+      '#options' => $arr_colors,
+      '#suffix' => '<div class="line-break"></div>'
+    ];
+
+    $form['navigation']['navi_main']['opacity_page_font_nav_dropdown_hover'] = [
+      '#type' => 'textfield',
+      '#attributes' => [
+        'class' => ['separator'],
+      ],
+      '#title' => t('Opacity'),
+      '#default_value' => $formValues['opacity_page_font_nav_dropdown_hover'],
       '#suffix' => '</div>'
     ];
 
     $form['navigation']['navi_main']['color_page_background_nav_dropdown_hover'] = [
-      '#prefix' => '<div class="inline-input-holder"><strong>Dropdown hover</strong>',
+      '#prefix' => '<div class="inline-input-holder">',
       '#type' => 'select',
-      '#title' => t('Background color'),
       '#options' => $arr_colors,
+      '#title' => t('Background color'),
       '#default_value' => $formValues['color_page_background_nav_dropdown_hover'] ? $formValues['color_page_background_nav_dropdown_hover'] : 'primary',
-      '#suffix' => '<div class="line-break"></div>'
     ];
 
     $form['navigation']['navi_main']['opacity_page_background_nav_dropdown_hover'] = [
@@ -1032,51 +1364,75 @@ class iqBarrioService {
       '#default_value' => $formValues['opacity_page_background_nav_dropdown_hover'],
     ];
 
-    $form['navigation']['navi_main']['color_page_font_nav_dropdown_hover'] = [
+
+    $form['navigation']['navi_main']['color_page_border_nav_dropdown_hover'] = [
       '#type' => 'select',
-      '#title' => t('Font color'),
+      '#title' => t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_nav_dropdown_hover'] ? $formValues['color_page_font_nav_dropdown_hover'] : 'grey3',
+      '#default_value' => $formValues['color_page_border_nav_dropdown_hover'] ? $formValues['color_page_border_nav_dropdown_hover'] : 'grey3',
     ];
 
-    $form['navigation']['navi_main']['opacity_page_font_nav_dropdown_hover'] = [
+    $form['navigation']['navi_main']['opacity_page_border_nav_dropdown_hover'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_font_nav_dropdown_hover'],
+      '#default_value' => $formValues['opacity_page_border_nav_dropdown_hover'],
       '#suffix' => '</div>'
     ];
 
-    $form['navigation']['navi_main']['color_page_background_nav_dropdown_active'] = [
-      '#prefix' => '<div class="inline-input-holder"><strong>Dropdown active</strong>',
+
+
+
+    $form['navigation']['navi_main']['color_page_font_nav_dropdown_active'] = [
+      '#prefix' => '<div class="inline-input-holder"><strong>Active</strong>',
       '#type' => 'select',
-      '#title' => t('Background color'),
+      '#title' => t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_background_nav_dropdown_active'] ? $formValues['color_page_background_nav_dropdown_active'] : 'primary',
+      '#default_value' => $formValues['color_page_font_nav_dropdown_active'] ? $formValues['color_page_font_nav_dropdown_active'] : 'primary',
       '#suffix' => '<div class="line-break"></div>'
     ];
 
-    $form['navigation']['navi_main']['opacity_page_background_nav_dropdown_active'] = [
+    $form['navigation']['navi_main']['opacity_page_font_nav_dropdown_active'] = [
       '#type' => 'textfield',
       '#attributes' => [
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_background_nav_dropdown_active'],
-    ];
-
-    $form['navigation']['navi_main']['color_page_font_nav_dropdown_active'] = [
-      '#type' => 'select',
-      '#title' => t('Font color'),
-      '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_nav_dropdown_active'] ? $formValues['color_page_font_nav_dropdown_active'] : 'grey3',
-    ];
-
-    $form['navigation']['navi_main']['opacity_page_font_nav_dropdown_active'] = [
-      '#type' => 'textfield',
-      '#title' => t('Opacity'),
       '#default_value' => $formValues['opacity_page_font_nav_dropdown_active'],
       '#suffix' => '</div>'
     ];
+
+    $form['navigation']['navi_main']['color_page_background_nav_dropdown_active'] = [
+      '#prefix' => '<div class="inline-input-holder">',
+      '#type' => 'select',
+      '#title' => t('Background color'),
+      '#options' => $arr_colors,
+      '#default_value' => $formValues['color_page_background_nav_dropdown_active'] ? $formValues['color_page_background_nav_dropdown_active'] : 'grey3',
+    ];
+
+    $form['navigation']['navi_main']['opacity_page_background_nav_dropdown_active'] = [
+      '#type' => 'textfield',
+      '#title' => t('Opacity'),
+      '#attributes' => [
+        'class' => ['separator'],
+      ],
+      '#default_value' => $formValues['opacity_page_background_nav_dropdown_active'],
+    ];
+
+    $form['navigation']['navi_main']['color_page_border_nav_dropdown_active'] = [
+      '#type' => 'select',
+      '#title' => t('Border color'),
+      '#options' => $arr_colors,
+      '#default_value' => $formValues['color_page_border_nav_dropdown_active'] ? $formValues['color_page_border_nav_dropdown_active'] : 'grey3',
+    ];
+
+    $form['navigation']['navi_main']['opacity_page_border_nav_dropdown_active'] = [
+      '#type' => 'textfield',
+      '#title' => t('Opacity'),
+      '#default_value' => $formValues['opacity_page_border_nav_dropdown_active'],
+      '#suffix' => '</div>'
+    ];
+
+
 
     $form['navigation']['navi_main']['navi_main_title'] = [
       '#prefix' => '</div><div class="styling-preview">',
