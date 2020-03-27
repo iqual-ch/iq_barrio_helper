@@ -220,7 +220,7 @@ class iqBarrioService {
     $form['color_definitions']['section_definitions']['opacity_color_page_background'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_color_page_background'],
+      '#default_value' => isset($formValues['opacity_color_page_background']) ? $formValues['opacity_color_page_background'] : '1' ,
       '#suffix' => '</div>'
     ];
 
@@ -235,7 +235,7 @@ class iqBarrioService {
     $form['color_definitions']['section_definitions']['opacity_color_page_background_meta_header'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_color_page_background_meta_header'],
+      '#default_value' => isset($formValues['opacity_color_page_background_meta_header']) ? $formValues['opacity_color_page_background_meta_header']: '1',
       '#suffix' => '</div>'
     ];
 
@@ -250,7 +250,7 @@ class iqBarrioService {
     $form['color_definitions']['section_definitions']['opacity_color_page_font_meta_header'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_color_page_font_meta_header'],
+      '#default_value' => isset($formValues['opacity_color_page_font_meta_header']) ? $formValues['opacity_color_page_font_meta_header']: '1',
       '#suffix' => '</div>'
     ];
 
@@ -265,7 +265,7 @@ class iqBarrioService {
     $form['color_definitions']['section_definitions']['opacity_color_page_background_header'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_color_page_background_header'],
+      '#default_value' => isset($formValues['opacity_color_page_background_header']) ? $formValues['opacity_color_page_background_header']: '1',
       '#suffix' => '</div>'
     ];
 
@@ -280,7 +280,7 @@ class iqBarrioService {
     $form['color_definitions']['section_definitions']['opacity_color_page_font_header'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_color_page_font_header'],
+      '#default_value' => isset($formValues['opacity_color_page_font_header']) ? $formValues['opacity_color_page_font_header']: '1',
       '#suffix' => '</div>'
     ];
 
@@ -295,7 +295,7 @@ class iqBarrioService {
     $form['color_definitions']['section_definitions']['opacity_color_page_background_footer'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_color_page_background_footer'],
+      '#default_value' => isset($formValues['opacity_color_page_background_footer']) ? $formValues['opacity_color_page_background_footer']: '1',
       '#suffix' => '</div>'
     ];
 
@@ -311,7 +311,7 @@ class iqBarrioService {
     $form['color_definitions']['section_definitions']['opacity_color_page_font_footer'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_color_page_font_footer'],
+      '#default_value' => isset($formValues['opacity_color_page_font_footer']) ? $formValues['opacity_color_page_font_footer']: '1',
       '#suffix' => '</div>'
     ];
 
@@ -326,7 +326,7 @@ class iqBarrioService {
     $form['color_definitions']['section_definitions']['opacity_color_page_background_elements'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_color_page_background_elements'],
+      '#default_value' => isset($formValues['opacity_color_page_background_elements']) ? $formValues['opacity_color_page_background_elements']: '1',
       '#suffix' => '</div></div><div class="styling-preview page-layout"><div id="color-definitions-preview-page"><div id="color-definitions-preview-meta-header">Meta header</div><div id="color-definitions-preview-header">Header</div><div id="color-definitions-preview-content">Content</div><div id="color-definitions-preview-footer">Footer</div></div></div></div>'
     ];
 
@@ -388,7 +388,7 @@ class iqBarrioService {
       $form['typography']['headings'][$tag . '_opacity'] = [
         '#type' => 'textfield',
         '#title' => t('Opacity'),
-        '#default_value' => $opacity_value,
+        '#default_value' => isset($opacity_value) ? $opacity_value : '1',
       ];
 
 
@@ -403,7 +403,7 @@ class iqBarrioService {
       $form['typography']['headings'][$tag . '_opacity_inverted'] = [
         '#type' => 'textfield',
         '#title' => t('Opacity'),
-        '#default_value' => $opacity_inverted_value,
+        '#default_value' => isset($opacity_inverted_value) ? $opacity_inverted_value : '1',
         '#suffix' => '</div>'
       ];
 
@@ -549,7 +549,7 @@ class iqBarrioService {
       $form['typography']['text_elements'][$tag . '_opacity'] = [
         '#type' => 'textfield',
         '#title' => t('Opacity'),
-        '#default_value' => $opacity_value,
+        '#default_value' => isset($opacity_value) ? $opacity_value : '1',
       ];
 
       $form['typography']['text_elements'][$tag . '_color_inverted'] = [
@@ -562,7 +562,7 @@ class iqBarrioService {
       $form['typography']['text_elements'][$tag . '_opacity_inverted'] = [
         '#type' => 'textfield',
         '#title' => t('Opacity'),
-        '#default_value' => $opacity_inverted_value,
+        '#default_value' => isset($opacity_inverted_value) ? $opacity_inverted_value : '1',
         '#suffix' => '</div>'
       ];
 
@@ -695,7 +695,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $link_opacity_value,
+      '#default_value' => isset($link_opacity_value) ? $link_opacity_value : '1',
     ];
 
     $form['typography']['links']['link_color_inverted'] = [
@@ -708,7 +708,7 @@ class iqBarrioService {
     $form['typography']['links']['link_opacity_inverted'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $link_opacity_inverted_value,
+      '#default_value' => isset($link_opacity_inverted_value) ? $link_opacity_inverted_value : '1',
     ];
 
     $form['typography']['links']['link_text_decoration'] = [
@@ -738,7 +738,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $link_opacity_hover_value,
+      '#default_value' => isset($link_opacity_hover_value) ? $link_opacity_hover_value : '1',
     ];
 
     $form['typography']['links']['link_color_hover_inverted'] = [
@@ -751,7 +751,7 @@ class iqBarrioService {
     $form['typography']['links']['link_opacity_hover_inverted'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $link_opacity_hover_inverted_value,
+      '#default_value' => isset($link_opacity_hover_inverted_value) ? $link_opacity_hover_inverted_value : '1',
     ];
 
     $form['typography']['links']['link_text_decoration_hover'] = [
@@ -960,7 +960,7 @@ class iqBarrioService {
       '#attributes' => [
         'class' => ['separator'],
       ],
-      '#default_value' => $formValues['opacity_page_font_navbar'],
+      '#default_value' => isset($formValues['opacity_page_font_navbar']) ? $formValues['opacity_page_font_navbar'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -978,7 +978,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_background_navbar'],
+      '#default_value' => isset($formValues['opacity_page_background_navbar']) ? $formValues['opacity_page_background_navbar'] : '1',
     ];
 
 
@@ -994,7 +994,7 @@ class iqBarrioService {
     $form['navigation']['navi_main']['opacity_page_border_navbar'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_border_navbar'],
+      '#default_value' => isset($formValues['opacity_page_border_navbar']) ? $formValues['opacity_page_border_navbar'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1012,7 +1012,7 @@ class iqBarrioService {
     $form['navigation']['navi_main']['opacity_page_font_navbar_hover'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_font_navbar_hover'],
+      '#default_value' => isset($formValues['opacity_page_font_navbar_hover']) ? $formValues['opacity_page_font_navbar_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1031,7 +1031,7 @@ class iqBarrioService {
       '#attributes' => [
         'class' => ['separator'],
       ],
-      '#default_value' => $formValues['opacity_page_background_navbar_hover'],
+      '#default_value' => isset($formValues['opacity_page_background_navbar_hover']) ? $formValues['opacity_page_background_navbar_hover'] : '1',
     ];
 
     $form['navigation']['navi_main']['color_page_border_navbar_hover'] = [
@@ -1044,7 +1044,7 @@ class iqBarrioService {
     $form['navigation']['navi_main']['opacity_page_border_navbar_hover'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_border_navbar_hover'],
+      '#default_value' => isset($formValues['opacity_page_border_navbar_hover']) ? $formValues['opacity_page_border_navbar_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1066,7 +1066,7 @@ class iqBarrioService {
       '#attributes' => [
         'class' => ['separator'],
       ],
-      '#default_value' => $formValues['opacity_page_font_navbar_active'],
+      '#default_value' => isset($formValues['opacity_page_font_navbar_active']) ? $formValues['opacity_page_font_navbar_active'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1085,7 +1085,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_background_navbar_active'],
+      '#default_value' => isset($formValues['opacity_page_background_navbar_active']) ? $formValues['opacity_page_background_navbar_active'] : '1',
     ];
 
 
@@ -1101,7 +1101,7 @@ class iqBarrioService {
     $form['navigation']['navi_main']['opacity_page_border_navbar_active'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_border_navbar_active'],
+      '#default_value' => isset($formValues['opacity_page_border_navbar_active']) ? $formValues['opacity_page_border_navbar_active'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1292,7 +1292,7 @@ class iqBarrioService {
       '#attributes' => [
         'class' => ['separator'],
       ],
-      '#default_value' => $formValues['opacity_page_font_nav_dropdown'],
+      '#default_value' => isset($formValues['opacity_page_font_nav_dropdown']) ? $formValues['opacity_page_font_nav_dropdown'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1310,7 +1310,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_background_nav_dropdown'],
+      '#default_value' => isset($formValues['opacity_page_background_nav_dropdown']) ? $formValues['opacity_page_background_nav_dropdown'] : '1',
     ];
 
     $form['navigation']['navi_main']['color_page_border_nav_dropdown'] = [
@@ -1323,7 +1323,7 @@ class iqBarrioService {
     $form['navigation']['navi_main']['opacity_page_border_nav_dropdown'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_border_nav_dropdown'],
+      '#default_value' => isset($formValues['opacity_page_border_nav_dropdown']) ? $formValues['opacity_page_border_nav_dropdown'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1342,7 +1342,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_font_nav_dropdown_hover'],
+      '#default_value' => isset($formValues['opacity_page_font_nav_dropdown_hover']) ? $formValues['opacity_page_font_nav_dropdown_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1360,7 +1360,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_background_nav_dropdown_hover'],
+      '#default_value' => isset($formValues['opacity_page_background_nav_dropdown_hover']) ? $formValues['opacity_page_background_nav_dropdown_hover'] : '1',
     ];
 
 
@@ -1374,7 +1374,7 @@ class iqBarrioService {
     $form['navigation']['navi_main']['opacity_page_border_nav_dropdown_hover'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_border_nav_dropdown_hover'],
+      '#default_value' => isset($formValues['opacity_page_border_nav_dropdown_hover']) ? $formValues['opacity_page_border_nav_dropdown_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1396,7 +1396,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_font_nav_dropdown_active'],
+      '#default_value' => isset($formValues['opacity_page_font_nav_dropdown_active']) ? $formValues['opacity_page_font_nav_dropdown_active'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1414,7 +1414,7 @@ class iqBarrioService {
       '#attributes' => [
         'class' => ['separator'],
       ],
-      '#default_value' => $formValues['opacity_page_background_nav_dropdown_active'],
+      '#default_value' => isset($formValues['opacity_page_background_nav_dropdown_active']) ? $formValues['opacity_page_background_nav_dropdown_active'] : '1',
     ];
 
     $form['navigation']['navi_main']['color_page_border_nav_dropdown_active'] = [
@@ -1427,7 +1427,7 @@ class iqBarrioService {
     $form['navigation']['navi_main']['opacity_page_border_nav_dropdown_active'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_border_nav_dropdown_active'],
+      '#default_value' => isset($formValues['opacity_page_border_nav_dropdown_active']) ? $formValues['opacity_page_border_nav_dropdown_active'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1483,7 +1483,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_background_nav_mobile'],
+      '#default_value' => isset($formValues['opacity_page_background_nav_mobile']) ? $formValues['opacity_page_background_nav_mobile'] : '1',
     ];
 
     $form['navigation']['navi_mobile']['color_page_font_nav_mobile'] = [
@@ -1496,7 +1496,7 @@ class iqBarrioService {
     $form['navigation']['navi_mobile']['opacity_page_font_nav_mobile'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_font_nav_mobile'],
+      '#default_value' => isset($formValues['opacity_page_font_nav_mobile']) ? $formValues['opacity_page_font_nav_mobile'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1512,7 +1512,7 @@ class iqBarrioService {
     $form['navigation']['navi_mobile']['opacity_page_font_nav_mobile_hover'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_font_nav_mobile_hover'],
+      '#default_value' => isset($formValues['opacity_page_font_nav_mobile_hover']) ? $formValues['opacity_page_font_nav_mobile_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1539,7 +1539,7 @@ class iqBarrioService {
     $form['navigation']['navi_sidebar']['opacity_page_font_nav_sidebar'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_font_nav_sidebar'],
+      '#default_value' => isset($formValues['opacity_page_font_nav_sidebar']) ? $formValues['opacity_page_font_nav_sidebar'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1554,7 +1554,7 @@ class iqBarrioService {
     $form['navigation']['navi_sidebar']['opacity_page_font_nav_sidebar_hover'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_page_font_nav_sidebar_hover'],
+      '#default_value' => isset($formValues['opacity_page_font_nav_sidebar_hover']) ? $formValues['opacity_page_font_nav_sidebar_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1628,7 +1628,7 @@ class iqBarrioService {
     $form['decorations']['border']['border_opacity'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['border_opacity'],
+      '#default_value' => isset($formValues['border_opacity']) ? $formValues['border_opacity'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1939,13 +1939,8 @@ class iqBarrioService {
 
     $form['buttons']['default']['standard']['button_font_opacity_standard'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_font_opacity_standard'],
+      '#default_value' => isset($formValues['button_font_opacity_standard']) ? $formValues['button_font_opacity_standard'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1961,13 +1956,10 @@ class iqBarrioService {
     $form['buttons']['default']['standard']['button_background_opacity_standard'] = [
       '#type' => 'textfield',
       '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_background_opacity_standard'],
+      '#default_value' => isset($formValues['button_background_opacity_standard']) ? $formValues['button_background_opacity_standard'] : '1',
     ];
 
     $form['buttons']['default']['standard']['button_border_color_standard'] = [
@@ -1979,13 +1971,8 @@ class iqBarrioService {
 
     $form['buttons']['default']['standard']['button_border_opacity_standard'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_border_opacity_standard'],
+      '#default_value' => isset($formValues['button_border_opacity_standard']) ? $formValues['button_border_opacity_standard'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -1999,13 +1986,8 @@ class iqBarrioService {
 
     $form['buttons']['default']['standard']['button_font_opacity_hover'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_font_opacity_hover'],
+      '#default_value' => isset($formValues['button_font_opacity_hover']) ? $formValues['button_font_opacity_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2020,13 +2002,10 @@ class iqBarrioService {
     $form['buttons']['default']['standard']['button_background_opacity_hover'] = [
       '#type' => 'textfield',
       '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_background_opacity_hover'],
+      '#default_value' => isset($formValues['button_background_opacity_hover']) ? $formValues['button_background_opacity_hover'] : '1',
     ];
 
     $form['buttons']['default']['standard']['button_border_color_hover'] = [
@@ -2038,13 +2017,8 @@ class iqBarrioService {
 
     $form['buttons']['default']['standard']['button_border_opacity_hover'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_border_opacity_hover'],
+      '#default_value' => isset($formValues['button_border_opacity_hover']) ? $formValues['button_border_opacity_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2058,13 +2032,8 @@ class iqBarrioService {
 
     $form['buttons']['default']['standard']['button_font_opacity_active'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_font_opacity_active'],
+      '#default_value' => isset($formValues['button_font_opacity_active']) ? $formValues['button_font_opacity_active'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2079,13 +2048,10 @@ class iqBarrioService {
     $form['buttons']['default']['standard']['button_background_opacity_active'] = [
       '#type' => 'textfield',
       '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_background_opacity_active'],
+      '#default_value' => isset($formValues['button_background_opacity_active']) ? $formValues['button_background_opacity_active'] : '1',
     ];
 
     $form['buttons']['default']['standard']['button_border_color_active'] = [
@@ -2097,19 +2063,10 @@ class iqBarrioService {
 
     $form['buttons']['default']['standard']['button_border_opacity_active'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_border_opacity_active'],
+      '#default_value' => isset($formValues['button_border_opacity_active']) ? $formValues['button_border_opacity_active'] : '1',
       '#suffix' => '</div>'
     ];
-
-
-
-
 
     $form['buttons']['default']['inverted'] = [
       '#type' => 'details',
@@ -2126,13 +2083,8 @@ class iqBarrioService {
 
     $form['buttons']['default']['inverted']['button_font_opacity_inverted'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_font_opacity_inverted'],
+      '#default_value' => isset($formValues['button_font_opacity_inverted']) ? $formValues['button_font_opacity_inverted'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2148,13 +2100,10 @@ class iqBarrioService {
     $form['buttons']['default']['inverted']['button_background_opacity_inverted'] = [
       '#type' => 'textfield',
       '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_background_opacity_inverted'],
+      '#default_value' => isset($formValues['button_background_opacity_inverted']) ? $formValues['button_background_opacity_inverted'] : '1',
     ];
 
     $form['buttons']['default']['inverted']['button_border_color_inverted'] = [
@@ -2166,13 +2115,8 @@ class iqBarrioService {
 
     $form['buttons']['default']['inverted']['button_border_opacity_inverted'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_border_opacity_inverted'],
+      '#default_value' => isset($formValues['button_border_opacity_inverted']) ? $formValues['button_border_opacity_inverted'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2186,13 +2130,8 @@ class iqBarrioService {
 
     $form['buttons']['default']['inverted']['button_font_opacity_inverted_hover'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_font_opacity_inverted_hover'],
+      '#default_value' => isset($formValues['button_font_opacity_inverted_hover']) ? $formValues['button_font_opacity_inverted_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2207,13 +2146,10 @@ class iqBarrioService {
     $form['buttons']['default']['inverted']['button_background_opacity_inverted_hover'] = [
       '#type' => 'textfield',
       '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_background_opacity_inverted_hover'],
+      '#default_value' => isset($formValues['button_background_opacity_inverted_hover']) ? $formValues['button_background_opacity_inverted_hover'] : '1',
     ];
 
     $form['buttons']['default']['inverted']['button_border_color_inverted_hover'] = [
@@ -2225,13 +2161,8 @@ class iqBarrioService {
 
     $form['buttons']['default']['inverted']['button_border_opacity_inverted_hover'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_border_opacity_inverted_hover'],
+      '#default_value' => isset($formValues['button_border_opacity_inverted_hover']) ? $formValues['button_border_opacity_inverted_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2245,13 +2176,8 @@ class iqBarrioService {
 
     $form['buttons']['default']['inverted']['button_font_opacity_inverted_active'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_font_opacity_inverted_active'],
+      '#default_value' => isset($formValues['button_font_opacity_inverted_active']) ? $formValues['button_font_opacity_inverted_active'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2266,13 +2192,10 @@ class iqBarrioService {
     $form['buttons']['default']['inverted']['button_background_opacity_inverted_active'] = [
       '#type' => 'textfield',
       '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_background_opacity_inverted_active'],
+      '#default_value' => isset($formValues['button_background_opacity_inverted_active']) ? $formValues['button_background_opacity_inverted_active'] : '1',
     ];
 
     $form['buttons']['default']['inverted']['button_border_color_inverted_active'] = [
@@ -2284,16 +2207,10 @@ class iqBarrioService {
 
     $form['buttons']['default']['inverted']['button_border_opacity_inverted_active'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_border_opacity_inverted_active'],
+      '#default_value' => isset($formValues['button_border_opacity_inverted_active']) ? $formValues['button_border_opacity_inverted_active'] : '1',
       '#suffix' => '</div>'
     ];
-
 
     $form['buttons']['default']['button_title'] = [
       '#prefix' => '</div><div class="styling-preview">',
@@ -2505,7 +2422,7 @@ class iqBarrioService {
     $form['buttons']['alternate']['standard']['button_alternate_font_opacity_standard'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_font_opacity_standard'],
+      '#default_value' => isset($formValues['button_alternate_font_opacity_standard']) ? $formValues['button_alternate_font_opacity_standard'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2523,7 +2440,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_background_opacity_standard'],
+      '#default_value' => isset($formValues['button_alternate_background_opacity_standard']) ? $formValues['button_alternate_background_opacity_standard'] : '1',
     ];
 
     $form['buttons']['alternate']['standard']['button_alternate_border_color_standard'] = [
@@ -2536,7 +2453,7 @@ class iqBarrioService {
     $form['buttons']['alternate']['standard']['button_alternate_border_opacity_standard'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_border_opacity_standard'],
+      '#default_value' => isset($formValues['button_alternate_border_opacity_standard']) ? $formValues['button_alternate_border_opacity_standard'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2551,7 +2468,7 @@ class iqBarrioService {
     $form['buttons']['alternate']['standard']['button_alternate_font_opacity_hover'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_font_opacity_hover'],
+      '#default_value' => isset($formValues['button_alternate_font_opacity_hover']) ? $formValues['button_alternate_font_opacity_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2569,7 +2486,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_background_opacity_hover'],
+      '#default_value' => isset($formValues['button_alternate_background_opacity_hover']) ? $formValues['button_alternate_background_opacity_hover'] : '1',
     ];
 
     $form['buttons']['alternate']['standard']['button_alternate_border_color_hover'] = [
@@ -2582,7 +2499,7 @@ class iqBarrioService {
     $form['buttons']['alternate']['standard']['button_alternate_border_opacity_hover'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_border_opacity_hover'],
+      '#default_value' => isset($formValues['button_alternate_border_opacity_hover']) ? $formValues['button_alternate_border_opacity_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2590,14 +2507,14 @@ class iqBarrioService {
       '#type' => 'select',
       '#title' => t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_font_color_active'],
+      '#default_value' => isset($formValues['button_alternate_font_color_active']) ? $formValues['button_alternate_font_color_active'] : '1',
       '#prefix' => '<div class="inline-input-holder"><strong>Active</strong>',
     ];
 
     $form['buttons']['alternate']['standard']['button_alternate_font_opacity_active'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_font_opacity_active'],
+      '#default_value' => isset($formValues['button_alternate_font_opacity_active']) ? $formValues['button_alternate_font_opacity_active'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2615,7 +2532,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_background_opacity_active'],
+      '#default_value' => isset($formValues['button_alternate_background_opacity_active']) ? $formValues['button_alternate_background_opacity_active'] : '1',
     ];
 
     $form['buttons']['alternate']['standard']['button_alternate_border_color_active'] = [
@@ -2628,7 +2545,7 @@ class iqBarrioService {
     $form['buttons']['alternate']['standard']['button_alternate_border_opacity_active'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_border_opacity_active'],
+      '#default_value' => isset($formValues['button_alternate_border_opacity_active']) ? $formValues['button_alternate_border_opacity_active'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2648,7 +2565,7 @@ class iqBarrioService {
     $form['buttons']['alternate']['inverted']['button_alternate_font_opacity_inverted'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_font_opacity_inverted'],
+      '#default_value' => isset($formValues['button_alternate_font_opacity_inverted']) ? $formValues['button_alternate_font_opacity_inverted'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2667,7 +2584,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_background_opacity_inverted'],
+      '#default_value' => isset($formValues['button_alternate_background_opacity_inverted']) ? $formValues['button_alternate_background_opacity_inverted'] : '1',
     ];
 
     $form['buttons']['alternate']['inverted']['button_alternate_border_color_inverted'] = [
@@ -2680,7 +2597,7 @@ class iqBarrioService {
     $form['buttons']['alternate']['inverted']['button_alternate_border_opacity_inverted'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_border_opacity_inverted'],
+      '#default_value' => isset($formValues['button_alternate_border_opacity_inverted']) ? $formValues['button_alternate_border_opacity_inverted'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2695,7 +2612,7 @@ class iqBarrioService {
     $form['buttons']['alternate']['inverted']['button_alternate_font_opacity_inverted_hover'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_font_opacity_inverted_hover'],
+      '#default_value' => isset($formValues['button_alternate_font_opacity_inverted_hover']) ? $formValues['button_alternate_font_opacity_inverted_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2713,7 +2630,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_background_opacity_inverted_hover'],
+      '#default_value' => isset($formValues['button_alternate_background_opacity_inverted_hover']) ? $formValues['button_alternate_background_opacity_inverted_hover'] : '1',
     ];
 
     $form['buttons']['alternate']['inverted']['button_alternate_border_color_inverted_hover'] = [
@@ -2726,7 +2643,7 @@ class iqBarrioService {
     $form['buttons']['alternate']['inverted']['button_alternate_border_opacity_inverted_hover'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_border_opacity_inverted_hover'],
+      '#default_value' => isset($formValues['button_alternate_border_opacity_inverted_hover']) ? $formValues['button_alternate_border_opacity_inverted_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2741,7 +2658,7 @@ class iqBarrioService {
     $form['buttons']['alternate']['inverted']['button_alternate_font_opacity_inverted_active'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_font_opacity_inverted_active'],
+      '#default_value' => isset($formValues['button_alternate_font_opacity_inverted_active']) ? $formValues['button_alternate_font_opacity_inverted_active'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2759,7 +2676,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_background_opacity_inverted_active'],
+      '#default_value' => isset($formValues['button_alternate_background_opacity_inverted_active']) ? $formValues['button_alternate_background_opacity_inverted_active'] : '1',
     ];
 
     $form['buttons']['alternate']['inverted']['button_alternate_border_color_inverted_active'] = [
@@ -2772,7 +2689,7 @@ class iqBarrioService {
     $form['buttons']['alternate']['inverted']['button_alternate_border_opacity_inverted_active'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['button_alternate_border_opacity_inverted_active'],
+      '#default_value' => isset($formValues['button_alternate_border_opacity_inverted_active']) ? $formValues['button_alternate_border_opacity_inverted_active'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2837,7 +2754,7 @@ class iqBarrioService {
         'class' => [ 'separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['slider_arrow_opacity'],
+      '#default_value' => isset($formValues['slider_arrow_opacity']) ? $formValues['slider_arrow_opacity'] : '1',
     ];
 
     $form['patterns']['slider']['slider_arrow_backgroundcolor'] = [
@@ -2849,18 +2766,10 @@ class iqBarrioService {
 
     $form['patterns']['slider']['slider_arrow_background_opacity'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['slider_arrow_background_opacity'],
+      '#default_value' => isset($formValues['slider_arrow_background_opacity']) ? $formValues['slider_arrow_background_opacity'] : '1',
       '#suffix' => '</div>'
     ];
-
-
-
 
     $form['patterns']['slider']['slider_dot_size_holder'] = [
       '#type' => 'container',
@@ -2892,13 +2801,10 @@ class iqBarrioService {
     $form['patterns']['slider']['slider_dot_opacity'] = [
       '#type' => 'textfield',
       '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
         'class' => [ 'separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['slider_dot_opacity'],
+      '#default_value' => isset($formValues['slider_dot_opacity']) ? $formValues['slider_dot_opacity'] : '1',
     ];
 
     $form['patterns']['slider']['slider_dot_color_active'] = [
@@ -2910,13 +2816,8 @@ class iqBarrioService {
 
     $form['patterns']['slider']['slider_dot_opacity_active'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['slider_dot_opacity_active'],
+      '#default_value' => isset($formValues['slider_dot_opacity_active']) ? $formValues['slider_dot_opacity_active'] : '1',
       '#suffix' => '</div></div></div>'
     ];
 
@@ -2937,13 +2838,8 @@ class iqBarrioService {
 
     $form['patterns']['quote']['quote_highlight_opacity'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['quote_highlight_opacity'],
+      '#default_value' => isset($formValues['quote_highlight_opacity']) ? $formValues['quote_highlight_opacity'] : '1',
       '#suffix' => '</div></div></div>'
     ];
 
@@ -2972,13 +2868,8 @@ class iqBarrioService {
 
     $form['patterns']['icons']['default']['opacity_icons'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_icons'],
+      '#default_value' => isset($formValues['opacity_icons']) ? $formValues['opacity_icons'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -2992,13 +2883,8 @@ class iqBarrioService {
 
     $form['patterns']['icons']['default']['opacity_icons_hover'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_icons_hover'],
+      '#default_value' => isset($formValues['opacity_icons_hover']) ? $formValues['opacity_icons_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -3012,21 +2898,10 @@ class iqBarrioService {
 
     $form['patterns']['icons']['default']['opacity_icons_active'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_icons_active'],
+      '#default_value' => isset($formValues['opacity_icons_active']) ? $formValues['opacity_icons_active'] : '1',
       '#suffix' => '</div>'
     ];
-
-
-
-
-
-
 
     $form['patterns']['icons']['default']['color_icons_inverted'] = [
       '#type' => 'select',
@@ -3038,13 +2913,8 @@ class iqBarrioService {
 
     $form['patterns']['icons']['default']['opacity_icons_inverted'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_icons_inverted'],
+      '#default_value' => isset($formValues['opacity_icons_inverted']) ? $formValues['opacity_icons_inverted'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -3058,13 +2928,8 @@ class iqBarrioService {
 
     $form['patterns']['icons']['default']['opacity_icons_inverted_hover'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_icons_inverted_hover'],
+      '#default_value' => isset($formValues['opacity_icons_inverted_hover']) ? $formValues['opacity_icons_inverted_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -3078,21 +2943,10 @@ class iqBarrioService {
 
     $form['patterns']['icons']['default']['opacity_icons_inverted_active'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_icons_inverted_active'],
+      '#default_value' => isset($formValues['opacity_icons_inverted_active']) ? $formValues['opacity_icons_inverted_active'] : '1',
       '#suffix' => '</div></div></div>'
     ];
-
-
-
-
-
-
 
     $form['patterns']['icons']['alternate'] = [
       '#type' => 'details',
@@ -3112,13 +2966,8 @@ class iqBarrioService {
 
     $form['patterns']['icons']['alternate']['opacity_icons_alternate'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_icons_alternate'],
+      '#default_value' => isset($formValues['opacity_icons_alternate']) ? $formValues['opacity_icons_alternate'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -3132,13 +2981,8 @@ class iqBarrioService {
 
     $form['patterns']['icons']['alternate']['opacity_icons_alternate_hover'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_icons_alternate_hover'],
+      '#default_value' => isset($formValues['opacity_icons_alternate_hover']) ? $formValues['opacity_icons_alternate_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -3152,21 +2996,10 @@ class iqBarrioService {
 
     $form['patterns']['icons']['alternate']['opacity_icons_alternate_active'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_icons_alternate_active'],
+      '#default_value' => isset($formValues['opacity_icons_alternate_active']) ? $formValues['opacity_icons_alternate_active'] : '1',
       '#suffix' => '</div>'
     ];
-
-
-
-
-
-
 
     $form['patterns']['icons']['alternate']['color_icons_alternate_inverted'] = [
       '#type' => 'select',
@@ -3178,13 +3011,8 @@ class iqBarrioService {
 
     $form['patterns']['icons']['alternate']['opacity_icons_alternate_inverted'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_icons_alternate_inverted'],
+      '#default_value' => isset($formValues['opacity_icons_alternate_inverted']) ? $formValues['opacity_icons_alternate_inverted'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -3198,13 +3026,8 @@ class iqBarrioService {
 
     $form['patterns']['icons']['alternate']['opacity_icons_alternate_inverted_hover'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_icons_alternate_inverted_hover'],
+      '#default_value' => isset($formValues['opacity_icons_alternate_inverted_hover']) ? $formValues['opacity_icons_alternate_inverted_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -3218,31 +3041,10 @@ class iqBarrioService {
 
     $form['patterns']['icons']['alternate']['opacity_icons_alternate_inverted_active'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['opacity_icons_alternate_inverted_active'],
+      '#default_value' => isset($formValues['opacity_icons_alternate_inverted_active']) ? $formValues['opacity_icons_alternate_inverted_active'] : '1',
       '#suffix' => '</div></div></div>'
     ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     $form['patterns']['social'] = [
       '#type' => 'details',
@@ -3259,17 +3061,10 @@ class iqBarrioService {
 
     $form['patterns']['social']['social_icon_opacity'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['social_icon_opacity'],
+      '#default_value' => isset($formValues['social_icon_opacity']) ? $formValues['social_icon_opacity'] : '1',
       '#suffix' => '</div></div></div>'
     ];
-
-
 
     $form['patterns']['tabs'] = [
       '#type' => 'details',
@@ -3288,13 +3083,10 @@ class iqBarrioService {
     $form['patterns']['tabs']['tab_opacity'] = [
       '#type' => 'textfield',
       '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
         'class' => [ 'separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['tab_opacity'],
+      '#default_value' => isset($formValues['tab_opacity']) ? $formValues['tab_opacity'] : '1',
     ];
 
     $form['patterns']['tabs']['tab_font_color'] = [
@@ -3306,19 +3098,10 @@ class iqBarrioService {
 
     $form['patterns']['tabs']['tab_font_opacity'] = [
       '#type' => 'textfield',
-      // '#attributes' => [
-      //   'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
-      // ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['tab_font_opacity'],
+      '#default_value' => isset($formValues['tab_font_opacity']) ? $formValues['tab_font_opacity'] : '1',
       '#suffix' => '</div>'
     ];
-
-
-
-
 
     $form['patterns']['tabs']['tab_color_active'] = [
       '#type' => 'select',
@@ -3334,7 +3117,7 @@ class iqBarrioService {
         'class' => [ 'separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['tab_opacity_active'],
+      '#default_value' => isset($formValues['tab_opacity_active']) ? $formValues['tab_opacity_active'] : '1',
     ];
 
     $form['patterns']['tabs']['tab_font_color_active'] = [
@@ -3347,7 +3130,7 @@ class iqBarrioService {
     $form['patterns']['tabs']['tab_font_opacity_active'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['tab_font_opacity_active'],
+      '#default_value' => isset($formValues['tab_font_opacity_active']) ? $formValues['tab_font_opacity_active'] : '1',
       '#suffix' => '</div></div></div>'
     ];
 
@@ -3367,7 +3150,7 @@ class iqBarrioService {
     $form['patterns']['toggler']['toggler_opacity'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['toggler_opacity'],
+      '#default_value' => isset($formValues['toggler_opacity']) ? $formValues['toggler_opacity'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -3382,7 +3165,7 @@ class iqBarrioService {
     $form['patterns']['toggler']['toggler_opacity_hover'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['toggler_opacity_hover'],
+      '#default_value' => isset($formValues['toggler_opacity_hover']) ? $formValues['toggler_opacity_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -3397,7 +3180,7 @@ class iqBarrioService {
     $form['patterns']['toggler']['toggler_opacity_active'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['toggler_opacity_active'],
+      '#default_value' => isset($formValues['toggler_opacity_active']) ? $formValues['toggler_opacity_active'] : '1',
       '#suffix' => '</div></div></div>'
     ];
 
@@ -3538,7 +3321,7 @@ class iqBarrioService {
     $form['patterns']['anchornavigation']['anchornavigation_wrapper_background_opacity'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['anchornavigation_wrapper_background_opacity'],
+      '#default_value' => isset($formValues['anchornavigation_wrapper_background_opacity']) ? $formValues['anchornavigation_wrapper_background_opacity'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -3553,7 +3336,7 @@ class iqBarrioService {
     $form['patterns']['anchornavigation']['anchornavigation_font_opacity_standard'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['anchornavigation_font_opacity_standard'],
+      '#default_value' => isset($formValues['anchornavigation_font_opacity_standard']) ? $formValues['anchornavigation_font_opacity_standard'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -3571,7 +3354,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['anchornavigation_background_opacity_standard'],
+      '#default_value' => isset($formValues['anchornavigation_background_opacity_standard']) ? $formValues['anchornavigation_background_opacity_standard'] : '1',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_border_color_standard'] = [
@@ -3584,7 +3367,7 @@ class iqBarrioService {
     $form['patterns']['anchornavigation']['anchornavigation_border_opacity_standard'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['anchornavigation_border_opacity_standard'],
+      '#default_value' => isset($formValues['anchornavigation_border_opacity_standard']) ? $formValues['anchornavigation_border_opacity_standard'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -3599,7 +3382,7 @@ class iqBarrioService {
     $form['patterns']['anchornavigation']['anchornavigation_font_opacity_hover'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['anchornavigation_font_opacity_hover'],
+      '#default_value' => isset($formValues['anchornavigation_font_opacity_hover']) ? $formValues['anchornavigation_font_opacity_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -3617,7 +3400,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['anchornavigation_background_opacity_hover'],
+      '#default_value' => isset($formValues['anchornavigation_background_opacity_hover']) ? $formValues['anchornavigation_background_opacity_hover'] : '1',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_border_color_hover'] = [
@@ -3630,7 +3413,7 @@ class iqBarrioService {
     $form['patterns']['anchornavigation']['anchornavigation_border_opacity_hover'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['anchornavigation_border_opacity_hover'],
+      '#default_value' => isset($formValues['anchornavigation_border_opacity_hover']) ? $formValues['anchornavigation_border_opacity_hover'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -3645,7 +3428,7 @@ class iqBarrioService {
     $form['patterns']['anchornavigation']['anchornavigation_font_opacity_active'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['anchornavigation_font_opacity_active'],
+      '#default_value' => isset($formValues['anchornavigation_font_opacity_active']) ? $formValues['anchornavigation_font_opacity_active'] : '1',
       '#suffix' => '</div>'
     ];
 
@@ -3663,7 +3446,7 @@ class iqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['anchornavigation_background_opacity_active'],
+      '#default_value' => isset($formValues['anchornavigation_background_opacity_active']) ? $formValues['anchornavigation_background_opacity_active'] : '1',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_border_color_active'] = [
@@ -3676,7 +3459,7 @@ class iqBarrioService {
     $form['patterns']['anchornavigation']['anchornavigation_border_opacity_active'] = [
       '#type' => 'textfield',
       '#title' => t('Opacity'),
-      '#default_value' => $formValues['anchornavigation_border_opacity_active'],
+      '#default_value' => isset($formValues['anchornavigation_border_opacity_active']) ? $formValues['anchornavigation_border_opacity_active'] : '1',
       '#suffix' => '</div>'
     ];
   }
