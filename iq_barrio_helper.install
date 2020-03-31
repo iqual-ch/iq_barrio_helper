@@ -4,12 +4,18 @@
  * Update hooks for iq_barrio_helper themes.
  */
 
+function iq_barrio_helper_install() {
+  _set_iq_barrio_base_settings();
+}
+
 /**
  * Update 8001: Set newly added styling values
  */
-
 function iq_barrio_helper_update_8001() {
+  _set_iq_barrio_base_settings();
+}
 
+function _set_iq_barrio_base_settings(){
   // Set newly added styling values
   $config = \Drupal::configFactory()->getEditable('iq_barrio.settings');
   $styleSettings = \Drupal::config('iq_barrio.settings')->get();
