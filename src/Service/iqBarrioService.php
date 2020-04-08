@@ -1966,7 +1966,7 @@ class iqBarrioService {
       '#type' => 'select',
       '#title' => t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_border_color_standard'] ? $formValues['button_background_color_standard'] : 'primary',
+      '#default_value' => $formValues['button_border_color_standard'] ? $formValues['button_border_color_standard'] : 'primary',
     ];
 
     $form['buttons']['default']['standard']['button_border_opacity_standard'] = [
@@ -2110,7 +2110,7 @@ class iqBarrioService {
       '#type' => 'select',
       '#title' => t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_border_color_inverted'] ? $formValues['button_background_color_inverted'] : 'primary',
+      '#default_value' => $formValues['button_border_color_inverted'] ? $formValues['button_border_color_inverted'] : 'primary',
     ];
 
     $form['buttons']['default']['inverted']['button_border_opacity_inverted'] = [
@@ -2447,7 +2447,7 @@ class iqBarrioService {
       '#type' => 'select',
       '#title' => t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_border_color_standard'] ? $formValues['button_alternate_background_color_standard'] : 'primary',
+      '#default_value' => $formValues['button_alternate_border_color_standard'] ? $formValues['button_alternate_border_color_standard'] : 'primary',
     ];
 
     $form['buttons']['alternate']['standard']['button_alternate_border_opacity_standard'] = [
@@ -2591,7 +2591,7 @@ class iqBarrioService {
       '#type' => 'select',
       '#title' => t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_border_color_inverted'] ? $formValues['button_alternate_background_color_inverted'] : 'primary',
+      '#default_value' => $formValues['button_alternate_border_color_inverted'] ? $formValues['button_alternate_border_color_inverted'] : 'primary',
     ];
 
     $form['buttons']['alternate']['inverted']['button_alternate_border_opacity_inverted'] = [
