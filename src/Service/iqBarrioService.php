@@ -1668,29 +1668,29 @@ class iqBarrioService {
     $form['decorations']['margins_paddings']['margin']['margin_top'] = [
       '#title' => t('Margin (Top, right, bottom, left)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['margin_top'] ? $formValues['margin_top'] : '30',
+      '#default_value' => isset($formValues['margin_top']) ? $formValues['margin_top'] : '30',
     ];
 
     $form['decorations']['margins_paddings']['margin']['margin_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['margin_right'] ? $formValues['margin_right'] : '30',
+      '#default_value' => isset($formValues['margin_right']) ? $formValues['margin_right'] : '30',
     ];
 
     $form['decorations']['margins_paddings']['margin']['margin_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['margin_bottom'] ? $formValues['margin_bottom'] : '30',
+      '#default_value' => isset($formValues['margin_bottom']) ? $formValues['margin_bottom'] : '30',
     ];
 
     $form['decorations']['margins_paddings']['margin']['margin_left'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['margin_left'] ? $formValues['margin_left'] : '30',
+      '#default_value' => isset($formValues['margin_left']) ? $formValues['margin_left'] : '30',
     ];
 
     $form['decorations']['margins_paddings']['margin']['margin_unit'] = [
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['margin_unit'] ? $formValues['margin_unit'] : '1',
+      '#default_value' => $formValues['margin_unit'] ? $formValues['margin_unit'] : 'px',
     ];
 
     $form['decorations']['margins_paddings']['padding'] = [
@@ -1703,29 +1703,29 @@ class iqBarrioService {
     $form['decorations']['margins_paddings']['padding']['padding_top'] = [
       '#title' => t('Padding (Top, right, bottom, left)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['padding_top'] ? $formValues['padding_top'] : '30',
+      '#default_value' => isset($formValues['padding_top']) ? $formValues['padding_top'] : '30',
     ];
 
     $form['decorations']['margins_paddings']['padding']['padding_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['padding_right'] ? $formValues['padding_right'] : '30',
+      '#default_value' => isset($formValues['padding_right']) ? $formValues['padding_right'] : '30',
     ];
 
     $form['decorations']['margins_paddings']['padding']['padding_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['padding_bottom'] ? $formValues['padding_bottom'] : '30',
+      '#default_value' => isset($formValues['padding_bottom']) ? $formValues['padding_bottom'] : '30',
     ];
 
     $form['decorations']['margins_paddings']['padding']['padding_left'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['padding_left'] ? $formValues['padding_left'] : '30',
+      '#default_value' => isset($formValues['padding_left']) ? $formValues['padding_left'] : '30',
     ];
 
     $form['decorations']['margins_paddings']['padding']['padding_unit'] = [
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['padding_unit'] ? $formValues['padding_unit'] : '1',
+      '#default_value' => $formValues['padding_unit'] ? $formValues['padding_unit'] : 'px',
     ];
 
     // section buttons
@@ -1966,7 +1966,7 @@ class iqBarrioService {
       '#type' => 'select',
       '#title' => t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_border_color_standard'] ? $formValues['button_border_color_standard'] : 'primary',
+      '#default_value' => $formValues['button_border_color_standard'] ? $formValues['button_background_color_standard'] : 'primary',
     ];
 
     $form['buttons']['default']['standard']['button_border_opacity_standard'] = [
@@ -2110,7 +2110,7 @@ class iqBarrioService {
       '#type' => 'select',
       '#title' => t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_border_color_inverted'] ? $formValues['button_border_color_inverted'] : 'primary',
+      '#default_value' => $formValues['button_border_color_inverted'] ? $formValues['button_background_color_inverted'] : 'primary',
     ];
 
     $form['buttons']['default']['inverted']['button_border_opacity_inverted'] = [
@@ -2447,7 +2447,7 @@ class iqBarrioService {
       '#type' => 'select',
       '#title' => t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_border_color_standard'] ? $formValues['button_alternate_border_color_standard'] : 'primary',
+      '#default_value' => $formValues['button_alternate_border_color_standard'] ? $formValues['button_alternate_background_color_standard'] : 'primary',
     ];
 
     $form['buttons']['alternate']['standard']['button_alternate_border_opacity_standard'] = [
@@ -2591,7 +2591,7 @@ class iqBarrioService {
       '#type' => 'select',
       '#title' => t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_border_color_inverted'] ? $formValues['button_alternate_border_color_inverted'] : 'primary',
+      '#default_value' => $formValues['button_alternate_border_color_inverted'] ? $formValues['button_alternate_background_color_inverted'] : 'primary',
     ];
 
     $form['buttons']['alternate']['inverted']['button_alternate_border_opacity_inverted'] = [
