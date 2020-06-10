@@ -1801,23 +1801,23 @@ class iqBarrioService {
     $form['buttons']['default']['button_border_width_holder']['button_border_width_top'] = [
       '#title' => t('Border (top, right, bottom, left)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_border_width_top'] ? $formValues['button_border_width_top'] : '1',
+      '#default_value' => isset($formValues['button_border_width_top']) ? $formValues['button_border_width_top'] : '1',
     ];
 
 
     $form['buttons']['default']['button_border_width_holder']['button_border_width_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_border_width_right'] ? $formValues['button_border_width_right'] : '1',
+      '#default_value' => isset($formValues['button_border_width_right']) ? $formValues['button_border_width_right'] : '1',
     ];
 
     $form['buttons']['default']['button_border_width_holder']['button_border_width_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_border_width_bottom'] ? $formValues['button_border_width_bottom'] : '1',
+      '#default_value' => isset($formValues['button_border_width_bottom']) ? $formValues['button_border_width_bottom'] : '1',
     ];
 
     $form['buttons']['default']['button_border_width_holder']['button_border_width_left'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_border_width_left'] ? $formValues['button_border_width_left'] : '1',
+      '#default_value' => isset($formValues['button_border_width_left']) ? $formValues['button_border_width_left'] : '1',
     ];
 
     $form['buttons']['default']['button_border_width_holder']['button_border_width_unit'] = [
@@ -1837,7 +1837,7 @@ class iqBarrioService {
     $form['buttons']['default']['button_border_radius_holder']['button_border_radius'] = [
       '#type' => 'textfield',
       '#title' => t('Border radius'),
-      '#default_value' => $formValues['button_border_radius'] ? $formValues['button_border_radius'] : '0',
+      '#default_value' => isset($formValues['button_border_radius']) ? $formValues['button_border_radius'] : '0',
     ];
 
     $form['buttons']['default']['button_border_radius_holder']['button_border_radius_unit'] = [
@@ -1858,24 +1858,23 @@ class iqBarrioService {
     $form['buttons']['default']['button_margin_holder']['button_margin_top'] = [
       '#title' => t('Margin (top, right, bottom, left)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_margin_top'] ? $formValues['button_margin_top'] : '0',
+      '#default_value' => isset($formValues['button_margin_top']) ? $formValues['button_margin_top'] : '0',
     ];
 
     $form['buttons']['default']['button_margin_holder']['button_margin_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_margin_right'] ? $formValues['button_margin_right'] : '0',
+      '#default_value' => isset($formValues['button_margin_right']) ? $formValues['button_margin_right'] : '0',
     ];
 
     $form['buttons']['default']['button_margin_holder']['button_margin_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_margin_bottom'] ? $formValues['button_margin_bottom'] : '0',
+      '#default_value' => isset($formValues['button_margin_bottom']) ? $formValues['button_margin_bottom'] : '0',
     ];
 
     $form['buttons']['default']['button_margin_holder']['button_margin_left'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_margin_left'] ? $formValues['button_margin_left'] : '0',
+      '#default_value' => isset($formValues['button_margin_left']) ? $formValues['button_margin_left'] : '0',
     ];
-
 
     $form['buttons']['default']['button_margin_holder']['button_margin_unit'] = [
       '#type' => 'textfield',
@@ -1883,7 +1882,6 @@ class iqBarrioService {
       '#options' => $arr_units,
       '#default_value' => $formValues['button_margin_unit'],
     ];
-
 
     $form['buttons']['default']['button_padding_holder'] = [
       '#type' => 'container',
@@ -1896,24 +1894,23 @@ class iqBarrioService {
     $form['buttons']['default']['button_padding_holder']['button_padding_top'] = [
       '#title' => t('Padding (top, right, bottom, left)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_padding_top'] ? $formValues['button_padding_top'] : '5',
+      '#default_value' => isset($formValues['button_padding_top']) ? $formValues['button_padding_top'] : '5',
     ];
 
     $form['buttons']['default']['button_padding_holder']['button_padding_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_padding_right'] ? $formValues['button_padding_right'] : '5',
+      '#default_value' => isset($formValues['button_padding_right']) ? $formValues['button_padding_right'] : '5',
     ];
 
     $form['buttons']['default']['button_padding_holder']['button_padding_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_padding_bottom'] ? $formValues['button_padding_bottom'] : '5',
+      '#default_value' => isset($formValues['button_padding_bottom']) ? $formValues['button_padding_bottom'] : '5',
     ];
 
     $form['buttons']['default']['button_padding_holder']['button_padding_left'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_padding_left'] ? $formValues['button_padding_left'] : '5',
+      '#default_value' => isset($formValues['button_padding_left']) ? $formValues['button_padding_left'] : '5',
     ];
-
 
     $form['buttons']['default']['button_padding_holder']['button_padding_unit'] = [
       '#type' => 'textfield',
@@ -2287,22 +2284,22 @@ class iqBarrioService {
     $form['buttons']['alternate']['button_alternate_border_width_holder']['button_alternate_border_width_top'] = [
       '#title' => t('Border (top, right, bottom, left)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_border_width_top'] ? $formValues['button_alternate_border_width_top'] : '1',
+      '#default_value' => isset($formValues['button_alternate_border_width_top']) ? $formValues['button_alternate_border_width_top'] : '1',
     ];
 
     $form['buttons']['alternate']['button_alternate_border_width_holder']['button_alternate_border_width_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_border_width_right'] ? $formValues['button_alternate_border_width_right'] : '1',
+      '#default_value' => isset($formValues['button_alternate_border_width_right']) ? $formValues['button_alternate_border_width_right'] : '1',
     ];
 
     $form['buttons']['alternate']['button_alternate_border_width_holder']['button_alternate_border_width_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_border_width_bottom'] ? $formValues['button_alternate_border_width_bottom'] : '1',
+      '#default_value' => isset($formValues['button_alternate_border_width_bottom']) ? $formValues['button_alternate_border_width_bottom'] : '1',
     ];
 
     $form['buttons']['alternate']['button_alternate_border_width_holder']['button_alternate_border_width_left'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_border_width_left'] ? $formValues['button_alternate_border_width_left'] : '1',
+      '#default_value' => isset($formValues['button_alternate_border_width_left']) ? $formValues['button_alternate_border_width_left'] : '1',
     ];
 
     $form['buttons']['alternate']['button_alternate_border_width_holder']['button_alternate_border_width_unit'] = [
@@ -2342,24 +2339,23 @@ class iqBarrioService {
     $form['buttons']['alternate']['button_alternate_margin_holder']['button_alternate_margin_top'] = [
       '#title' => t('Margin (top, right, bottom, left)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_margin_top'] ? $formValues['button_alternate_margin_top'] : '0',
+      '#default_value' => isset($formValues['button_alternate_margin_top']) ? $formValues['button_alternate_margin_top'] : '0',
     ];
 
     $form['buttons']['alternate']['button_alternate_margin_holder']['button_alternate_margin_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_margin_right'] ? $formValues['button_alternate_margin_right'] : '0',
+      '#default_value' => isset($formValues['button_alternate_margin_right']) ? $formValues['button_alternate_margin_right'] : '0',
     ];
 
     $form['buttons']['alternate']['button_alternate_margin_holder']['button_alternate_margin_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_margin_bottom'] ? $formValues['button_alternate_margin_bottom'] : '0',
+      '#default_value' => isset($formValues['button_alternate_margin_bottom']) ? $formValues['button_alternate_margin_bottom'] : '0',
     ];
 
     $form['buttons']['alternate']['button_alternate_margin_holder']['button_alternate_margin_left'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_margin_left'] ? $formValues['button_alternate_margin_left'] : '0',
+      '#default_value' => isset($formValues['button_alternate_margin_left']) ? $formValues['button_alternate_margin_left'] : '0',
     ];
-
 
     $form['buttons']['alternate']['button_alternate_margin_holder']['button_alternate_margin_unit'] = [
       '#type' => 'textfield',
@@ -2380,24 +2376,23 @@ class iqBarrioService {
     $form['buttons']['alternate']['button_alternate_padding_holder']['button_alternate_padding_top'] = [
       '#title' => t('Padding (top, right, bottom, left)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_padding_top'] ? $formValues['button_alternate_padding_top'] : '5',
+      '#default_value' => isset($formValues['button_alternate_padding_top']) ? $formValues['button_alternate_padding_top'] : '5',
     ];
 
     $form['buttons']['alternate']['button_alternate_padding_holder']['button_alternate_padding_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_padding_right'] ? $formValues['button_alternate_padding_right'] : '5',
+      '#default_value' => isset($formValues['button_alternate_padding_right']) ? $formValues['button_alternate_padding_right'] : '5',
     ];
 
     $form['buttons']['alternate']['button_alternate_padding_holder']['button_alternate_padding_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_padding_bottom'] ? $formValues['button_alternate_padding_bottom'] : '5',
+      '#default_value' => isset($formValues['button_alternate_padding_bottom']) ? $formValues['button_alternate_padding_bottom'] : '5',
     ];
 
     $form['buttons']['alternate']['button_alternate_padding_holder']['button_alternate_padding_left'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_padding_left'] ? $formValues['button_alternate_padding_left'] : '5',
+      '#default_value' => isset($formValues['button_alternate_padding_left']) ? $formValues['button_alternate_padding_left'] : '5',
     ];
-
 
     $form['buttons']['alternate']['button_alternate_padding_holder']['button_alternate_padding_unit'] = [
       '#type' => 'textfield',
