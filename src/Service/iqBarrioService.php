@@ -2392,7 +2392,7 @@ class iqBarrioService {
       '#type' => 'select',
       '#title' => t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_border_color_standard'] ? $formValues['button_alternate_background_color_standard'] : 'primary',
+      '#default_value' => $formValues['button_alternate_border_color_standard'] ? $formValues['button_alternate_border_color_standard'] : 'primary',
     ];
 
     $form['buttons']['alternate']['standard']['button_alternate_border_opacity_standard'] = [
