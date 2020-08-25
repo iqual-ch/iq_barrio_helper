@@ -15,7 +15,7 @@ function iq_barrio_helper_install() {
 /**
  *
  */
-function iq_barrio_helper_update_8001() {
+function iq_barrio_helper_update_8002() {
   _recreate_definitions_file();
 }
 
