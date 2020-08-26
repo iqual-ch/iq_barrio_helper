@@ -34,6 +34,19 @@ class iqBarrioService {
   }
 
   /**
+   * Reset the aggregated CSS.
+   *
+   * @todo Replace cache rebuild by a more precise method.
+   */
+  public function resetCSS() {
+    // Wait for css file to be generated.
+    // @todo Replace with trigger for sass compilation.
+    sleep(5);
+    // Flush all caches.
+    drupal_flush_all_caches();
+  }
+
+  /**
    *
    */
   public function alterThemeSettingsForm(&$form, $formValues) {
@@ -3392,6 +3405,15 @@ class iqBarrioService {
       '#default_value' => isset($formValues['anchornavigation_border_opacity_active']) ? $formValues['anchornavigation_border_opacity_active'] : '1',
       '#suffix' => '</div>',
     ];
+
+    if (\Drupal::config('system.performance')->get('css')['preprocess']) {
+      $form['reset_css'] = [
+        '#type' => 'checkbox',
+        '#title' => t('Reset CSS'),
+        '#description' => t('Reset the css by rebuilding the Drupal cache to display changes immediately. This will cause a decrease in performance until the cache is rebuilt.'),
+        '#default_value' => 0,
+      ];
+    }
   }
 
 }
