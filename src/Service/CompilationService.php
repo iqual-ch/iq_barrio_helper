@@ -43,6 +43,7 @@ class CompilationService {
       $watch_descriptor = \inotify_add_watch($fd, $file->getPath(), IN_CLOSE_WRITE | IN_MOVE | IN_MOVE_SELF | IN_DELETE | IN_DELETE_SELF | IN_MASK_ADD);
       $this->iterator->next();
     }
+    $this->iterator->rewind();
     while (TRUE) {
       if (inotify_queue_len($fd) === 0 && $this->changeRegistered) {
         if (!$this->isCompiling) {
@@ -81,7 +82,6 @@ class CompilationService {
     // Collect all config files and save per path.
     while ($this->iterator->valid()) {
       $file = $this->iterator->current();
-
       if ($file->isFile() && $file->getFilename() == 'libsass.ini') {
         $this->configs[$file->getPath()] = parse_ini_file($file->getPath() . '/' . $file->getFilename());
       }
@@ -104,6 +104,8 @@ class CompilationService {
       }
       $this->iterator->next();
     }
+    $this->iterator->rewind();
+
     $this->isCompiling = FALSE;
   }
 
