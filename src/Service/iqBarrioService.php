@@ -2,6 +2,7 @@
 
 namespace Drupal\iq_barrio_helper\Service;
 
+use Drupal\advagg\Form\OperationsForm;
 use Drupal\fontyourface\Entity\Font;
 
 /**
@@ -36,14 +37,26 @@ class iqBarrioService {
   /**
    * Reset the aggregated CSS.
    *
-   * @todo Replace cache rebuild by a more precise method.
+   * @todo Replace full cache rebuild by a more precise method.
    */
   public function resetCSS() {
-    // Wait for css file to be generated.
-    // @todo Replace with trigger for sass compilation.
-    sleep(5);
-    // Flush all caches.
-    drupal_flush_all_caches();
+    // Recompile all sources
+    $compilationService = \Drupal::service('iq_barrio_helper.compilation_service');
+    $compilationService->addSource('/var/www/public/modules');
+    $compilationService->addSource('/var/www/public/themes');
+    $compilationService->addSource('/var/www/public/sites/default/files/styling_profiles');
+    $compilationService->compile();
+
+
+    if (\Drupal::moduleHandler()->moduleExists('advagg')) {
+      $form = OperationsForm::create(\Drupal::getContainer());
+      $form->clearAggregates();
+    }
+    else {
+      // Flush all caches.
+      drupal_flush_all_caches();
+    }
+
   }
 
   /**
