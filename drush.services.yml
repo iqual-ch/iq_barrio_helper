@@ -1,0 +1,6 @@
+services:
+  drush9_iq_barrio_helper.commands:
+    class: \Drupal\iq_barrio_helper\Commands\SassCommands
+    tags:
+      - { name: drush.command }
+    arguments: ["@logger.factory"]
