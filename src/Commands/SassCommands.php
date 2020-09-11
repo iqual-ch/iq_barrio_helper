@@ -23,22 +23,26 @@ class SassCommands extends DrushCommands {
   /**
    * Import all products and certificates.
    *
-   * @param string $folders
-   *   A list of folders to watch.
+   * @options folders Whether or not an extra message should be displayed to the user.
    *
    * @command iq_barrio_helper:sass-watch
    * @aliases iq_barrio_helper-sass-watch
    *
-   * @usage drush iq_barrio_helper:sass-watch themes,modules
+   * @usage drush iq_barrio_helper:sass-watch --folders=themes,modules
    */
-  public function watch($folders) {
-    $folders = explode(',', str_replace('}', '', str_replace('{', '', $folders)));
+  public function watch($options = ['folders' => 'themes', 'ttl' => 60]) {
+    $folders = explode(',', str_replace('}', '', str_replace('{', '', $options['folders'])));
+    $ttl = $options['ttl'];
 
     $compilationService = \Drupal::service('iq_barrio_helper.compilation_service');
-    foreach($folders as $folder) {
-      $compilationService->addSource('/var/www/public/' . trim($folder));
+    foreach ($folders as $folder) {
+      $folder = trim($folder);
+      if (!empty($folder)) {
+        $compilationService->addSource('/var/www/public/' . $folder);
+      }
     }
-    $compilationService->watch();
+
+    $compilationService->watch($ttl);
   }
 
 }

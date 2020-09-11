@@ -14,6 +14,12 @@ class iqBarrioService {
    *
    */
   public function writeDefinitionsFile($stylingValues, $pathDefinitionTarget, $pathDefinitionSource = NULL) {
+
+    // Recompile all sources
+    $compilationService = \Drupal::service('iq_barrio_helper.compilation_service');
+    $compilationService->addSource('/var/www/public/modules');
+    $compilationService->addSource('/var/www/public/themes');
+    $compilationService->addSource('/var/www/public/sites/default/files/styling_profiles');
     $definitionSource = "";
 
     if (!$pathDefinitionSource) {
@@ -32,6 +38,7 @@ class iqBarrioService {
 
       file_put_contents($pathDefinitionTarget, $definitionCompiled);
     }
+    $compilationService->compile();
   }
 
   /**
@@ -40,13 +47,6 @@ class iqBarrioService {
    * @todo Replace full cache rebuild by a more precise method.
    */
   public function resetCSS() {
-    // Recompile all sources
-    $compilationService = \Drupal::service('iq_barrio_helper.compilation_service');
-    $compilationService->addSource('/var/www/public/modules');
-    $compilationService->addSource('/var/www/public/themes');
-    $compilationService->addSource('/var/www/public/sites/default/files/styling_profiles');
-    $compilationService->compile();
-
 
     if (\Drupal::moduleHandler()->moduleExists('advagg')) {
       $form = OperationsForm::create(\Drupal::getContainer());
