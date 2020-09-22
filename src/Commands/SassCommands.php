@@ -41,7 +41,7 @@ class SassCommands extends DrushCommands {
         $compilationService->addSource('/var/www/public/' . $folder);
       }
     }
-
+    echo 'Starting sass watch' . "\n";
     $compilationService->watch($ttl);
   }
 

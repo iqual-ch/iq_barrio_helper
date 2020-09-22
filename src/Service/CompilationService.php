@@ -39,7 +39,7 @@ class CompilationService {
   public function addSource($directory) {
     if (is_dir($directory)) {
       $files = new \RecursiveDirectoryIterator($directory);
-      $recursiveIterator = new \RecursiveIteartorIterator($files);
+      $recursiveIterator = new \RecursiveIteratorIterator($files);
       $this->iterator->append($recursiveIterator);
     }
   }
