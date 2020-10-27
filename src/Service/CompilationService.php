@@ -145,7 +145,7 @@ class CompilationService {
         }
       }
       sleep(1);
-      if ($ttl != '*' && ($ttl * 3600) + $startTime < time()) {
+      if ($ttl != '*' && ($ttl * 60) + $startTime < time()) {
         exit(0);
       }
     }
