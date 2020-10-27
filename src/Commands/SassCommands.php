@@ -45,4 +45,27 @@ class SassCommands extends DrushCommands {
     $compilationService->watch($ttl);
   }
 
+  /**
+   * Compile scss
+   *
+   * @options folders Whether or not an extra message should be displayed to the user.
+   *
+   * @command iq_barrio_helper:sass-compile
+   * @aliases iq_barrio_helper-sass-compile
+   *
+   * @usage drush iq_barrio_helper:sass-compile --folders=themes,modules,sites/default/files/styling_profiles
+   */
+  public function compile($options = ['folders' => 'themes,modules,sites/default/files/styling_profiles']) {
+    $folders = explode(',', str_replace('}', '', str_replace('{', '', $options['folders'])));
+
+    $compilationService = \Drupal::service('iq_barrio_helper.compilation_service');
+    foreach ($folders as $folder) {
+      $folder = trim($folder);
+      if (!empty($folder)) {
+        $compilationService->addSource('/var/www/public/' . $folder);
+      }
+    }
+    echo 'Compiling SASS' . "\n";
+    $compilationService->compile();
+  }
 }
