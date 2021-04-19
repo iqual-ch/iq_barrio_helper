@@ -71,7 +71,7 @@ function _set_iq_barrio_base_settings() {
 
   $styles = \Drupal::config('iq_barrio.settings')->get();
   $service = \Drupal::service('iq_barrio_helper.iq_barrio_service');
-  $service->writeDefinitionsFile($styles, DRUPAL_ROOT . '/themes/custom/iq_barrio/resources/sass/_definitions.scss', DRUPAL_ROOT . '/themes/custom/iq_barrio/resources/sass/_definitions.scss.txt');
+  $service->writeDefinitionsFile($styles, DRUPAL_ROOT . '/themes/custom/iq_barrio/resources/sass/_definitions.scss', DRUPAL_ROOT . '/themes/custom/iq_barrio/resources/sass/_template.scss.txt');
 }
 
 /**
@@ -80,5 +80,5 @@ function _set_iq_barrio_base_settings() {
 function _recreate_definitions_file() {
   $styles = \Drupal::config('iq_barrio.settings')->get();
   $service = \Drupal::service('iq_barrio_helper.iq_barrio_service');
-  $service->writeDefinitionsFile($styles, DRUPAL_ROOT . '/themes/custom/iq_barrio/resources/sass/_definitions.scss', DRUPAL_ROOT . '/themes/custom/iq_barrio/resources/sass/_definitions.scss.txt');
+  $service->writeDefinitionsFile($styles, DRUPAL_ROOT . '/themes/custom/iq_barrio/resources/sass/_definitions.scss', DRUPAL_ROOT . '/themes/custom/iq_barrio/resources/sass/_template.scss.txt');
 }
