@@ -174,10 +174,12 @@ class CompilationService {
         $css = $this->compiler->compileFile($scssFile->getPath() . '/' . $scssFile->getFilename());
         $targetFile = $scssFile->getPath() . '/' . str_replace('scss', 'css', $scssFile->getFilename());
         if (!empty($this->configs[$scssFile->getPath()])) {
+          if (!is_dir($scssFile->getPath() . '/' . $this->configs[$scssFile->getPath()]['css_dir'])) {
+            mkdir($scssFile->getPath() . '/' . $this->configs[$scssFile->getPath()]['css_dir'], 0770, TRUE);
+          }
           $targetFile = $scssFile->getPath() . '/' . $this->configs[$scssFile->getPath()]['css_dir'] . '/' . str_replace('scss', 'css', $scssFile->getFilename());
         }
         file_put_contents($targetFile, $css);
-
       }
       $this->iterator->next();
     }
