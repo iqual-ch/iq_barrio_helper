@@ -46,6 +46,24 @@ class SassCommands extends DrushCommands {
   }
 
   /**
+   * Interpolates configuration values in the scss definition file.
+   *
+   * @options folders Whether or not an extra message should be displayed to the user.
+   *
+   * @command iq_barrio_helper:sass-interpolate-config
+   * @aliases iq_barrio_helper-sass-interpolate-config
+   *
+   * @usage drush iq_barrio_helper:sass-interpolate-config
+   */
+  public function interpolateConfig() {
+    $theme_settings = \Drupal::config('system.theme.global')->get() + \Drupal::config('iq_barrio.settings')->get();
+    $form_state = new FormState();
+    $form_state->setValues($theme_settings);
+    \Drupal::service('theme_handler')->getTheme('iq_barrio')->load();
+    iq_barrio_form_system_theme_settings_submit([], $form_state);
+  }
+
+  /**
    * Compile scss
    *
    * @options folders Whether or not an extra message should be displayed to the user.
