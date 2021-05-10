@@ -6,7 +6,7 @@ use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drush\Commands\DrushCommands;
 
 /**
- * Sass Drush commands.
+ * Sass Drush commands.§
  */
 class SassCommands extends DrushCommands {
 
@@ -38,7 +38,7 @@ class SassCommands extends DrushCommands {
     foreach ($folders as $folder) {
       $folder = trim($folder);
       if (!empty($folder)) {
-        $compilationService->addSource('/var/www/public/' . $folder);
+        $compilationService->addSource(DRUPAL_ROOT . $folder);
       }
     }
     echo 'Starting sass watch' . "\n";
@@ -62,7 +62,7 @@ class SassCommands extends DrushCommands {
     foreach ($folders as $folder) {
       $folder = trim($folder);
       if (!empty($folder)) {
-        $compilationService->addSource('/var/www/public/' . $folder);
+        $compilationService->addSource(DRUPAL_ROOT . $folder);
       }
     }
     echo 'Compiling SASS' . "\n";
