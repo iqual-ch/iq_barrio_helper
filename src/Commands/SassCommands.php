@@ -6,7 +6,7 @@ use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drush\Commands\DrushCommands;
 
 /**
- * Sass Drush commands.§
+ * Sass Drush commands.
  */
 class SassCommands extends DrushCommands {
 
