@@ -1,5 +1,3 @@
 services:
   iq_barrio_helper.iq_barrio_service:
     class: Drupal\iq_barrio_helper\Service\iqBarrioService
-  iq_barrio_helper.compilation_service:
-    class: Drupal\iq_barrio_helper\Service\CompilationService
