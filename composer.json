@@ -16,5 +16,8 @@
 				"drush.services.yml": "^9"
 			}
 		}
+	},
+	"require": {
+		"iqual/iq_scss_compiler": "*"
 	}
 }
