@@ -64,7 +64,7 @@ class SassCommands extends DrushCommands {
    *
    * @usage drush iq_barrio_helper:sass-compile --folders=themes,modules,sites/default/files/styling_profiles --continueOnErrors=false
    */
-  public function compile($options = ['folders' => 'themes,modules,sites/default/files/styling_profiles', 'continueOnErrors' => false, 'verbose' => false]) {
+  public function compile($options = ['folders' => 'themes,modules,sites/default/files/styling_profiles', 'continueOnErrors' => false]) {
     $sassCommands = \Drupal::service('iq_scss_compiler.sass_commands');
     $sassCommands->compile($options);
   }
