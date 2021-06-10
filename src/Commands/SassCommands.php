@@ -38,7 +38,7 @@ class SassCommands extends DrushCommands {
     foreach ($folders as $folder) {
       $folder = trim($folder);
       if (!empty($folder)) {
-        $compilationService->addSource('/var/www/public/' . $folder);
+        $compilationService->addSource(DRUPAL_ROOT . '/' . $folder);
       }
     }
     echo 'Starting sass watch' . "\n";
@@ -62,7 +62,7 @@ class SassCommands extends DrushCommands {
     foreach ($folders as $folder) {
       $folder = trim($folder);
       if (!empty($folder)) {
-        $compilationService->addSource('/var/www/public/' . $folder);
+        $compilationService->addSource(DRUPAL_ROOT . '/' . $folder);
       }
     }
     echo 'Compiling SASS' . "\n";
