@@ -16,7 +16,7 @@ class iqBarrioService {
   public function writeDefinitionsFile($stylingValues, $pathDefinitionTarget, $pathDefinitionSource = NULL) {
 
     // Recompile all sources
-    $compilationService = \Drupal::service('iq_barrio_helper.compilation_service');
+    $compilationService = \Drupal::service('iq_scss_compiler.compilation_service');
     $compilationService->addSource(DRUPAL_ROOT . '/modules');
     $compilationService->addSource(DRUPAL_ROOT . '/themes');
     $compilationService->addSource(DRUPAL_ROOT . '/sites/default/files/styling_profiles');
