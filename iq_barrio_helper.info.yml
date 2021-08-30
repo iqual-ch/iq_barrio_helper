@@ -3,8 +3,8 @@ type: module
 description: 'Provides iqBarrioService'
 package: 'Theme helper'
 core: 8.x
+core_version_requirement: ^8 || ^9
 'interface translation project': iq_barrio_helper
 'interface translation server pattern': modules/custom/iq_barrio_helper/translations/iq_barrio_helper-%language.po
-
 dependencies:
   - iq_scss_compiler:iq_scss_compiler
