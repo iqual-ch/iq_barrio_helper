@@ -2,6 +2,7 @@
 
 namespace Drupal\iq_barrio_helper\Service;
 
+use Drupal\Core\Form\FormState;
 use Drupal\advagg\Form\OperationsForm;
 use Drupal\fontyourface\Entity\Font;
 
@@ -39,6 +40,17 @@ class iqBarrioService {
       file_put_contents($pathDefinitionTarget, $definitionCompiled);
     }
     $compilationService->compile();
+  }
+
+ /**
+  * Interpolates configuration values in the scss definition file.
+  */
+  public function interpolateConfig() {
+    $theme_settings = \Drupal::config('system.theme.global')->get() + \Drupal::config('iq_barrio.settings')->get();
+    $form_state = new FormState();
+    $form_state->setValues($theme_settings);
+    \Drupal::service('theme_handler')->getTheme('iq_barrio')->load();
+    iq_barrio_form_system_theme_settings_submit([], $form_state);
   }
 
   /**

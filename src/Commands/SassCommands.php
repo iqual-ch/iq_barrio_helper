@@ -47,11 +47,8 @@ class SassCommands extends DrushCommands {
    * @usage drush iq_barrio_helper:sass-interpolate-config
    */
   public function interpolateConfig() {
-    $theme_settings = \Drupal::config('system.theme.global')->get() + \Drupal::config('iq_barrio.settings')->get();
-    $form_state = new FormState();
-    $form_state->setValues($theme_settings);
-    \Drupal::service('theme_handler')->getTheme('iq_barrio')->load();
-    iq_barrio_form_system_theme_settings_submit([], $form_state);
+    $service = \Drupal::service('iq_barrio_helper.iq_barrio_service');
+    $service->interpolateConfig();
   }
 
   /**
