@@ -68,4 +68,16 @@ class SassCommands extends DrushCommands {
     $sassCommands = \Drupal::service('iq_scss_compiler.sass_commands');
     $sassCommands->compile($options);
   }
+  
+  /**
+   * Run SASS compilations after deploy.
+   *
+   * @hook post-command deploy:hook
+   */
+  public function deploy($result, CommandData $commandData) {
+      $this->interpolateConfig();
+      $this->compile();
+      return;
+  }
+
 }
