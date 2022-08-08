@@ -2,8 +2,9 @@
 
 namespace Drupal\iq_barrio_helper\Commands;
 
-use Drupal\Core\Form\FormState;
+use Consolidation\AnnotatedCommand\CommandData;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
+use Drush\Commands\core\CacheCommands;
 use Drush\Commands\DrushCommands;
 
 /**
@@ -65,4 +66,18 @@ class SassCommands extends DrushCommands {
     $sassCommands = \Drupal::service('iq_scss_compiler.sass_commands');
     $sassCommands->compile($options);
   }
+  
+  /**
+   * Run SASS compilations after deploy.
+   *
+   * @hook post-command deploy:hook
+   */
+  public function deploy($result, CommandData $commandData) {
+      $this->interpolateConfig();
+      $this->compile();
+      CacheCommands::clearThemeRegistry();
+      CacheCommands::clearRender();
+      return;
+  }
+
 }
