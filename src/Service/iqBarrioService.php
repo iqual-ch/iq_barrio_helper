@@ -9,18 +9,23 @@ use Drupal\fontyourface\Entity\Font;
 /**
  *
  */
-class iqBarrioService {
+class iqBarrioService
+{
 
   /**
+   * 
+   * Updates a definition file with the given styling values.
    *
+   * @param array $stylingValues
+   *   The styling values to insert.
+   * @param string $pathDefinitionTarget
+   *   The definition file to write.
+   * @param string $pathDefinitionSource
+   *   The definition base file.
    */
-  public function writeDefinitionsFile($stylingValues, $pathDefinitionTarget, $pathDefinitionSource = NULL) {
+  public function writeDefinitionsFile(array $stylingValues, string $pathDefinitionTarget, string $pathDefinitionSource = NULL)
+  {
 
-    // Recompile all sources
-    $compilationService = \Drupal::service('iq_scss_compiler.compilation_service');
-    $compilationService->addSource(DRUPAL_ROOT . '/modules');
-    $compilationService->addSource(DRUPAL_ROOT . '/themes');
-    $compilationService->addSource(DRUPAL_ROOT . '/sites/default/files/styling_profiles');
     $definitionSource = "";
 
     if (!$pathDefinitionSource) {
@@ -39,12 +44,21 @@ class iqBarrioService {
 
       file_put_contents($pathDefinitionTarget, $definitionCompiled);
     }
+  }
+
+  /**
+   * Run the compilation service for custom modules and themes.
+   */
+  public function compile() {
+    $compilationService = \Drupal::service('iq_scss_compiler.compilation_service');
+    $compilationService->addSource(\Drupal::root() . '/modules/custom');
+    $compilationService->addSource(\Drupal::root() . '/themes/custom');
     $compilationService->compile();
   }
 
- /**
-  * Interpolates configuration values in the scss definition file.
-  */
+  /**
+   * Interpolates configuration values in the scss definition file.
+   */
   public function interpolateConfig() {
     $theme_settings = \Drupal::config('system.theme.global')->get() + \Drupal::config('iq_barrio.settings')->get();
     $form_state = new FormState();
@@ -166,7 +180,7 @@ class iqBarrioService {
     $form['color_definitions'] = [
       '#type' => 'details',
       '#title' => t('Colors'),
-    // Controls the HTML5 'open' attribute. Defaults to FALSE.
+      // Controls the HTML5 'open' attribute. Defaults to FALSE.
       '#open' => TRUE,
       '#group' => 'iq_theme',
       '#prefix' => '<div id="iq-barrio-target"></div><div id="iq-barrio-source">' . file_get_contents(DRUPAL_ROOT . '/' . drupal_get_path('theme', 'iq_barrio') . "/resources/sass/backend-styling-preview.css.txt") . '</div>',
@@ -2727,9 +2741,9 @@ class iqBarrioService {
     $form['patterns']['slider']['slider_arrow_opacity'] = [
       '#type' => 'textfield',
       '#attributes' => [
-      // 'min' => 0,
-      //   'max' => 1,
-      //   'step' => 0.01,
+        // 'min' => 0,
+        //   'max' => 1,
+        //   'step' => 0.01,
         'class' => ['separator'],
       ],
       '#title' => t('Opacity'),
