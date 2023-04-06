@@ -53,7 +53,7 @@ class SassCommands extends DrushCommands {
   }
 
   /**
-   * Compile scss
+   * Compile scss.
    *
    * @options folders Whether or not an extra message should be displayed to the user.
    *
@@ -62,22 +62,22 @@ class SassCommands extends DrushCommands {
    *
    * @usage drush iq_barrio_helper:sass-compile --folders=themes,modules,sites/default/files/styling_profiles --continueOnErrors=false
    */
-  public function compile($options = ['folders' => 'themes,modules,sites/default/files/styling_profiles', 'continueOnErrors' => false]) {
+  public function compile($options = ['folders' => 'themes,modules,sites/default/files/styling_profiles', 'continueOnErrors' => FALSE]) {
     $sassCommands = \Drupal::service('iq_scss_compiler.sass_commands');
     $sassCommands->compile($options);
   }
-  
+
   /**
    * Run SASS compilations after deploy.
    *
    * @hook post-command deploy:hook
    */
   public function deploy($result, CommandData $commandData) {
-      $this->interpolateConfig();
-      $this->compile();
-      CacheCommands::clearThemeRegistry();
-      CacheCommands::clearRender();
-      return;
+    $this->interpolateConfig();
+    $this->compile();
+    CacheCommands::clearThemeRegistry();
+    CacheCommands::clearRender();
+    return;
   }
 
 }
