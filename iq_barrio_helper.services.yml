@@ -1,3 +1,4 @@
 services:
   iq_barrio_helper.iq_barrio_service:
-    class: Drupal\iq_barrio_helper\Service\iqBarrioService
+    class: Drupal\iq_barrio_helper\Service\IqBarrioService
+    arguments: ['@string_translation']

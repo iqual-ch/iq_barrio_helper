@@ -6,6 +6,8 @@ use Consolidation\AnnotatedCommand\CommandData;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drush\Commands\core\CacheCommands;
 use Drush\Commands\DrushCommands;
+use Drupal\iq_scss_compiler\Commands\SassCommands as IqScssCompilerCommands;
+use Drupal\iq_barrio_helper\Service\IqBarrioService;
 
 /**
  * Sass Drush commands.
@@ -13,13 +15,40 @@ use Drush\Commands\DrushCommands;
 class SassCommands extends DrushCommands {
 
   /**
+   * Drupal Logger service.
+   *
+   * @var \Drupal\Core\Logger\LoggerChannelFactoryInterface
+   */
+  private $loggerChannelFactory;
+
+  /**
+   * Iqual sass commands.
+   *
+   * @var \Drupal\iq_scss_compiler\Commands\SassCommands
+   */
+  private $sassCommands;
+
+  /**
+   * IqBarrio Helper service.
+   *
+   * @var \Drupal\iq_barrio_helper\Service\IqBarrioService
+   */
+  private $iqBarrioService;
+
+  /**
    * Constructs a new SassCommands object.
    *
    * @param \Drupal\Core\Logger\LoggerChannelFactoryInterface $loggerChannelFactory
    *   Logger channel factory service.
+   * @param \Drupal\iq_scss_compiler\Commands\SassCommands $sassCommands
+   *   Iqual sass commands.
+   * @param \Drupal\iq_barrio_helper\Service\IqBarrioService $iqBarrioService
+   *   IqBarrio Helper service.
    */
-  public function __construct(LoggerChannelFactoryInterface $loggerChannelFactory) {
+  public function __construct(LoggerChannelFactoryInterface $loggerChannelFactory, IqScssCompilerCommands $sassCommands, IqBarrioService $iqBarrioService) {
     $this->loggerChannelFactory = $loggerChannelFactory;
+    $this->sassCommands = $sassCommands;
+    $this->iqBarrioService = $iqBarrioService;
   }
 
   /**
@@ -33,8 +62,7 @@ class SassCommands extends DrushCommands {
    * @usage drush iq_barrio_helper:sass-watch --folders=themes,modules
    */
   public function watch($options = ['folders' => 'themes', 'ttl' => 60]) {
-    $sassCommands = \Drupal::service('iq_scss_compiler.sass_commands');
-    $sassCommands->watch($options);
+    $this->sassCommands->watch($options);
   }
 
   /**
@@ -48,12 +76,11 @@ class SassCommands extends DrushCommands {
    * @usage drush iq_barrio_helper:sass-interpolate-config
    */
   public function interpolateConfig() {
-    $service = \Drupal::service('iq_barrio_helper.iq_barrio_service');
-    $service->interpolateConfig();
+    $this->iqBarrioService->interpolateConfig();
   }
 
   /**
-   * Compile scss
+   * Compile scss.
    *
    * @options folders Whether or not an extra message should be displayed to the user.
    *
@@ -62,22 +89,23 @@ class SassCommands extends DrushCommands {
    *
    * @usage drush iq_barrio_helper:sass-compile --folders=themes,modules,sites/default/files/styling_profiles --continueOnErrors=false
    */
-  public function compile($options = ['folders' => 'themes,modules,sites/default/files/styling_profiles', 'continueOnErrors' => false]) {
-    $sassCommands = \Drupal::service('iq_scss_compiler.sass_commands');
-    $sassCommands->compile($options);
+  public function compile($options = [
+    'folders' => 'themes,modules,sites/default/files/styling_profiles',
+    'continueOnErrors' => FALSE,
+  ]) {
+    $this->sassCommands->compile($options);
   }
-  
+
   /**
    * Run SASS compilations after deploy.
    *
    * @hook post-command deploy:hook
    */
   public function deploy($result, CommandData $commandData) {
-      $this->interpolateConfig();
-      $this->compile();
-      CacheCommands::clearThemeRegistry();
-      CacheCommands::clearRender();
-      return;
+    $this->interpolateConfig();
+    $this->compile();
+    CacheCommands::clearThemeRegistry();
+    CacheCommands::clearRender();
   }
 
 }
