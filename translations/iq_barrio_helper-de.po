@@ -118,9 +118,6 @@ msgstr "Schriftfarbe"
 msgid "Font color footer"
 msgstr "Schriftfarbe im Fussbereich"
 
-msgid "Background color "
-msgstr "Hintergrundfarbe"
-
 msgid "Typography"
 msgstr "Typografie"
 
@@ -204,9 +201,6 @@ msgstr "Aussenabstand<br />(oben, links/rechts, unten)"
 
 msgid "Padding (top, left/right, bottom)"
 msgstr "Innenabstand<br />(oben, links/rechts, unten)"
-
-msgid "Font color "
-msgstr "Schriftfarbe"
 
 msgid "Background"
 msgstr "Hintergrund"
