@@ -13,11 +13,11 @@
 	"extra": {
 		"drush": {
 			"services": {
-				"drush.services.yml": "^9"
+				"drush.services.yml": "^10"
 			}
 		}
 	},
 	"require": {
-		"iqual/iq_scss_compiler": "^3.0"
+		"iqual/iq_scss_compiler": "^4.0"
 	}
 }
