@@ -4,36 +4,15 @@ namespace Drupal\iq_barrio_helper\Commands;
 
 use Consolidation\AnnotatedCommand\CommandData;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
+use Drupal\iq_barrio_helper\Service\IqBarrioService;
+use Drupal\iq_scss_compiler\Commands\SassCommands as IqScssCompilerCommands;
 use Drush\Commands\core\CacheCommands;
 use Drush\Commands\DrushCommands;
-use Drupal\iq_scss_compiler\Commands\SassCommands as IqScssCompilerCommands;
-use Drupal\iq_barrio_helper\Service\IqBarrioService;
 
 /**
  * Sass Drush commands.
  */
 class SassCommands extends DrushCommands {
-
-  /**
-   * Drupal Logger service.
-   *
-   * @var \Drupal\Core\Logger\LoggerChannelFactoryInterface
-   */
-  private $loggerChannelFactory;
-
-  /**
-   * Iqual sass commands.
-   *
-   * @var \Drupal\iq_scss_compiler\Commands\SassCommands
-   */
-  private $sassCommands;
-
-  /**
-   * IqBarrio Helper service.
-   *
-   * @var \Drupal\iq_barrio_helper\Service\IqBarrioService
-   */
-  private $iqBarrioService;
 
   /**
    * Constructs a new SassCommands object.
@@ -45,10 +24,7 @@ class SassCommands extends DrushCommands {
    * @param \Drupal\iq_barrio_helper\Service\IqBarrioService $iqBarrioService
    *   IqBarrio Helper service.
    */
-  public function __construct(LoggerChannelFactoryInterface $loggerChannelFactory, IqScssCompilerCommands $sassCommands, IqBarrioService $iqBarrioService) {
-    $this->loggerChannelFactory = $loggerChannelFactory;
-    $this->sassCommands = $sassCommands;
-    $this->iqBarrioService = $iqBarrioService;
+  public function __construct(private readonly LoggerChannelFactoryInterface $loggerChannelFactory, private readonly IqScssCompilerCommands $sassCommands, private readonly IqBarrioService $iqBarrioService) {
   }
 
   /**
@@ -90,7 +66,7 @@ class SassCommands extends DrushCommands {
    * @usage drush iq_barrio_helper:sass-compile --folders=themes,modules,sites/default/files/styling_profiles --continueOnErrors=false
    */
   public function compile($options = [
-    'folders' => 'themes,modules,sites/default/files/styling_profiles',
+    'folders' => 'themes/custom,modules/custom,sites/default/files/styling_profiles',
     'continueOnErrors' => FALSE,
   ]) {
     $this->sassCommands->compile($options);

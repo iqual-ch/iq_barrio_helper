@@ -2,11 +2,11 @@
 
 namespace Drupal\iq_barrio_helper\Service;
 
-use Drupal\Core\Form\FormState;
 use Drupal\advagg\Form\OperationsForm;
-use Drupal\fontyourface\Entity\Font;
+use Drupal\Core\Form\FormState;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\StringTranslation\TranslationInterface;
+use Drupal\fontyourface\Entity\Font;
 
 /**
  * Provides a config form to alter stylings and CSS compilation functions.
