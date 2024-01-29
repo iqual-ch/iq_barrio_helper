@@ -1,23 +1,24 @@
 {
-	"name": "iqual/iq_barrio_helper",
-	"description": "Helper functions for iq_ barrio_theme.",
-	"type": "drupal-custom-module",
-	"keywords": [
-		"Drupal"
-	],
-	"homepage": "https://github.com/iqual-ch/iq_barrio_helper",
-	"support": {
-		"issues": "https://github.com/iqual-ch/iq_barrio_helper/issues",
-		"source": "https://github.com/iqual-ch/iq_barrio_helper"
-	},
-	"extra": {
-		"drush": {
-			"services": {
-				"drush.services.yml": "^10"
-			}
-		}
-	},
-	"require": {
-		"iqual/iq_scss_compiler": "^4.0"
-	}
+  "name": "iqual/iq_barrio_helper",
+  "description": "Helper functions for iq_ barrio_theme.",
+  "type": "drupal-custom-module",
+  "keywords": [
+    "Drupal"
+  ],
+  "homepage": "https://github.com/iqual-ch/iq_barrio_helper",
+  "support": {
+    "issues": "https://github.com/iqual-ch/iq_barrio_helper/issues",
+    "source": "https://github.com/iqual-ch/iq_barrio_helper"
+  },
+  "extra": {
+    "drush": {
+      "services": {
+        "drush.services.yml": "^10"
+      }
+    }
+  },
+  "require": {
+    "iqual/iq_scss_compiler": "^4.0",
+    "drush/drush": "^11"
+  }
 }
