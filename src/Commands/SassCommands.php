@@ -24,6 +24,10 @@ class SassCommands extends DrushCommands {
    *   Iqual sass commands.
    * @param \Drupal\iq_barrio_helper\Service\IqBarrioService $iqBarrioService
    *   IqBarrio Helper service.
+   * @param \Drupal\Core\Cache\CacheTagsInvalidatorInterface $cacheTagsInvalidator
+   *   Cache tags invalidator service.
+   * @param \Drupal\Core\Theme\Registry $themeRegistry
+   *   Theme registry service.
    */
   public function __construct(
     protected readonly LoggerChannelFactoryInterface $loggerChannelFactory,
