@@ -19,6 +19,6 @@
   },
   "require": {
     "iqual/iq_scss_compiler": "^4.0",
-    "drush/drush": "^12"
+    "drush/drush": "^11 | ^12"
   }
 }
