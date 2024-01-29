@@ -3,10 +3,11 @@
 namespace Drupal\iq_barrio_helper\Commands;
 
 use Consolidation\AnnotatedCommand\CommandData;
+use Drupal\Core\Cache\CacheTagsInvalidatorInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
+use Drupal\Core\Theme\Registry;
 use Drupal\iq_barrio_helper\Service\IqBarrioService;
 use Drupal\iq_scss_compiler\Commands\SassCommands as IqScssCompilerCommands;
-use Drush\Commands\core\CacheCommands;
 use Drush\Commands\DrushCommands;
 
 /**
@@ -24,7 +25,12 @@ class SassCommands extends DrushCommands {
    * @param \Drupal\iq_barrio_helper\Service\IqBarrioService $iqBarrioService
    *   IqBarrio Helper service.
    */
-  public function __construct(private readonly LoggerChannelFactoryInterface $loggerChannelFactory, private readonly IqScssCompilerCommands $sassCommands, private readonly IqBarrioService $iqBarrioService) {
+  public function __construct(
+    protected readonly LoggerChannelFactoryInterface $loggerChannelFactory,
+    protected readonly IqScssCompilerCommands $sassCommands,
+    protected readonly IqBarrioService $iqBarrioService,
+    protected readonly CacheTagsInvalidatorInterface $cacheTagsInvalidator,
+    protected readonly Registry $themeRegistry) {
   }
 
   /**
@@ -80,8 +86,8 @@ class SassCommands extends DrushCommands {
   public function deploy($result, CommandData $commandData) {
     $this->interpolateConfig();
     $this->compile();
-    CacheCommands::clearThemeRegistry();
-    CacheCommands::clearRender();
+    $this->cacheTagsInvalidator->invalidateTags(['rendered']);
+    $this->themeRegistry->reset();
   }
 
 }
