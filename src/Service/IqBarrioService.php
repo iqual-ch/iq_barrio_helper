@@ -211,71 +211,71 @@ class IqBarrioService {
 
     $form['color_definitions']['base_definitions']['grey_holder']['color_black'] = [
       '#type' => 'hidden',
-      '#default_value' => $formValues['color_black'] ?: '#000000',
+      '#default_value' => $formValues['color_black'] ?? '#000000',
     ];
 
     $form['color_definitions']['base_definitions']['grey_holder']['color_white'] = [
       '#type' => 'hidden',
-      '#default_value' => $formValues['color_white'] ?: '#FFFFFF',
+      '#default_value' => $formValues['color_white'] ?? '#FFFFFF',
     ];
 
     $form['color_definitions']['base_definitions']['grey_holder']['color_black'] = [
       '#type' => 'hidden',
-      '#default_value' => $formValues['color_black'] ?: '#000000',
+      '#default_value' => $formValues['color_black'] ?? '#000000',
     ];
 
     $form['color_definitions']['base_definitions']['grey_holder']['color_white'] = [
       '#type' => 'hidden',
-      '#default_value' => $formValues['color_white'] ?: '#FFFFFF',
+      '#default_value' => $formValues['color_white'] ?? '#FFFFFF',
     ];
 
     $form['color_definitions']['base_definitions']['grey_holder']['color_grey1'] = [
       '#type' => 'color',
-      '#default_value' => $formValues['color_grey1'] ?: '#333333',
+      '#default_value' => $formValues['color_grey1'] ?? '#333333',
     ];
 
     $form['color_definitions']['base_definitions']['grey_holder']['color_grey2'] = [
       '#type' => 'color',
-      '#default_value' => $formValues['color_grey2'] ?: '#666666',
+      '#default_value' => $formValues['color_grey2'] ?? '#666666',
     ];
 
     $form['color_definitions']['base_definitions']['grey_holder']['color_grey3'] = [
       '#type' => 'color',
-      '#default_value' => $formValues['color_grey3'] ?: '#999999',
+      '#default_value' => $formValues['color_grey3'] ?? '#999999',
     ];
 
     $form['color_definitions']['base_definitions']['grey_holder']['color_grey4'] = [
       '#type' => 'color',
-      '#default_value' => $formValues['color_grey4'] ?: '#cccccc',
+      '#default_value' => $formValues['color_grey4'] ?? '#cccccc',
     ];
 
     $form['color_definitions']['base_definitions']['grey_holder']['color_grey5'] = [
       '#type' => 'color',
-      '#default_value' => $formValues['color_grey5'] ?: '#eeeeee',
+      '#default_value' => $formValues['color_grey5'] ?? '#eeeeee',
     ];
 
     $form['color_definitions']['base_definitions']['color_primary'] = [
       '#type' => 'color',
       '#title' => $this->t('Primary color'),
-      '#default_value' => $formValues['color_primary'] ?: '#e95e27',
+      '#default_value' => $formValues['color_primary'] ?? '#e95e27',
     ];
 
     $form['color_definitions']['base_definitions']['color_secondary'] = [
       '#type' => 'color',
       '#title' => $this->t('Secondary color'),
-      '#default_value' => $formValues['color_secondary'] ?: '#009C82',
+      '#default_value' => $formValues['color_secondary'] ?? '#009C82',
     ];
 
     $form['color_definitions']['base_definitions']['color_tertiary'] = [
       '#type' => 'color',
       '#title' => $this->t('Tertiary color'),
-      '#default_value' => $formValues['color_tertiary'] ?: '#9C360D',
+      '#default_value' => $formValues['color_tertiary'] ?? '#9C360D',
     ];
 
     $form['color_definitions']['base_definitions']['color_quaternary'] = [
       '#type' => 'color',
       '#title' => $this->t('Quaternary color'),
-      '#default_value' => $formValues['color_quaternary'] ?: '#27E9C9',
+      '#default_value' => $formValues['color_quaternary'] ?? '#27E9C9',
     ];
 
     $form['color_definitions']['section_definitions'] = [
@@ -287,7 +287,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_background'] ?: 'white',
+      '#default_value' => $formValues['color_page_background'] ?? 'white',
       '#prefix' => '<div class="styling-row"><div class="styling-input"><div class="inline-input-holder separator"><strong>Page Background</strong>',
     ];
 
@@ -302,7 +302,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_background_meta_header'] ?: 'white',
+      '#default_value' => $formValues['color_page_background_meta_header'] ?? 'white',
       '#prefix' => '<div class="inline-input-holder"><strong>Meta header</strong>',
     ];
 
@@ -317,7 +317,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_meta_header'] ?: 'grey3',
+      '#default_value' => $formValues['color_page_font_meta_header'] ?? 'grey3',
       '#prefix' => '<div class="inline-input-holder separator">',
     ];
 
@@ -332,7 +332,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_background_header'] ?: 'white',
+      '#default_value' => $formValues['color_page_background_header'] ?? 'white',
       '#prefix' => '<div class="inline-input-holder"><strong>Header</strong>',
     ];
 
@@ -347,7 +347,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_header'] ?: 'grey3',
+      '#default_value' => $formValues['color_page_font_header'] ?? 'grey3',
       '#prefix' => '<div class="inline-input-holder separator">',
     ];
 
@@ -362,7 +362,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_background_footer'] ?: 'grey5',
+      '#default_value' => $formValues['color_page_background_footer'] ?? 'grey5',
       '#prefix' => '<div class="inline-input-holder"><strong>Footer</strong>',
     ];
 
@@ -377,7 +377,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color footer'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_footer'] ?: 'grey3',
+      '#default_value' => $formValues['color_page_font_footer'] ?? 'grey3',
       '#prefix' => '<div class="inline-input-holder separator">',
     ];
 
@@ -392,7 +392,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_background_elements'] ?: 'secondary',
+      '#default_value' => $formValues['color_page_background_elements'] ?? 'secondary',
       '#prefix' => '<div class="inline-input-holder separator"><strong>Elements (legacy)</strong>',
     ];
 
@@ -426,25 +426,25 @@ class IqBarrioService {
     ];
 
     foreach ($headings as $tag => $title) {
-      $font_family_value = $formValues[$tag . '_font_family'] ?: '000000';
-      $color_value = $formValues[$tag . '_color'] ?: 'primary';
-      $opacity_value = $formValues[$tag . '_opacity'];
+      $font_family_value = $formValues[$tag . '_font_family'] ?? '000000';
+      $color_value = $formValues[$tag . '_color'] ?? 'primary';
+      $opacity_value = $formValues[$tag . '_opacity'] ?? 1;
 
-      $color_inverted_value = $formValues[$tag . '_color_inverted'] ?: 'white';
-      $opacity_inverted_value = $formValues[$tag . '_opacity_inverted'];
+      $color_inverted_value = $formValues[$tag . '_color_inverted'] ?? 'white';
+      $opacity_inverted_value = $formValues[$tag . '_opacity_inverted'] ?? '1';
 
-      $font_size_value = $formValues[$tag . '_font_size'] ?: '2.5';
-      $font_size_unit_value = $formValues[$tag . '_font_size_unit'] ?: 'rem';
+      $font_size_value = $formValues[$tag . '_font_size'] ?? '2.5';
+      $font_size_unit_value = $formValues[$tag . '_font_size_unit'] ?? 'rem';
 
-      $font_size_min_value = $formValues[$tag . '_font_size_min'] ?: '2';
+      $font_size_min_value = $formValues[$tag . '_font_size_min'] ?? '2';
 
-      $line_height_value = $formValues[$tag . '_line_height'] ?: '1.2';
-      $font_weight_value = $formValues[$tag . '_font_weight'] ?: 'normal';
-      $font_style_value = $formValues[$tag . '_font_style'] ?: 'normal';
+      $line_height_value = $formValues[$tag . '_line_height'] ?? '1.2';
+      $font_weight_value = $formValues[$tag . '_font_weight'] ?? 'normal';
+      $font_style_value = $formValues[$tag . '_font_style'] ?? 'normal';
 
-      $margin_top_value = $formValues[$tag . '_margin_top'] ?: '0';
-      $margin_bottom_value = $formValues[$tag . '_margin_bottom'] ?: '30';
-      $margin_unit_value = $formValues[$tag . '_margin_unit'] ?: 'px';
+      $margin_top_value = $formValues[$tag . '_margin_top'] ?? '0';
+      $margin_bottom_value = $formValues[$tag . '_margin_bottom'] ?? '30';
+      $margin_unit_value = $formValues[$tag . '_margin_unit'] ?? 'px';
 
       $form['typography']['headings'][$tag . '_color'] = [
         '#prefix' => '<div class="styling-row"><div class="styling-input"><div class="inline-input-holder"><strong>' . $title . '</strong>',
@@ -457,7 +457,7 @@ class IqBarrioService {
       $form['typography']['headings'][$tag . '_opacity'] = [
         '#type' => 'textfield',
         '#title' => $this->t('Opacity'),
-        '#default_value' => $opacity_value ?? '1',
+        '#default_value' => $opacity_value,
       ];
 
       $form['typography']['headings'][$tag . '_color_inverted'] = [
@@ -471,7 +471,7 @@ class IqBarrioService {
       $form['typography']['headings'][$tag . '_opacity_inverted'] = [
         '#type' => 'textfield',
         '#title' => $this->t('Opacity'),
-        '#default_value' => $opacity_inverted_value ?? '1',
+        '#default_value' => $opacity_inverted_value,
         '#suffix' => '</div>',
       ];
 
@@ -586,23 +586,23 @@ class IqBarrioService {
     ];
 
     foreach ($text_elements as $tag => $title) {
-      $font_family_value = $formValues[$tag . '_font_family'] ?: '000000';
-      $color_value = $formValues[$tag . '_color'] ?: 'grey3';
-      $opacity_value = $formValues[$tag . '_opacity'];
+      $font_family_value = $formValues[$tag . '_font_family'] ?? '000000';
+      $color_value = $formValues[$tag . '_color'] ?? 'grey3';
+      $opacity_value = $formValues[$tag . '_opacity'] ?? '1';
 
-      $color_inverted_value = $formValues[$tag . '_color_inverted'] ?: 'white';
-      $opacity_inverted_value = $formValues[$tag . '_opacity_inverted'];
+      $color_inverted_value = $formValues[$tag . '_color_inverted'] ?? 'white';
+      $opacity_inverted_value = $formValues[$tag . '_opacity_inverted'] ?? '1';
 
-      $font_size_min_value = $formValues[$tag . '_font_size_min'] ?: '1';
-      $font_size_value = $formValues[$tag . '_font_size'] ?: '1.5';
-      $font_size_unit_value = $formValues[$tag . '_font_size_unit'] ?: 'rem';
-      $line_height_value = $formValues[$tag . '_line_height'] ?: '1.2';
-      $font_weight_value = $formValues[$tag . '_font_weight'] ?: '400';
-      $font_style_value = $formValues[$tag . '_font_style'] ?: 'normal';
+      $font_size_min_value = $formValues[$tag . '_font_size_min'] ?? '1';
+      $font_size_value = $formValues[$tag . '_font_size'] ?? '1.5';
+      $font_size_unit_value = $formValues[$tag . '_font_size_unit'] ?? 'rem';
+      $line_height_value = $formValues[$tag . '_line_height'] ?? '1.2';
+      $font_weight_value = $formValues[$tag . '_font_weight'] ?? '400';
+      $font_style_value = $formValues[$tag . '_font_style'] ?? 'normal';
 
-      $margin_top_value = $formValues[$tag . '_margin_top'] ?: '0';
-      $margin_bottom_value = $formValues[$tag . '_margin_bottom'] ?: '0.5';
-      $margin_unit_value = $formValues[$tag . '_margin_unit'] ?: 'rem';
+      $margin_top_value = $formValues[$tag . '_margin_top'] ?? '0';
+      $margin_bottom_value = $formValues[$tag . '_margin_bottom'] ?? '0.5';
+      $margin_unit_value = $formValues[$tag . '_margin_unit'] ?? 'rem';
 
       $form['typography']['text_elements'][$tag . '_color'] = [
         '#prefix' => '<div class="styling-row"><div class="styling-input"><div class="inline-input-holder"><strong>' . $title . '</strong>',
@@ -615,7 +615,7 @@ class IqBarrioService {
       $form['typography']['text_elements'][$tag . '_opacity'] = [
         '#type' => 'textfield',
         '#title' => $this->t('Opacity'),
-        '#default_value' => $opacity_value ?? '1',
+        '#default_value' => $opacity_value,
       ];
 
       $form['typography']['text_elements'][$tag . '_color_inverted'] = [
@@ -628,7 +628,7 @@ class IqBarrioService {
       $form['typography']['text_elements'][$tag . '_opacity_inverted'] = [
         '#type' => 'textfield',
         '#title' => $this->t('Opacity'),
-        '#default_value' => $opacity_inverted_value ?? '1',
+        '#default_value' => $opacity_inverted_value,
         '#suffix' => '</div>',
       ];
 
@@ -738,19 +738,19 @@ class IqBarrioService {
       '#title' => $this->t('Links'),
     ];
 
-    $link_color_value = $formValues['link_color'] ?: 'primary';
-    $link_opacity_value = $formValues['link_opacity'];
-    $link_color_inverted_value = $formValues['link_color_inverted'] ?: 'white';
-    $link_opacity_inverted_value = $formValues['link_opacity_inverted'];
+    $link_color_value = $formValues['link_color'] ?? 'primary';
+    $link_opacity_value = $formValues['link_opacity'] ?? '1';
+    $link_color_inverted_value = $formValues['link_color_inverted'] ?? 'white';
+    $link_opacity_inverted_value = $formValues['link_opacity_inverted'] ?? '1';
 
-    $link_text_decoration_value = $formValues['link_text_decoration'] ?: 'underline';
+    $link_text_decoration_value = $formValues['link_text_decoration'] ?? 'underline';
 
-    $link_color_hover_value = $formValues['link_color_hover'] ?: 'primary';
-    $link_opacity_hover_value = $formValues['link_opacity_hover'];
-    $link_color_hover_inverted_value = $formValues['link_color_hover_inverted'] ?: 'white';
-    $link_opacity_hover_inverted_value = $formValues['link_opacity_hover_inverted'];
+    $link_color_hover_value = $formValues['link_color_hover'] ?? 'primary';
+    $link_opacity_hover_value = $formValues['link_opacity_hover'] ?? '1';
+    $link_color_hover_inverted_value = $formValues['link_color_hover_inverted'] ?? 'white';
+    $link_opacity_hover_inverted_value = $formValues['link_opacity_hover_inverted'] ?? '1';
 
-    $link_text_decoration_hover_value = $formValues['link_text_decoration_hover'] ?: 'underline';
+    $link_text_decoration_hover_value = $formValues['link_text_decoration_hover'] ?? 'underline';
 
     $form['typography']['links']['link_color'] = [
       '#prefix' => '<div class="styling-row"><div class="styling-input"><div class="inline-input-holder separator"><strong>Standard</strong>',
@@ -766,7 +766,7 @@ class IqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => $this->t('Opacity'),
-      '#default_value' => $link_opacity_value ?? '1',
+      '#default_value' => $link_opacity_value,
     ];
 
     $form['typography']['links']['link_color_inverted'] = [
@@ -779,7 +779,7 @@ class IqBarrioService {
     $form['typography']['links']['link_opacity_inverted'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Opacity'),
-      '#default_value' => $link_opacity_inverted_value ?? '1',
+      '#default_value' => $link_opacity_inverted_value,
     ];
 
     $form['typography']['links']['link_text_decoration'] = [
@@ -809,7 +809,7 @@ class IqBarrioService {
         'class' => ['separator'],
       ],
       '#title' => $this->t('Opacity'),
-      '#default_value' => $link_opacity_hover_value ?? '1',
+      '#default_value' => $link_opacity_hover_value,
     ];
 
     $form['typography']['links']['link_color_hover_inverted'] = [
@@ -822,7 +822,7 @@ class IqBarrioService {
     $form['typography']['links']['link_opacity_hover_inverted'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Opacity'),
-      '#default_value' => $link_opacity_hover_inverted_value ?? '1',
+      '#default_value' => $link_opacity_hover_inverted_value,
     ];
 
     $form['typography']['links']['link_text_decoration_hover'] = [
@@ -863,27 +863,27 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font family'),
       '#options' => $arr_fonts,
-      '#default_value' => $formValues['navi_main_font_family'],
+      '#default_value' => $formValues['navi_main_font_family'] ?? 'Arial',
     ];
 
     $form['navigation']['navi_main']['navi_main_font_weight'] = [
       '#type' => 'select',
       '#options' => $arr_fontweights,
       '#title' => $this->t('Font weight'),
-      '#default_value' => $formValues['navi_main_font_weight'],
+      '#default_value' => $formValues['navi_main_font_family'] ?? 'normal',
     ];
 
     $form['navigation']['navi_main']['navi_main_font_style'] = [
       '#type' => 'select',
       '#options' => $arr_fontstyles,
       '#title' => $this->t('Font style'),
-      '#default_value' => $formValues['navi_main_font_style'],
+      '#default_value' => $formValues['navi_main_font_style'] ?? 'normal',
     ];
 
     $form['navigation']['navi_main']['navi_main_text_transform'] = [
       '#type' => 'select',
       '#title' => $this->t('Text Transform'),
-      '#default_value' => $formValues['navi_main_text_transform'] ?: 'none',
+      '#default_value' => $formValues['navi_main_text_transform'] ?? 'none',
       '#options' => $arr_texttransform,
       '#suffix' => '</div>',
     ];
@@ -899,19 +899,19 @@ class IqBarrioService {
     $form['navigation']['navi_main']['navi_main_font_size_holder']['navi_main_font_size'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Font size'),
-      '#default_value' => $formValues['navi_main_font_size'] ?: 1,
+      '#default_value' => $formValues['navi_main_font_size'] ?? 1,
     ];
 
     $form['navigation']['navi_main']['navi_main_font_size_holder']['navi_main_font_size_unit'] = [
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['navi_main_font_size_unit'] ?: 'rem',
+      '#default_value' => $formValues['navi_main_font_size_unit'] ?? 'rem',
     ];
 
     $form['navigation']['navi_main']['navi_main_line_height'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Line height'),
-      '#default_value' => $formValues['navi_main_line_height'] ?: 2,
+      '#default_value' => $formValues['navi_main_line_height'] ?? 2,
     ];
 
     $form['navigation']['navi_main']['navi_main_border_width_holder'] = [
@@ -929,29 +929,29 @@ class IqBarrioService {
     $form['navigation']['navi_main']['navi_main_border_width_holder']['navi_main_border_width_top'] = [
       '#title' => $this->t('Border (top, right, bottom, left)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_main_border_width_top'] ?: '0',
+      '#default_value' => $formValues['navi_main_border_width_top'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_main_border_width_holder']['navi_main_border_width_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_main_border_width_right'] ?: '0',
+      '#default_value' => $formValues['navi_main_border_width_right'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_main_border_width_holder']['navi_main_border_width_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_main_border_width_bottom'] ?: '0',
+      '#default_value' => $formValues['navi_main_border_width_bottom'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_main_border_width_holder']['navi_main_border_width_left'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_main_border_width_left'] ?: '0',
+      '#default_value' => $formValues['navi_main_border_width_left'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_main_border_width_holder']['navi_main_border_width_unit'] = [
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['navi_main_border_width_unit'] ?: 'px',
+      '#default_value' => $formValues['navi_main_border_width_unit'] ?? 'px',
       '#suffix' => '</div>',
     ];
 
@@ -971,24 +971,24 @@ class IqBarrioService {
     $form['navigation']['navi_main']['navi_main_margin_holder']['navi_main_margin_top'] = [
       '#title' => $this->t('Margin (top, left/right, bottom)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_main_margin_top'] ?: '0',
+      '#default_value' => $formValues['navi_main_margin_top'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_main_margin_holder']['navi_main_margin_left_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_main_margin_left_right'] ?: '0',
+      '#default_value' => $formValues['navi_main_margin_left_right'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_main_margin_holder']['navi_main_margin_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_main_margin_bottom'] ?: '0',
+      '#default_value' => $formValues['navi_main_margin_bottom'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_main_margin_holder']['navi_main_margin_unit'] = [
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['navi_main_margin_unit'],
+      '#default_value' => $formValues['navi_main_margin_unit'] ?? 'px',
     ];
 
     $form['navigation']['navi_main']['navi_main_padding_holder'] = [
@@ -1002,24 +1002,24 @@ class IqBarrioService {
     $form['navigation']['navi_main']['navi_main_padding_holder']['navi_main_padding_top'] = [
       '#title' => $this->t('Padding (top, left/right, bottom)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_main_padding_top'] ?: '0',
+      '#default_value' => $formValues['navi_main_padding_top'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_main_padding_holder']['navi_main_padding_left_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_main_padding_left_right'] ?: '0',
+      '#default_value' => $formValues['navi_main_padding_left_right'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_main_padding_holder']['navi_main_padding_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_main_padding_bottom'] ?: '0',
+      '#default_value' => $formValues['navi_main_padding_bottom'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_main_padding_holder']['navi_main_padding_unit'] = [
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['navi_main_padding_unit'],
+      '#default_value' => $formValues['navi_main_padding_unit'] ?? 'px',
     ];
 
     $form['navigation']['navi_main']['color_page_font_navbar'] = [
@@ -1027,7 +1027,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_navbar'] ?: 'white',
+      '#default_value' => $formValues['color_page_font_navbar'] ?? 'white',
     ];
 
     $form['navigation']['navi_main']['opacity_page_font_navbar'] = [
@@ -1045,7 +1045,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_background_navbar'] ?: 'grey3',
+      '#default_value' => $formValues['color_page_background_navbar'] ?? 'grey3',
     ];
 
     $form['navigation']['navi_main']['opacity_page_background_navbar'] = [
@@ -1061,7 +1061,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_border_navbar'] ?: 'grey3',
+      '#default_value' => $formValues['color_page_border_navbar'] ?? 'grey3',
     ];
 
     $form['navigation']['navi_main']['opacity_page_border_navbar'] = [
@@ -1076,7 +1076,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_navbar_hover'] ?: 'primary',
+      '#default_value' => $formValues['color_page_font_navbar_hover'] ?? 'primary',
     ];
 
     $form['navigation']['navi_main']['opacity_page_font_navbar_hover'] = [
@@ -1091,7 +1091,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_background_navbar_hover'] ?: 'white',
+      '#default_value' => $formValues['color_page_background_navbar_hover'] ?? 'white',
     ];
 
     $form['navigation']['navi_main']['opacity_page_background_navbar_hover'] = [
@@ -1107,7 +1107,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_border_navbar_hover'] ?: 'white',
+      '#default_value' => $formValues['color_page_border_navbar_hover'] ?? 'white',
     ];
 
     $form['navigation']['navi_main']['opacity_page_border_navbar_hover'] = [
@@ -1122,7 +1122,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_navbar_active'] ?: 'primary',
+      '#default_value' => $formValues['color_page_font_navbar_active'] ?? 'primary',
     ];
 
     $form['navigation']['navi_main']['opacity_page_font_navbar_active'] = [
@@ -1140,7 +1140,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_background_navbar_active'] ?: 'black',
+      '#default_value' => $formValues['color_page_background_navbar_active'] ?? 'black',
     ];
 
     $form['navigation']['navi_main']['opacity_page_background_navbar_active'] = [
@@ -1156,7 +1156,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_border_navbar_active'] ?: 'black',
+      '#default_value' => $formValues['color_page_border_navbar_active'] ?? 'black',
     ];
 
     $form['navigation']['navi_main']['opacity_page_border_navbar_active'] = [
@@ -1171,27 +1171,27 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font family'),
       '#options' => $arr_fonts,
-      '#default_value' => $formValues['navi_sub_font_family'],
+      '#default_value' => $formValues['navi_sub_font_family'] ?? 'Arial',
     ];
 
     $form['navigation']['navi_main']['navi_sub_font_weight'] = [
       '#type' => 'select',
       '#options' => $arr_fontweights,
       '#title' => $this->t('Font weight'),
-      '#default_value' => $formValues['navi_sub_font_weight'],
+      '#default_value' => $formValues['navi_sub_font_family'] ?? 'normal',
     ];
 
     $form['navigation']['navi_main']['navi_sub_font_style'] = [
       '#type' => 'select',
       '#options' => $arr_fontstyles,
       '#title' => $this->t('Font style'),
-      '#default_value' => $formValues['navi_sub_font_style'],
+      '#default_value' => $formValues['navi_sub_font_style'] ?? 'normal',
     ];
 
     $form['navigation']['navi_main']['navi_sub_text_transform'] = [
       '#type' => 'select',
       '#title' => $this->t('Text Transform'),
-      '#default_value' => $formValues['navi_sub_text_transform'] ?: 'none',
+      '#default_value' => $formValues['navi_sub_text_transform'] ?? 'none',
       '#options' => $arr_texttransform,
       '#suffix' => '</div>',
     ];
@@ -1207,19 +1207,19 @@ class IqBarrioService {
     $form['navigation']['navi_main']['navi_sub_font_size_holder']['navi_sub_font_size'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Font size'),
-      '#default_value' => $formValues['navi_sub_font_size'] ?: 1,
+      '#default_value' => $formValues['navi_sub_font_size'] ?? 1,
     ];
 
     $form['navigation']['navi_main']['navi_sub_font_size_holder']['navi_sub_font_size_unit'] = [
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['navi_sub_font_size_unit'] ?: 'rem',
+      '#default_value' => $formValues['navi_sub_font_size_unit'] ?? 'rem',
     ];
 
     $form['navigation']['navi_main']['navi_sub_line_height'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Line height'),
-      '#default_value' => $formValues['navi_sub_line_height'] ?: 2,
+      '#default_value' => $formValues['navi_sub_line_height'] ?? 2,
     ];
 
     $form['navigation']['navi_main']['navi_sub_border_width_holder'] = [
@@ -1237,29 +1237,29 @@ class IqBarrioService {
     $form['navigation']['navi_main']['navi_sub_border_width_holder']['navi_sub_border_width_top'] = [
       '#title' => $this->t('Border (top, right, bottom, left)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_sub_border_width_top'] ?: '0',
+      '#default_value' => $formValues['navi_sub_border_width_top'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_sub_border_width_holder']['navi_sub_border_width_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_sub_border_width_right'] ?: '0',
+      '#default_value' => $formValues['navi_sub_border_width_right'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_sub_border_width_holder']['navi_sub_border_width_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_sub_border_width_bottom'] ?: '0',
+      '#default_value' => $formValues['navi_sub_border_width_bottom'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_sub_border_width_holder']['navi_sub_border_width_left'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_sub_border_width_left'] ?: '0',
+      '#default_value' => $formValues['navi_sub_border_width_left'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_sub_border_width_holder']['navi_sub_border_width_unit'] = [
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['navi_sub_border_width_unit'] ?: 'px',
+      '#default_value' => $formValues['navi_sub_border_width_unit'] ?? 'px',
       '#suffix' => '</div>',
     ];
 
@@ -1279,24 +1279,24 @@ class IqBarrioService {
     $form['navigation']['navi_main']['navi_sub_margin_holder']['navi_sub_margin_top'] = [
       '#title' => $this->t('Margin (top, left/right, bottom)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_sub_margin_top'] ?: '0',
+      '#default_value' => $formValues['navi_sub_margin_top'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_sub_margin_holder']['navi_sub_margin_left_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_sub_margin_left_right'] ?: '0',
+      '#default_value' => $formValues['navi_sub_margin_left_right'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_sub_margin_holder']['navi_sub_margin_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_sub_margin_bottom'] ?: '0',
+      '#default_value' => $formValues['navi_sub_margin_bottom'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_sub_margin_holder']['navi_sub_margin_unit'] = [
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['navi_sub_margin_unit'],
+      '#default_value' => $formValues['navi_sub_margin_unit'] ?? 'px',
     ];
 
     $form['navigation']['navi_main']['navi_sub_padding_holder'] = [
@@ -1310,24 +1310,24 @@ class IqBarrioService {
     $form['navigation']['navi_main']['navi_sub_padding_holder']['navi_sub_padding_top'] = [
       '#title' => $this->t('Padding (top, left/right, bottom)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_sub_padding_top'] ?: '0',
+      '#default_value' => $formValues['navi_sub_padding_top'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_sub_padding_holder']['navi_sub_padding_left_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_sub_padding_left_right'] ?: '0',
+      '#default_value' => $formValues['navi_sub_padding_left_right'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_sub_padding_holder']['navi_sub_padding_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['navi_sub_padding_bottom'] ?: '0',
+      '#default_value' => $formValues['navi_sub_padding_bottom'] ?? '0',
     ];
 
     $form['navigation']['navi_main']['navi_sub_padding_holder']['navi_sub_padding_unit'] = [
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['navi_sub_padding_unit'],
+      '#default_value' => $formValues['navi_sub_padding_unit'] ?? 'px',
     ];
 
     $form['navigation']['navi_main']['color_page_font_nav_dropdown'] = [
@@ -1335,7 +1335,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_nav_dropdown'] ?: 'grey3',
+      '#default_value' => $formValues['color_page_font_nav_dropdown'] ?? 'grey3',
     ];
 
     $form['navigation']['navi_main']['opacity_page_font_nav_dropdown'] = [
@@ -1353,7 +1353,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_background_nav_dropdown'] ?: 'primary',
+      '#default_value' => $formValues['color_page_background_nav_dropdown'] ?? 'primary',
     ];
 
     $form['navigation']['navi_main']['opacity_page_background_nav_dropdown'] = [
@@ -1369,7 +1369,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_border_nav_dropdown'] ?: 'primary',
+      '#default_value' => $formValues['color_page_border_nav_dropdown'] ?? 'primary',
     ];
 
     $form['navigation']['navi_main']['opacity_page_border_nav_dropdown'] = [
@@ -1383,7 +1383,7 @@ class IqBarrioService {
       '#prefix' => '<div class="inline-input-holder"><strong>Hover</strong>',
       '#type' => 'select',
       '#title' => $this->t('Font color'),
-      '#default_value' => $formValues['color_page_font_nav_dropdown_hover'] ?: 'grey3',
+      '#default_value' => $formValues['color_page_font_nav_dropdown_hover'] ?? 'grey3',
       '#options' => $arr_colors,
       '#suffix' => '<div class="line-break"></div>',
     ];
@@ -1403,7 +1403,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#options' => $arr_colors,
       '#title' => $this->t('Background color'),
-      '#default_value' => $formValues['color_page_background_nav_dropdown_hover'] ?: 'primary',
+      '#default_value' => $formValues['color_page_background_nav_dropdown_hover'] ?? 'primary',
     ];
 
     $form['navigation']['navi_main']['opacity_page_background_nav_dropdown_hover'] = [
@@ -1419,7 +1419,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_border_nav_dropdown_hover'] ?: 'grey3',
+      '#default_value' => $formValues['color_page_border_nav_dropdown_hover'] ?? 'grey3',
     ];
 
     $form['navigation']['navi_main']['opacity_page_border_nav_dropdown_hover'] = [
@@ -1434,7 +1434,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_nav_dropdown_active'] ?: 'primary',
+      '#default_value' => $formValues['color_page_font_nav_dropdown_active'] ?? 'primary',
       '#suffix' => '<div class="line-break"></div>',
     ];
 
@@ -1453,7 +1453,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_background_nav_dropdown_active'] ?: 'grey3',
+      '#default_value' => $formValues['color_page_background_nav_dropdown_active'] ?? 'grey3',
     ];
 
     $form['navigation']['navi_main']['opacity_page_background_nav_dropdown_active'] = [
@@ -1469,7 +1469,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_border_nav_dropdown_active'] ?: 'grey3',
+      '#default_value' => $formValues['color_page_border_nav_dropdown_active'] ?? 'grey3',
     ];
 
     $form['navigation']['navi_main']['opacity_page_border_nav_dropdown_active'] = [
@@ -1520,7 +1520,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_background_nav_mobile'] ?: 'white',
+      '#default_value' => $formValues['color_page_background_nav_mobile'] ?? 'white',
     ];
 
     $form['navigation']['navi_mobile']['opacity_page_background_nav_mobile'] = [
@@ -1536,7 +1536,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_nav_mobile'] ?: 'grey3',
+      '#default_value' => $formValues['color_page_font_nav_mobile'] ?? 'grey3',
     ];
 
     $form['navigation']['navi_mobile']['opacity_page_font_nav_mobile'] = [
@@ -1551,7 +1551,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_nav_mobile_hover'] ?: 'grey3',
+      '#default_value' => $formValues['color_page_font_nav_mobile_hover'] ?? 'grey3',
     ];
 
     $form['navigation']['navi_mobile']['opacity_page_font_nav_mobile_hover'] = [
@@ -1577,7 +1577,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_nav_sidebar'] ?: 'grey3',
+      '#default_value' => $formValues['color_page_font_nav_sidebar'] ?? 'grey3',
       '#prefix' => '<div class="styling-row"><div class="styling-input"><div class="inline-input-holder separator"><strong>Sidebar standard</strong>',
     ];
 
@@ -1592,7 +1592,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_page_font_nav_sidebar_hover'] ?: 'grey3',
+      '#default_value' => $formValues['color_page_font_nav_sidebar_hover'] ?? 'grey3',
       '#prefix' => '<div class="inline-input-holder separator"><strong>Sidebar hover</strong>',
     ];
 
@@ -1634,14 +1634,14 @@ class IqBarrioService {
     $form['decorations']['border']['border_width_holder']['border_width'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Width'),
-      '#default_value' => $formValues['border_width'] ?: '1',
+      '#default_value' => $formValues['border_width'] ?? '1',
     ];
 
     $form['decorations']['border']['border_width_holder']['border_width_unit'] = [
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['border_width_unit'] ?: 'px',
+      '#default_value' => $formValues['border_width_unit'] ?? 'px',
     ];
 
     $form['decorations']['border']['border_style'] = [
@@ -1660,14 +1660,14 @@ class IqBarrioService {
       '#attributes' => [
         'class' => ['separator'],
       ],
-      '#default_value' => $formValues['border_style'] ?: 'solid',
+      '#default_value' => $formValues['border_style'] ?? 'solid',
     ];
 
     $form['decorations']['border']['border_color'] = [
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['border_color'] ?: 'primary',
+      '#default_value' => $formValues['border_color'] ?? 'primary',
     ];
 
     $form['decorations']['border']['border_opacity'] = [
@@ -1687,14 +1687,14 @@ class IqBarrioService {
     $form['decorations']['border']['radius_holder']['radius'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Border Radius'),
-      '#default_value' => $formValues['radius'] ?: '1',
+      '#default_value' => $formValues['radius'] ?? '1',
     ];
 
     $form['decorations']['border']['radius_holder']['radius_unit'] = [
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['radius_unit'] ?: '1',
+      '#default_value' => $formValues['radius_unit'] ?? '1',
       '#suffix' => '</div></div>',
     ];
 
@@ -1735,7 +1735,7 @@ class IqBarrioService {
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['margin_unit'] ?: 'px',
+      '#default_value' => $formValues['margin_unit'] ?? 'px',
     ];
 
     $form['decorations']['margins_paddings']['padding'] = [
@@ -1770,7 +1770,7 @@ class IqBarrioService {
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['padding_unit'] ?: 'px',
+      '#default_value' => $formValues['padding_unit'] ?? 'px',
     ];
 
     // Section buttons.
@@ -1791,27 +1791,27 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font family'),
       '#options' => $arr_fonts,
-      '#default_value' => $formValues['button_font_family'],
+      '#default_value' => $formValues['button_font_family'] ?? 'Arial',
     ];
 
     $form['buttons']['default']['button_font_weight'] = [
       '#type' => 'select',
       '#options' => $arr_fontweights,
       '#title' => $this->t('Font weight'),
-      '#default_value' => $formValues['button_font_weight'],
+      '#default_value' => $formValues['button_font_family'] ?? 'normal',
     ];
 
     $form['buttons']['default']['button_font_style'] = [
       '#type' => 'select',
       '#options' => $arr_fontstyles,
       '#title' => $this->t('Font style'),
-      '#default_value' => $formValues['button_font_style'],
+      '#default_value' => $formValues['button_font_style'] ?? 'normal',
     ];
 
     $form['buttons']['default']['button_line_height'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Line height'),
-      '#default_value' => $formValues['button_line_height'] ?: '1.2',
+      '#default_value' => $formValues['button_line_height'] ?? '1.2',
       '#suffix' => '</div>',
     ];
 
@@ -1826,13 +1826,13 @@ class IqBarrioService {
     $form['buttons']['default']['button_font_size_holder']['button_font_size'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Font size'),
-      '#default_value' => $formValues['button_font_size'] ?: '1',
+      '#default_value' => $formValues['button_font_size'] ?? '1',
     ];
 
     $form['buttons']['default']['button_font_size_holder']['button_font_size_unit'] = [
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['button_font_size_unit'] ?: 'rem',
+      '#default_value' => $formValues['button_font_size_unit'] ?? 'rem',
     ];
 
     $form['buttons']['default']['button_border_width_holder'] = [
@@ -1872,7 +1872,7 @@ class IqBarrioService {
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['button_border_width_unit'] ?: 'px',
+      '#default_value' => $formValues['button_border_width_unit'] ?? 'px',
     ];
 
     $form['buttons']['default']['button_border_radius_holder'] = [
@@ -1885,13 +1885,13 @@ class IqBarrioService {
     $form['buttons']['default']['button_border_radius_holder']['button_border_radius'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Border radius'),
-      '#default_value' => $formValues['button_border_radius'] ?: '0',
+      '#default_value' => $formValues['button_border_radius'] ?? '0',
     ];
 
     $form['buttons']['default']['button_border_radius_holder']['button_border_radius_unit'] = [
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['button_border_radius_unit'],
+      '#default_value' => $formValues['button_border_radius_unit'] ?? '1',
       '#suffix' => '</div>',
     ];
 
@@ -1911,29 +1911,29 @@ class IqBarrioService {
     $form['buttons']['default']['button_margin_holder']['button_margin_top'] = [
       '#title' => $this->t('Margin (top, right, bottom, left)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_margin_top'] ?: '0',
+      '#default_value' => $formValues['button_margin_top'] ?? '0',
     ];
 
     $form['buttons']['default']['button_margin_holder']['button_margin_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_margin_right'] ?: '0',
+      '#default_value' => $formValues['button_margin_right'] ?? '0',
     ];
 
     $form['buttons']['default']['button_margin_holder']['button_margin_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_margin_bottom'] ?: '0',
+      '#default_value' => $formValues['button_margin_bottom'] ?? '0',
     ];
 
     $form['buttons']['default']['button_margin_holder']['button_margin_left'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_margin_left'] ?: '0',
+      '#default_value' => $formValues['button_margin_left'] ?? '0',
     ];
 
     $form['buttons']['default']['button_margin_holder']['button_margin_unit'] = [
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['button_margin_unit'],
+      '#default_value' => $formValues['button_margin_unit'] ?? 'px',
     ];
 
     $form['buttons']['default']['button_padding_holder'] = [
@@ -1947,29 +1947,29 @@ class IqBarrioService {
     $form['buttons']['default']['button_padding_holder']['button_padding_top'] = [
       '#title' => $this->t('Padding (top, right, bottom, left)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_padding_top'] ?: '5',
+      '#default_value' => $formValues['button_padding_top'] ?? '5',
     ];
 
     $form['buttons']['default']['button_padding_holder']['button_padding_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_padding_right'] ?: '5',
+      '#default_value' => $formValues['button_padding_right'] ?? '5',
     ];
 
     $form['buttons']['default']['button_padding_holder']['button_padding_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_padding_bottom'] ?: '5',
+      '#default_value' => $formValues['button_padding_bottom'] ?? '5',
     ];
 
     $form['buttons']['default']['button_padding_holder']['button_padding_left'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_padding_left'] ?: '5',
+      '#default_value' => $formValues['button_padding_left'] ?? '5',
     ];
 
     $form['buttons']['default']['button_padding_holder']['button_padding_unit'] = [
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['button_padding_unit'],
+      '#default_value' => $formValues['button_padding_unit'] ?? 'px',
     ];
 
     $form['buttons']['default']['standard'] = [
@@ -1981,7 +1981,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_font_color_standard'] ?: 'white',
+      '#default_value' => $formValues['button_font_color_standard'] ?? 'white',
       '#prefix' => '<div class="inline-input-holder"><strong>Standard</strong>',
     ];
 
@@ -1997,7 +1997,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_background_color_standard'] ?: 'primary',
+      '#default_value' => $formValues['button_background_color_standard'] ?? 'primary',
     ];
 
     $form['buttons']['default']['standard']['button_background_opacity_standard'] = [
@@ -2013,7 +2013,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_border_color_standard'] ?: 'primary',
+      '#default_value' => $formValues['button_border_color_standard'] ?? 'primary',
     ];
 
     $form['buttons']['default']['standard']['button_border_opacity_standard'] = [
@@ -2027,7 +2027,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_font_color_hover'] ?: 'white',
+      '#default_value' => $formValues['button_font_color_hover'] ?? 'white',
       '#prefix' => '<div class="inline-input-holder"><strong>Hover</strong>',
     ];
 
@@ -2043,7 +2043,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_background_color_hover'],
+      '#default_value' => $formValues['button_background_color_hover'] ?? 'secondary',
     ];
 
     $form['buttons']['default']['standard']['button_background_opacity_hover'] = [
@@ -2059,7 +2059,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Hover border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_border_color_hover'],
+      '#default_value' => $formValues['button_border_color_hover'] ?? 'secondary',
     ];
 
     $form['buttons']['default']['standard']['button_border_opacity_hover'] = [
@@ -2073,7 +2073,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_font_color_active'],
+      '#default_value' => $formValues['button_font_color_active'] ?? 'white',
       '#prefix' => '<div class="inline-input-holder"><strong>Active</strong>',
     ];
 
@@ -2088,7 +2088,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_background_color_active'],
+      '#default_value' => $formValues['button_background_color_active'] ?? 'primary',
       '#prefix' => '<div class="inline-input-holder separator">',
     ];
 
@@ -2105,7 +2105,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_border_color_active'],
+      '#default_value' => $formValues['button_border_color_active'] ?? 'primary',
     ];
 
     $form['buttons']['default']['standard']['button_border_opacity_active'] = [
@@ -2124,7 +2124,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_font_color_inverted'] ?: 'white',
+      '#default_value' => $formValues['button_font_color_inverted'] ?? 'white',
       '#prefix' => '<div class="inline-input-holder"><strong>Standard</strong>',
     ];
 
@@ -2140,7 +2140,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_background_color_inverted'] ?: 'primary',
+      '#default_value' => $formValues['button_background_color_inverted'] ?? 'secondary',
     ];
 
     $form['buttons']['default']['inverted']['button_background_opacity_inverted'] = [
@@ -2156,13 +2156,13 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_border_color_inverted'] ?: 'primary',
+      '#default_value' => $formValues['button_border_color_inverted'] ?? 'primary',
     ];
 
     $form['buttons']['default']['inverted']['button_border_opacity_inverted'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Opacity'),
-      '#default_value' => $formValues['button_border_opacity_inverted'] ?? '1',
+      '#default_value' => $formValues['button_border_opacity_inverted'] ?? '0',
       '#suffix' => '</div>',
     ];
 
@@ -2170,7 +2170,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_font_color_inverted_hover'] ?: 'white',
+      '#default_value' => $formValues['button_font_color_inverted_hover'] ?? 'white',
       '#prefix' => '<div class="inline-input-holder"><strong>Hover</strong>',
     ];
 
@@ -2186,7 +2186,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_background_color_inverted_hover'],
+      '#default_value' => $formValues['button_background_color_inverted_hover'] ?? 'primary',
     ];
 
     $form['buttons']['default']['inverted']['button_background_opacity_inverted_hover'] = [
@@ -2202,7 +2202,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Hover border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_border_color_inverted_hover'],
+      '#default_value' => $formValues['button_border_color_inverted_hover'] ?? 'primary',
     ];
 
     $form['buttons']['default']['inverted']['button_border_opacity_inverted_hover'] = [
@@ -2216,7 +2216,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_font_color_inverted_active'],
+      '#default_value' => $formValues['button_font_color_inverted_active'] ?? 'white',
       '#prefix' => '<div class="inline-input-holder"><strong>Active</strong>',
     ];
 
@@ -2231,7 +2231,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_background_color_inverted_active'],
+      '#default_value' => $formValues['button_background_color_inverted_active'] ?? 'secondary',
       '#prefix' => '<div class="inline-input-holder separator">',
     ];
 
@@ -2248,7 +2248,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_border_color_inverted_active'],
+      '#default_value' => $formValues['button_border_color_inverted_active'] ?? 'secondary',
     ];
 
     $form['buttons']['default']['inverted']['button_border_opacity_inverted_active'] = [
@@ -2278,27 +2278,27 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font family'),
       '#options' => $arr_fonts,
-      '#default_value' => $formValues['button_alternate_font_family'],
+      '#default_value' => $formValues['button_alternate_font_family'] ?? 'Arial',
     ];
 
     $form['buttons']['alternate']['button_alternate_font_weight'] = [
       '#type' => 'select',
       '#options' => $arr_fontweights,
       '#title' => $this->t('Font weight'),
-      '#default_value' => $formValues['button_alternate_font_weight'],
+      '#default_value' => $formValues['button_alternate_font_family'] ?? 'normal',
     ];
 
     $form['buttons']['alternate']['button_alternate_font_style'] = [
       '#type' => 'select',
       '#options' => $arr_fontstyles,
       '#title' => $this->t('Font style'),
-      '#default_value' => $formValues['button_alternate_font_style'],
+      '#default_value' => $formValues['button_alternate_font_style'] ?? 'normal',
     ];
 
     $form['buttons']['alternate']['button_alternate_line_height'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Line height'),
-      '#default_value' => $formValues['button_alternate_line_height'] ?: '1,2',
+      '#default_value' => $formValues['button_alternate_line_height'] ?? '1,2',
       '#suffix' => '</div>',
     ];
 
@@ -2313,13 +2313,13 @@ class IqBarrioService {
     $form['buttons']['alternate']['button_alternate_font_size_holder']['button_alternate_font_size'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Font size'),
-      '#default_value' => $formValues['button_alternate_font_size'] ?: '1',
+      '#default_value' => $formValues['button_alternate_font_size'] ?? '1',
     ];
 
     $form['buttons']['alternate']['button_alternate_font_size_holder']['button_alternate_font_size_unit'] = [
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['button_alternate_font_size_unit'] ?: 'rem',
+      '#default_value' => $formValues['button_alternate_font_size_unit'] ?? 'rem',
     ];
 
     $form['buttons']['alternate']['button_alternate_border_width_holder'] = [
@@ -2358,7 +2358,7 @@ class IqBarrioService {
     $form['buttons']['alternate']['button_alternate_border_width_holder']['button_alternate_border_width_unit'] = [
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['button_alternate_border_width_unit'] ?: 'px',
+      '#default_value' => $formValues['button_alternate_border_width_unit'] ?? 'px',
     ];
 
     $form['buttons']['alternate']['button_alternate_border_radius_holder'] = [
@@ -2371,13 +2371,13 @@ class IqBarrioService {
     $form['buttons']['alternate']['button_alternate_border_radius_holder']['button_alternate_border_radius'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Border radius'),
-      '#default_value' => $formValues['button_alternate_border_radius'] ?: '0',
+      '#default_value' => $formValues['button_alternate_border_radius'] ?? '0',
     ];
 
     $form['buttons']['alternate']['button_alternate_border_radius_holder']['button_alternate_border_radius_unit'] = [
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['button_alternate_border_radius_unit'],
+      '#default_value' => $formValues['button_alternate_border_radius_unit'] ?? '1',
       '#suffix' => '</div>',
     ];
 
@@ -2397,29 +2397,29 @@ class IqBarrioService {
     $form['buttons']['alternate']['button_alternate_margin_holder']['button_alternate_margin_top'] = [
       '#title' => $this->t('Margin (top, right, bottom, left)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_margin_top'] ?: '0',
+      '#default_value' => $formValues['button_alternate_margin_top'] ?? '0',
     ];
 
     $form['buttons']['alternate']['button_alternate_margin_holder']['button_alternate_margin_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_margin_right'] ?: '0',
+      '#default_value' => $formValues['button_alternate_margin_right'] ?? '0',
     ];
 
     $form['buttons']['alternate']['button_alternate_margin_holder']['button_alternate_margin_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_margin_bottom'] ?: '0',
+      '#default_value' => $formValues['button_alternate_margin_bottom'] ?? '0',
     ];
 
     $form['buttons']['alternate']['button_alternate_margin_holder']['button_alternate_margin_left'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_margin_left'] ?: '0',
+      '#default_value' => $formValues['button_alternate_margin_left'] ?? '0',
     ];
 
     $form['buttons']['alternate']['button_alternate_margin_holder']['button_alternate_margin_unit'] = [
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['button_alternate_margin_unit'],
+      '#default_value' => $formValues['button_alternate_margin_unit'] ?? 'px',
     ];
 
     $form['buttons']['alternate']['button_alternate_padding_holder'] = [
@@ -2433,29 +2433,29 @@ class IqBarrioService {
     $form['buttons']['alternate']['button_alternate_padding_holder']['button_alternate_padding_top'] = [
       '#title' => $this->t('Padding (top, right, bottom, left)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_padding_top'] ?: '5',
+      '#default_value' => $formValues['button_alternate_padding_top'] ?? '5',
     ];
 
     $form['buttons']['alternate']['button_alternate_padding_holder']['button_alternate_padding_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_padding_right'] ?: '5',
+      '#default_value' => $formValues['button_alternate_padding_right'] ?? '5',
     ];
 
     $form['buttons']['alternate']['button_alternate_padding_holder']['button_alternate_padding_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_padding_bottom'] ?: '5',
+      '#default_value' => $formValues['button_alternate_padding_bottom'] ?? '5',
     ];
 
     $form['buttons']['alternate']['button_alternate_padding_holder']['button_alternate_padding_left'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['button_alternate_padding_left'] ?: '5',
+      '#default_value' => $formValues['button_alternate_padding_left'] ?? '5',
     ];
 
     $form['buttons']['alternate']['button_alternate_padding_holder']['button_alternate_padding_unit'] = [
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['button_alternate_padding_unit'],
+      '#default_value' => $formValues['button_alternate_padding_unit'] ?? 'px',
     ];
 
     $form['buttons']['alternate']['standard'] = [
@@ -2467,7 +2467,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_font_color_standard'] ?: 'white',
+      '#default_value' => $formValues['button_alternate_font_color_standard'] ?? 'white',
       '#prefix' => '<div class="inline-input-holder"><strong>Standard</strong>',
     ];
 
@@ -2483,7 +2483,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_background_color_standard'] ?: 'primary',
+      '#default_value' => $formValues['button_alternate_background_color_standard'] ?? 'primary',
     ];
 
     $form['buttons']['alternate']['standard']['button_alternate_background_opacity_standard'] = [
@@ -2499,7 +2499,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_border_color_standard'] ?: 'primary',
+      '#default_value' => $formValues['button_alternate_border_color_standard'] ?? 'primary',
     ];
 
     $form['buttons']['alternate']['standard']['button_alternate_border_opacity_standard'] = [
@@ -2513,7 +2513,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_font_color_hover'] ?: 'white',
+      '#default_value' => $formValues['button_alternate_font_color_hover'] ?? 'white',
       '#prefix' => '<div class="inline-input-holder"><strong>Hover</strong>',
     ];
 
@@ -2529,7 +2529,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_background_color_hover'],
+      '#default_value' => $formValues['button_alternate_background_color_hover'] ?? 'secondary',
     ];
 
     $form['buttons']['alternate']['standard']['button_alternate_background_opacity_hover'] = [
@@ -2545,7 +2545,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Hover border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_border_color_hover'],
+      '#default_value' => $formValues['button_alternate_border_color_hover'] ?? 'secondary',
     ];
 
     $form['buttons']['alternate']['standard']['button_alternate_border_opacity_hover'] = [
@@ -2559,7 +2559,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_font_color_active'] ?? '1',
+      '#default_value' => $formValues['button_alternate_font_color_active'] ?? 'white',
       '#prefix' => '<div class="inline-input-holder"><strong>Active</strong>',
     ];
 
@@ -2574,7 +2574,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_background_color_active'],
+      '#default_value' => $formValues['button_alternate_background_color_active'] ?? 'primary',
       '#prefix' => '<div class="inline-input-holder separator">',
     ];
 
@@ -2591,7 +2591,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_border_color_active'],
+      '#default_value' => $formValues['button_alternate_border_color_active'] ?? 'primary',
     ];
 
     $form['buttons']['alternate']['standard']['button_alternate_border_opacity_active'] = [
@@ -2610,7 +2610,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_font_color_inverted'] ?: 'white',
+      '#default_value' => $formValues['button_alternate_font_color_inverted'] ?? 'white',
       '#prefix' => '<div class="inline-input-holder"><strong>inverted</strong>',
     ];
 
@@ -2626,7 +2626,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_background_color_inverted'] ?: 'primary',
+      '#default_value' => $formValues['button_alternate_background_color_inverted'] ?? 'secondary',
     ];
 
     $form['buttons']['alternate']['inverted']['button_alternate_background_opacity_inverted'] = [
@@ -2642,13 +2642,13 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_border_color_inverted'] ?: 'primary',
+      '#default_value' => $formValues['button_alternate_border_color_inverted'] ?? 'primary',
     ];
 
     $form['buttons']['alternate']['inverted']['button_alternate_border_opacity_inverted'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Opacity'),
-      '#default_value' => $formValues['button_alternate_border_opacity_inverted'] ?? '1',
+      '#default_value' => $formValues['button_alternate_border_opacity_inverted'] ?? '0',
       '#suffix' => '</div>',
     ];
 
@@ -2656,7 +2656,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_font_color_inverted_hover'] ?: 'white',
+      '#default_value' => $formValues['button_alternate_font_color_inverted_hover'] ?? 'white',
       '#prefix' => '<div class="inline-input-holder"><strong>Hover</strong>',
     ];
 
@@ -2672,7 +2672,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_background_color_inverted_hover'],
+      '#default_value' => $formValues['button_alternate_background_color_inverted_hover'] ?? 'primary',
     ];
 
     $form['buttons']['alternate']['inverted']['button_alternate_background_opacity_inverted_hover'] = [
@@ -2688,7 +2688,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Hover border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_border_color_inverted_hover'],
+      '#default_value' => $formValues['button_alternate_border_color_inverted_hover'] ?? 'primary',
     ];
 
     $form['buttons']['alternate']['inverted']['button_alternate_border_opacity_inverted_hover'] = [
@@ -2702,14 +2702,14 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_font_color_inverted_active'],
+      '#default_value' => $formValues['button_alternate_font_color_inverted_active'] ?? 'secondary',
       '#prefix' => '<div class="inline-input-holder"><strong>Active</strong>',
     ];
 
     $form['buttons']['alternate']['inverted']['button_alternate_font_opacity_inverted_active'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Opacity'),
-      '#default_value' => $formValues['button_alternate_font_opacity_inverted_active'] ?? '1',
+      '#default_value' => $formValues['button_alternate_font_opacity_inverted_active'] ?? 'white',
       '#suffix' => '</div>',
     ];
 
@@ -2717,7 +2717,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_background_color_inverted_active'],
+      '#default_value' => $formValues['button_alternate_background_color_inverted_active'] ?? 'secondary',
       '#prefix' => '<div class="inline-input-holder separator">',
     ];
 
@@ -2734,7 +2734,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['button_alternate_border_color_inverted_active'],
+      '#default_value' => $formValues['button_alternate_border_color_inverted_active'] ?? 'secondary',
     ];
 
     $form['buttons']['alternate']['inverted']['button_alternate_border_opacity_inverted_active'] = [
@@ -2777,20 +2777,20 @@ class IqBarrioService {
     $form['patterns']['slider']['slider_arrow_size_holder']['slider_arrow_size'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Size'),
-      '#default_value' => $formValues['slider_arrow_size'] ?: '1',
+      '#default_value' => $formValues['slider_arrow_size'] ?? '1',
     ];
 
     $form['patterns']['slider']['slider_arrow_size_holder']['slider_arrow_size_unit'] = [
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['slider_arrow_size_unit'] ?: 'rem',
+      '#default_value' => $formValues['slider_arrow_size_unit'] ?? 'rem',
     ];
 
     $form['patterns']['slider']['slider_arrow_color'] = [
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['slider_arrow_color'] ?: 'grey3',
+      '#default_value' => $formValues['slider_arrow_color'] ?? 'grey3',
     ];
 
     $form['patterns']['slider']['slider_arrow_opacity'] = [
@@ -2806,7 +2806,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['slider_arrow_backgroundcolor'] ?: 'white',
+      '#default_value' => $formValues['slider_arrow_backgroundcolor'] ?? 'white',
     ];
 
     $form['patterns']['slider']['slider_arrow_background_opacity'] = [
@@ -2827,20 +2827,20 @@ class IqBarrioService {
     $form['patterns']['slider']['slider_dot_size_holder']['slider_dot_size'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Size'),
-      '#default_value' => $formValues['slider_dot_size'] ?: '1',
+      '#default_value' => $formValues['slider_dot_size'] ?? '1',
     ];
 
     $form['patterns']['slider']['slider_dot_size_holder']['slider_dot_size_unit'] = [
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['slider_dot_size_unit'] ?: 'rem',
+      '#default_value' => $formValues['slider_dot_size_unit'] ?? 'rem',
     ];
 
     $form['patterns']['slider']['slider_dot_color'] = [
       '#type' => 'select',
       '#title' => $this->t('Colo standard'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['slider_dot_color'] ?: 'grey3',
+      '#default_value' => $formValues['slider_dot_color'] ?? 'grey3',
     ];
 
     $form['patterns']['slider']['slider_dot_opacity'] = [
@@ -2856,7 +2856,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color active'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['slider_dot_color_active'] ?: 'grey1',
+      '#default_value' => $formValues['slider_dot_color_active'] ?? 'grey1',
     ];
 
     $form['patterns']['slider']['slider_dot_opacity_active'] = [
@@ -2875,7 +2875,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['quote_highlight_color'] ?: 'grey3',
+      '#default_value' => $formValues['quote_highlight_color'] ?? 'grey3',
       '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Highlights (quote marks / lines)</strong>',
     ];
 
@@ -2900,7 +2900,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_icons'] ?: 'primary',
+      '#default_value' => $formValues['color_icons'] ?? 'primary',
       '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Standard</strong>',
     ];
 
@@ -2915,7 +2915,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_icons_hover'] ?: 'primary',
+      '#default_value' => $formValues['color_icons_hover'] ?? 'primary',
       '#prefix' => '<div class="inline-input-holder "><strong>Hover</strong>',
     ];
 
@@ -2930,7 +2930,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_icons_active'] ?: 'primary',
+      '#default_value' => $formValues['color_icons_active'] ?? 'primary',
       '#prefix' => '<div class="inline-input-holder separator"><strong>Active</strong>',
     ];
 
@@ -2945,7 +2945,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_icons_inverted'] ?: 'primary',
+      '#default_value' => $formValues['color_icons_inverted'] ?? 'primary',
       '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Inverted</strong>',
     ];
 
@@ -2960,7 +2960,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_icons_inverted_hover'] ?: 'primary',
+      '#default_value' => $formValues['color_icons_inverted_hover'] ?? 'primary',
       '#prefix' => '<div class="inline-input-holder "><strong>Inverted hover</strong>',
     ];
 
@@ -2975,7 +2975,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_icons_inverted_active'] ?: 'primary',
+      '#default_value' => $formValues['color_icons_inverted_active'] ?? 'primary',
       '#prefix' => '<div class="inline-input-holder"><strong>Inverted active</strong>',
     ];
 
@@ -2995,7 +2995,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_icons_alternate'] ?: 'primary',
+      '#default_value' => $formValues['color_icons_alternate'] ?? 'primary',
       '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Standard</strong>',
     ];
 
@@ -3010,7 +3010,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_icons_alternate_hover'] ?: 'primary',
+      '#default_value' => $formValues['color_icons_alternate_hover'] ?? 'primary',
       '#prefix' => '<div class="inline-input-holder "><strong>Hover</strong>',
     ];
 
@@ -3025,7 +3025,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_icons_alternate_active'] ?: 'primary',
+      '#default_value' => $formValues['color_icons_alternate_active'] ?? 'primary',
       '#prefix' => '<div class="inline-input-holder separator"><strong>Active</strong>',
     ];
 
@@ -3040,7 +3040,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_icons_alternate_inverted'] ?: 'primary',
+      '#default_value' => $formValues['color_icons_alternate_inverted'] ?? 'primary',
       '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Inverted</strong>',
     ];
 
@@ -3055,7 +3055,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_icons_alternate_inverted_hover'] ?: 'primary',
+      '#default_value' => $formValues['color_icons_alternate_inverted_hover'] ?? 'primary',
       '#prefix' => '<div class="inline-input-holder "><strong>Inverted hover</strong>',
     ];
 
@@ -3070,7 +3070,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['color_icons_alternate_inverted_active'] ?: 'primary',
+      '#default_value' => $formValues['color_icons_alternate_inverted_active'] ?? 'primary',
       '#prefix' => '<div class="inline-input-holder"><strong>Inverted active</strong>',
     ];
 
@@ -3090,7 +3090,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['social_icon_color'] ?: 'grey3',
+      '#default_value' => $formValues['social_icon_color'] ?? 'grey3',
       '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Social icons</strong>',
     ];
 
@@ -3110,7 +3110,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['tab_color'] ?: 'primary',
+      '#default_value' => $formValues['tab_color'] ?? 'primary',
       '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Tab standard</strong>',
     ];
 
@@ -3127,7 +3127,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['tab_font_color'] ?: 'grey1',
+      '#default_value' => $formValues['tab_font_color'] ?? 'grey1',
     ];
 
     $form['patterns']['tabs']['tab_font_opacity'] = [
@@ -3141,7 +3141,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['tab_color_active'] ?: 'grey3',
+      '#default_value' => $formValues['tab_color_active'] ?? 'grey3',
       '#prefix' => '<div class="inline-input-holder "><strong>Tab Active</strong>',
     ];
 
@@ -3158,7 +3158,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Tab font color active'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['tab_font_color_active'] ?: 'grey1',
+      '#default_value' => $formValues['tab_font_color_active'] ?? 'grey1',
     ];
 
     $form['patterns']['tabs']['tab_font_opacity_active'] = [
@@ -3177,7 +3177,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['toggler_color'] ?: 'grey3',
+      '#default_value' => $formValues['toggler_color'] ?? 'grey3',
       '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Standard</strong>',
     ];
 
@@ -3192,7 +3192,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['toggler_color_hover'] ?: 'grey3',
+      '#default_value' => $formValues['toggler_color_hover'] ?? 'grey3',
       '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Hover</strong>',
     ];
 
@@ -3207,7 +3207,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['toggler_color_active'] ?: 'grey3',
+      '#default_value' => $formValues['toggler_color_active'] ?? 'grey3',
       '#prefix' => '<div class="styling-row"><div class="styling-input full"><div class="inline-input-holder "><strong>Active</strong>',
     ];
 
@@ -3229,27 +3229,27 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font family'),
       '#options' => $arr_fonts,
-      '#default_value' => $formValues['anchornavigation_font_family'],
+      '#default_value' => $formValues['anchornavigation_font_family'] ?? 'Arial',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_font_weight'] = [
       '#type' => 'select',
       '#options' => $arr_fontweights,
       '#title' => $this->t('Font weight'),
-      '#default_value' => $formValues['anchornavigation_font_weight'],
+      '#default_value' => $formValues['anchornavigation_font_family'] ?? 'normal',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_font_style'] = [
       '#type' => 'select',
       '#options' => $arr_fontstyles,
       '#title' => $this->t('Font style'),
-      '#default_value' => $formValues['anchornavigation_font_style'],
+      '#default_value' => $formValues['anchornavigation_font_style'] ?? 'normal',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_line_height'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Line height'),
-      '#default_value' => $formValues['anchornavigation_line_height'] ?: '1.2',
+      '#default_value' => $formValues['anchornavigation_line_height'] ?? '1.2',
       '#suffix' => '</div>',
     ];
 
@@ -3264,13 +3264,13 @@ class IqBarrioService {
     $form['patterns']['anchornavigation']['anchornavigation_font_size_holder']['anchornavigation_font_size'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Font size'),
-      '#default_value' => $formValues['anchornavigation_font_size'] ?: '1.2',
+      '#default_value' => $formValues['anchornavigation_font_size'] ?? '1.2',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_font_size_holder']['anchornavigation_font_size_unit'] = [
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['anchornavigation_font_size_unit'] ?: 'rem',
+      '#default_value' => $formValues['anchornavigation_font_size_unit'] ?? 'rem',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_margin_holder'] = [
@@ -3288,29 +3288,29 @@ class IqBarrioService {
     $form['patterns']['anchornavigation']['anchornavigation_margin_holder']['anchornavigation_margin_top'] = [
       '#title' => $this->t('Margin (top, right, bottom, left)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['anchornavigation_margin_top'] ?: '0',
+      '#default_value' => $formValues['anchornavigation_margin_top'] ?? '0',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_margin_holder']['anchornavigation_margin_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['anchornavigation_margin_right'] ?: '0',
+      '#default_value' => $formValues['anchornavigation_margin_right'] ?? '0',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_margin_holder']['anchornavigation_margin_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['anchornavigation_margin_bottom'] ?: '0',
+      '#default_value' => $formValues['anchornavigation_margin_bottom'] ?? '0',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_margin_holder']['anchornavigation_margin_left'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['anchornavigation_margin_left'] ?: '0',
+      '#default_value' => $formValues['anchornavigation_margin_left'] ?? '0',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_margin_holder']['anchornavigation_margin_unit'] = [
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['anchornavigation_margin_unit'],
+      '#default_value' => $formValues['anchornavigation_margin_unit'] ?? 'px',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_padding_holder'] = [
@@ -3324,36 +3324,36 @@ class IqBarrioService {
     $form['patterns']['anchornavigation']['anchornavigation_padding_holder']['anchornavigation_padding_top'] = [
       '#title' => $this->t('Padding (top, right, bottom, left)'),
       '#type' => 'textfield',
-      '#default_value' => $formValues['anchornavigation_padding_top'] ?: '5',
+      '#default_value' => $formValues['anchornavigation_padding_top'] ?? '5',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_padding_holder']['anchornavigation_padding_right'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['anchornavigation_padding_right'] ?: '5',
+      '#default_value' => $formValues['anchornavigation_padding_right'] ?? '5',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_padding_holder']['anchornavigation_padding_bottom'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['anchornavigation_padding_bottom'] ?: '5',
+      '#default_value' => $formValues['anchornavigation_padding_bottom'] ?? '5',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_padding_holder']['anchornavigation_padding_left'] = [
       '#type' => 'textfield',
-      '#default_value' => $formValues['anchornavigation_padding_left'] ?: '5',
+      '#default_value' => $formValues['anchornavigation_padding_left'] ?? '5',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_padding_holder']['anchornavigation_padding_unit'] = [
       '#type' => 'textfield',
       '#type' => 'select',
       '#options' => $arr_units,
-      '#default_value' => $formValues['anchornavigation_padding_unit'],
+      '#default_value' => $formValues['anchornavigation_padding_unit'] ?? 'px',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_wrapper_background_color'] = [
       '#type' => 'select',
       '#title' => $this->t('Wrapper background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['anchornavigation_wrapper_background_color'] ?: 'white',
+      '#default_value' => $formValues['anchornavigation_wrapper_background_color'] ?? 'white',
       '#prefix' => '<div class="inline-input-holder separator"><strong>Color settings</strong>',
     ];
 
@@ -3368,7 +3368,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['anchornavigation_font_color_standard'] ?: 'grey1',
+      '#default_value' => $formValues['anchornavigation_font_color_standard'] ?? 'grey1',
       '#prefix' => '<div class="inline-input-holder"><strong>Standard</strong>',
     ];
 
@@ -3384,7 +3384,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['anchornavigation_background_color_standard'] ?: 'white',
+      '#default_value' => $formValues['anchornavigation_background_color_standard'] ?? 'white',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_background_opacity_standard'] = [
@@ -3400,7 +3400,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['anchornavigation_border_color_standard'] ? $formValues['anchornavigation_background_color_standard'] : 'white',
+      '#default_value' => $formValues['anchornavigation_border_color_standard'] ?? 'white',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_border_opacity_standard'] = [
@@ -3414,7 +3414,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['anchornavigation_font_color_hover'] ?: 'white',
+      '#default_value' => $formValues['anchornavigation_font_color_hover'] ?? 'white',
       '#prefix' => '<div class="inline-input-holder"><strong>Hover</strong>',
     ];
 
@@ -3430,7 +3430,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['anchornavigation_background_color_hover'] ?: 'primary',
+      '#default_value' => $formValues['anchornavigation_background_color_hover'] ?? 'primary',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_background_opacity_hover'] = [
@@ -3446,7 +3446,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Hover border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['anchornavigation_border_color_hover'] ?: 'primary',
+      '#default_value' => $formValues['anchornavigation_border_color_hover'] ?? 'primary',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_border_opacity_hover'] = [
@@ -3460,7 +3460,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Font color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['anchornavigation_font_color_active'] ?: 'white',
+      '#default_value' => $formValues['anchornavigation_font_color_active'] ?? 'white',
       '#prefix' => '<div class="inline-input-holder"><strong>Active</strong>',
     ];
 
@@ -3475,7 +3475,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Background color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['anchornavigation_background_color_active'] ?: 'primary',
+      '#default_value' => $formValues['anchornavigation_background_color_active'] ?? 'primary',
       '#prefix' => '<div class="inline-input-holder separator">',
     ];
 
@@ -3492,7 +3492,7 @@ class IqBarrioService {
       '#type' => 'select',
       '#title' => $this->t('Border color'),
       '#options' => $arr_colors,
-      '#default_value' => $formValues['anchornavigation_border_color_active'],
+      '#default_value' => $formValues['anchornavigation_border_color_active'] ?? 'primary',
     ];
 
     $form['patterns']['anchornavigation']['anchornavigation_border_opacity_active'] = [
